@@ -1,0 +1,166 @@
+[14:07:53.026] ================ START SliceEq SELF-TRAINING ================
+[14:07:53.026] Namespace(root_path='/home/aiteam/zhengtaoma/Baseline/data/PROMISE12_h5_training_source', exp='SliceEq_PROMISE12', model='unet', max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, patch_size=[256, 256], seed=1337, num_classes=2, labeled_bs=12, labelnum=7, ema_decay=0.99, consistency_type='mse', consistency=0.1, consistency_rampup=200.0, pretrained_checkpoint='/home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth', sliceeq_radius=1, sliceeq_sigma_min=0.45, sliceeq_sigma_max=0.85, sliceeq_phase_min=-0.25, sliceeq_phase_max=0.25)
+[14:07:53.303] Loaded shared pretrain checkpoint: /home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth
+[14:07:53.304] Shared pretrain SHA-256: 49e8883039a5712102dc17c5277009504b55c232a10a0af1de4d26fbb414b9b9
+[14:07:53.306] 15 iterations per epoch
+[14:07:53.306] SliceEq profile: offsets=(-1,0,1), sigma=[0.450, 0.850], phase=[-0.250, 0.250]
+[14:08:21.267] iteration 200 : mean_dice : 0.740625, best_dice : 0.740625
+[14:08:47.806] iteration 400 : mean_dice : 0.724592, best_dice : 0.740625
+[14:09:14.941] iteration 600 : mean_dice : 0.723587, best_dice : 0.740625
+[14:09:42.503] iteration 800 : mean_dice : 0.714154, best_dice : 0.740625
+[14:10:09.376] iteration 1000 : mean_dice : 0.726894, best_dice : 0.740625
+[14:10:37.329] iteration 1200 : mean_dice : 0.764927, best_dice : 0.764927
+[14:11:05.849] iteration 1400 : mean_dice : 0.758296, best_dice : 0.764927
+[14:11:33.858] iteration 1600 : mean_dice : 0.771466, best_dice : 0.771466
+[14:12:01.858] iteration 1800 : mean_dice : 0.756615, best_dice : 0.771466
+[14:12:31.451] iteration 2000 : mean_dice : 0.778914, best_dice : 0.778914
+[14:12:59.785] iteration 2200 : mean_dice : 0.763870, best_dice : 0.778914
+[14:13:28.129] iteration 2400 : mean_dice : 0.767870, best_dice : 0.778914
+[14:13:57.118] iteration 2600 : mean_dice : 0.767312, best_dice : 0.778914
+[14:14:25.437] iteration 2800 : mean_dice : 0.763535, best_dice : 0.778914
+[14:14:53.722] iteration 3000 : mean_dice : 0.767477, best_dice : 0.778914
+[14:14:53.731] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_3000.pth
+[14:15:22.670] iteration 3200 : mean_dice : 0.752718, best_dice : 0.778914
+[14:15:50.806] iteration 3400 : mean_dice : 0.768975, best_dice : 0.778914
+[14:16:19.128] iteration 3600 : mean_dice : 0.762966, best_dice : 0.778914
+[14:16:47.693] iteration 3800 : mean_dice : 0.765138, best_dice : 0.778914
+[14:17:15.750] iteration 4000 : mean_dice : 0.765432, best_dice : 0.778914
+[14:17:43.797] iteration 4200 : mean_dice : 0.772178, best_dice : 0.778914
+[14:18:12.669] iteration 4400 : mean_dice : 0.762493, best_dice : 0.778914
+[14:18:40.953] iteration 4600 : mean_dice : 0.772083, best_dice : 0.778914
+[14:19:08.922] iteration 4800 : mean_dice : 0.752456, best_dice : 0.778914
+[14:19:38.040] iteration 5000 : mean_dice : 0.760870, best_dice : 0.778914
+[14:20:06.314] iteration 5200 : mean_dice : 0.764407, best_dice : 0.778914
+[14:20:34.389] iteration 5400 : mean_dice : 0.753678, best_dice : 0.778914
+[14:21:03.410] iteration 5600 : mean_dice : 0.769179, best_dice : 0.778914
+[14:21:31.796] iteration 5800 : mean_dice : 0.773456, best_dice : 0.778914
+[14:21:59.965] iteration 6000 : mean_dice : 0.767758, best_dice : 0.778914
+[14:21:59.974] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_6000.pth
+[14:22:28.952] iteration 6200 : mean_dice : 0.775033, best_dice : 0.778914
+[14:22:57.174] iteration 6400 : mean_dice : 0.770397, best_dice : 0.778914
+[14:23:25.844] iteration 6600 : mean_dice : 0.778138, best_dice : 0.778914
+[14:23:54.942] iteration 6800 : mean_dice : 0.771729, best_dice : 0.778914
+[14:24:23.050] iteration 7000 : mean_dice : 0.771571, best_dice : 0.778914
+[14:24:51.174] iteration 7200 : mean_dice : 0.770416, best_dice : 0.778914
+[14:25:19.703] iteration 7400 : mean_dice : 0.754650, best_dice : 0.778914
+[14:25:47.795] iteration 7600 : mean_dice : 0.774870, best_dice : 0.778914
+[14:26:16.244] iteration 7800 : mean_dice : 0.766462, best_dice : 0.778914
+[14:26:45.170] iteration 8000 : mean_dice : 0.775060, best_dice : 0.778914
+[14:27:13.644] iteration 8200 : mean_dice : 0.766738, best_dice : 0.778914
+[14:27:41.821] iteration 8400 : mean_dice : 0.768648, best_dice : 0.778914
+[14:28:10.526] iteration 8600 : mean_dice : 0.775504, best_dice : 0.778914
+[14:28:38.538] iteration 8800 : mean_dice : 0.774401, best_dice : 0.778914
+[14:29:06.786] iteration 9000 : mean_dice : 0.767831, best_dice : 0.778914
+[14:29:06.796] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_9000.pth
+[14:29:35.936] iteration 9200 : mean_dice : 0.776934, best_dice : 0.778914
+[14:30:04.163] iteration 9400 : mean_dice : 0.765083, best_dice : 0.778914
+[14:30:32.374] iteration 9600 : mean_dice : 0.777339, best_dice : 0.778914
+[14:31:01.309] iteration 9800 : mean_dice : 0.777194, best_dice : 0.778914
+[14:31:29.211] iteration 10000 : mean_dice : 0.765472, best_dice : 0.778914
+[14:31:57.390] iteration 10200 : mean_dice : 0.774452, best_dice : 0.778914
+[14:32:26.045] iteration 10400 : mean_dice : 0.783869, best_dice : 0.783869
+[14:32:55.195] iteration 10600 : mean_dice : 0.782201, best_dice : 0.783869
+[14:33:23.450] iteration 10800 : mean_dice : 0.769047, best_dice : 0.783869
+[14:33:51.929] iteration 11000 : mean_dice : 0.786906, best_dice : 0.786906
+[14:34:20.118] iteration 11200 : mean_dice : 0.787781, best_dice : 0.787781
+[14:34:48.438] iteration 11400 : mean_dice : 0.775463, best_dice : 0.787781
+[14:35:17.532] iteration 11600 : mean_dice : 0.776312, best_dice : 0.787781
+[14:35:47.599] iteration 11800 : mean_dice : 0.778046, best_dice : 0.787781
+[14:36:16.067] iteration 12000 : mean_dice : 0.768356, best_dice : 0.787781
+[14:36:16.078] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_12000.pth
+[14:36:52.808] iteration 12200 : mean_dice : 0.778637, best_dice : 0.787781
+[14:37:28.733] iteration 12400 : mean_dice : 0.767139, best_dice : 0.787781
+[14:38:03.946] iteration 12600 : mean_dice : 0.776158, best_dice : 0.787781
+[14:38:41.165] iteration 12800 : mean_dice : 0.777997, best_dice : 0.787781
+[14:39:17.851] iteration 13000 : mean_dice : 0.771350, best_dice : 0.787781
+[14:39:54.903] iteration 13200 : mean_dice : 0.782809, best_dice : 0.787781
+[14:40:33.064] iteration 13400 : mean_dice : 0.769328, best_dice : 0.787781
+[14:41:09.734] iteration 13600 : mean_dice : 0.775230, best_dice : 0.787781
+[14:41:46.716] iteration 13800 : mean_dice : 0.774332, best_dice : 0.787781
+[14:42:23.975] iteration 14000 : mean_dice : 0.770015, best_dice : 0.787781
+[14:43:07.522] iteration 14200 : mean_dice : 0.782732, best_dice : 0.787781
+[14:43:55.208] iteration 14400 : mean_dice : 0.783703, best_dice : 0.787781
+[14:44:44.337] iteration 14600 : mean_dice : 0.785898, best_dice : 0.787781
+[14:45:33.648] iteration 14800 : mean_dice : 0.793202, best_dice : 0.793202
+[14:46:22.213] iteration 15000 : mean_dice : 0.785786, best_dice : 0.793202
+[14:46:22.223] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_15000.pth
+[14:47:10.318] iteration 15200 : mean_dice : 0.797820, best_dice : 0.797820
+[14:47:59.429] iteration 15400 : mean_dice : 0.787613, best_dice : 0.797820
+[14:48:46.994] iteration 15600 : mean_dice : 0.781101, best_dice : 0.797820
+[14:49:34.480] iteration 15800 : mean_dice : 0.789696, best_dice : 0.797820
+[14:50:23.819] iteration 16000 : mean_dice : 0.782695, best_dice : 0.797820
+[14:51:11.080] iteration 16200 : mean_dice : 0.797563, best_dice : 0.797820
+[14:52:00.922] iteration 16400 : mean_dice : 0.796333, best_dice : 0.797820
+[14:52:49.847] iteration 16600 : mean_dice : 0.798582, best_dice : 0.798582
+[14:53:37.256] iteration 16800 : mean_dice : 0.778398, best_dice : 0.798582
+[14:54:26.709] iteration 17000 : mean_dice : 0.788071, best_dice : 0.798582
+[14:55:14.346] iteration 17200 : mean_dice : 0.802060, best_dice : 0.802060
+[14:56:03.103] iteration 17400 : mean_dice : 0.789430, best_dice : 0.802060
+[14:56:52.714] iteration 17600 : mean_dice : 0.794363, best_dice : 0.802060
+[14:57:43.145] iteration 17800 : mean_dice : 0.787937, best_dice : 0.802060
+[14:58:29.758] iteration 18000 : mean_dice : 0.800750, best_dice : 0.802060
+[14:58:29.768] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_18000.pth
+[14:59:19.491] iteration 18200 : mean_dice : 0.788273, best_dice : 0.802060
+[15:00:07.686] iteration 18400 : mean_dice : 0.799376, best_dice : 0.802060
+[15:00:54.612] iteration 18600 : mean_dice : 0.793886, best_dice : 0.802060
+[15:01:46.004] iteration 18800 : mean_dice : 0.795688, best_dice : 0.802060
+[15:02:35.224] iteration 19000 : mean_dice : 0.790472, best_dice : 0.802060
+[15:03:22.554] iteration 19200 : mean_dice : 0.785909, best_dice : 0.802060
+[15:04:13.622] iteration 19400 : mean_dice : 0.809343, best_dice : 0.809343
+[15:05:02.018] iteration 19600 : mean_dice : 0.796977, best_dice : 0.809343
+[15:05:49.469] iteration 19800 : mean_dice : 0.806442, best_dice : 0.809343
+[15:06:38.273] iteration 20000 : mean_dice : 0.794213, best_dice : 0.809343
+[15:07:26.201] iteration 20200 : mean_dice : 0.779927, best_dice : 0.809343
+[15:08:15.460] iteration 20400 : mean_dice : 0.780778, best_dice : 0.809343
+[15:09:04.796] iteration 20600 : mean_dice : 0.791702, best_dice : 0.809343
+[15:09:52.896] iteration 20800 : mean_dice : 0.800681, best_dice : 0.809343
+[15:10:32.529] iteration 21000 : mean_dice : 0.785465, best_dice : 0.809343
+[15:10:32.538] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_21000.pth
+[15:11:01.877] iteration 21200 : mean_dice : 0.793899, best_dice : 0.809343
+[15:11:30.535] iteration 21400 : mean_dice : 0.789722, best_dice : 0.809343
+[15:11:58.898] iteration 21600 : mean_dice : 0.773167, best_dice : 0.809343
+[15:12:27.368] iteration 21800 : mean_dice : 0.794853, best_dice : 0.809343
+[15:12:55.698] iteration 22000 : mean_dice : 0.789301, best_dice : 0.809343
+[15:13:24.041] iteration 22200 : mean_dice : 0.792297, best_dice : 0.809343
+[15:13:53.125] iteration 22400 : mean_dice : 0.798595, best_dice : 0.809343
+[15:14:21.359] iteration 22600 : mean_dice : 0.792480, best_dice : 0.809343
+[15:14:49.722] iteration 22800 : mean_dice : 0.792398, best_dice : 0.809343
+[15:15:18.510] iteration 23000 : mean_dice : 0.795290, best_dice : 0.809343
+[15:15:46.887] iteration 23200 : mean_dice : 0.802816, best_dice : 0.809343
+[15:16:15.075] iteration 23400 : mean_dice : 0.776071, best_dice : 0.809343
+[15:16:43.907] iteration 23600 : mean_dice : 0.782607, best_dice : 0.809343
+[15:17:11.850] iteration 23800 : mean_dice : 0.792415, best_dice : 0.809343
+[15:17:39.924] iteration 24000 : mean_dice : 0.800261, best_dice : 0.809343
+[15:17:39.933] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_24000.pth
+[15:18:08.710] iteration 24200 : mean_dice : 0.800478, best_dice : 0.809343
+[15:18:37.124] iteration 24400 : mean_dice : 0.788175, best_dice : 0.809343
+[15:19:05.540] iteration 24600 : mean_dice : 0.795971, best_dice : 0.809343
+[15:19:34.608] iteration 24800 : mean_dice : 0.811287, best_dice : 0.811287
+[15:20:03.284] iteration 25000 : mean_dice : 0.795184, best_dice : 0.811287
+[15:20:31.547] iteration 25200 : mean_dice : 0.803045, best_dice : 0.811287
+[15:21:00.245] iteration 25400 : mean_dice : 0.798433, best_dice : 0.811287
+[15:21:28.544] iteration 25600 : mean_dice : 0.799830, best_dice : 0.811287
+[15:21:57.015] iteration 25800 : mean_dice : 0.807109, best_dice : 0.811287
+[15:22:25.920] iteration 26000 : mean_dice : 0.804081, best_dice : 0.811287
+[15:22:54.185] iteration 26200 : mean_dice : 0.800295, best_dice : 0.811287
+[15:23:22.378] iteration 26400 : mean_dice : 0.809442, best_dice : 0.811287
+[15:23:51.301] iteration 26600 : mean_dice : 0.803591, best_dice : 0.811287
+[15:24:19.767] iteration 26800 : mean_dice : 0.801689, best_dice : 0.811287
+[15:24:47.790] iteration 27000 : mean_dice : 0.794812, best_dice : 0.811287
+[15:24:47.799] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_27000.pth
+[15:25:16.631] iteration 27200 : mean_dice : 0.798677, best_dice : 0.811287
+[15:25:45.079] iteration 27400 : mean_dice : 0.805620, best_dice : 0.811287
+[15:26:13.294] iteration 27600 : mean_dice : 0.804070, best_dice : 0.811287
+[15:26:41.985] iteration 27800 : mean_dice : 0.792884, best_dice : 0.811287
+[15:27:10.651] iteration 28000 : mean_dice : 0.809029, best_dice : 0.811287
+[15:27:38.594] iteration 28200 : mean_dice : 0.793621, best_dice : 0.811287
+[15:28:07.394] iteration 28400 : mean_dice : 0.798688, best_dice : 0.811287
+[15:28:35.454] iteration 28600 : mean_dice : 0.775020, best_dice : 0.811287
+[15:29:04.149] iteration 28800 : mean_dice : 0.808908, best_dice : 0.811287
+[15:29:33.046] iteration 29000 : mean_dice : 0.804111, best_dice : 0.811287
+[15:30:01.041] iteration 29200 : mean_dice : 0.803810, best_dice : 0.811287
+[15:30:29.387] iteration 29400 : mean_dice : 0.782278, best_dice : 0.811287
+[15:30:57.955] iteration 29600 : mean_dice : 0.790011, best_dice : 0.811287
+[15:31:26.280] iteration 29800 : mean_dice : 0.794553, best_dice : 0.811287
+[15:31:54.400] iteration 30000 : mean_dice : 0.788273, best_dice : 0.811287
+[15:31:54.408] save model to ../model/SliceEq_PROMISE12_7_labeled/self_train/unet/iter_30000.pth

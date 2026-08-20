@@ -1,0 +1,317 @@
+[16:02:43.353] ================ START SliceEqOcc SELF-TRAINING ================
+[16:02:43.353] Namespace(root_path='/home/aiteam/zhengtaoma/Baseline/data/PROMISE12_h5_training_source', exp='SliceEqOcc_PROMISE12', model='unet', max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, patch_size=[256, 256], seed=1337, num_classes=2, labeled_bs=12, labelnum=7, ema_decay=0.99, consistency_type='mse', consistency=0.1, consistency_rampup=200.0, pretrained_checkpoint='/home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth', sliceeq_radius=1, sliceeq_sigma_min=0.45, sliceeq_sigma_max=0.85, sliceeq_phase_min=-0.25, sliceeq_phase_max=0.25)
+[16:02:43.631] Loaded shared pretrain checkpoint: /home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth
+[16:02:43.631] Shared pretrain SHA-256: 49e8883039a5712102dc17c5277009504b55c232a10a0af1de4d26fbb414b9b9
+[16:02:43.633] 15 iterations per epoch
+[16:02:43.633] SliceEqOcc profile: offsets=(-1,0,1), sigma=[0.450, 0.850], phase=[-0.250, 0.250]
+[16:02:43.633] SliceEqOcc effective student batch after warmup: 36 (12 original-L + 12 reacquired-L + 12 reacquired-U)
+[16:03:06.196] SliceEqOcc diagnostics iteration 200: L_frac=0.000000 L_entropy=0.000000 L_dev=0.000000; U_frac=0.000000 U_entropy=0.000000 U_dev=0.000000 U_hard_change=0.000000
+[16:03:11.803] iteration 200 : mean_dice : 0.740575, best_dice : 0.740575
+[16:03:33.018] SliceEqOcc diagnostics iteration 400: L_frac=0.000000 L_entropy=0.000000 L_dev=0.000000; U_frac=0.000000 U_entropy=0.000000 U_dev=0.000000 U_hard_change=0.000000
+[16:03:38.549] iteration 400 : mean_dice : 0.724908, best_dice : 0.740575
+[16:04:00.313] SliceEqOcc diagnostics iteration 600: L_frac=0.000000 L_entropy=0.000000 L_dev=0.000000; U_frac=0.000000 U_entropy=0.000000 U_dev=0.000000 U_hard_change=0.000000
+[16:04:05.812] iteration 600 : mean_dice : 0.721654, best_dice : 0.740575
+[16:04:28.011] SliceEqOcc diagnostics iteration 800: L_frac=0.000000 L_entropy=0.000000 L_dev=0.000000; U_frac=0.000000 U_entropy=0.000000 U_dev=0.000000 U_hard_change=0.000000
+[16:04:33.566] iteration 800 : mean_dice : 0.716407, best_dice : 0.740575
+[16:04:55.124] SliceEqOcc diagnostics iteration 1000: L_frac=0.000000 L_entropy=0.000000 L_dev=0.000000; U_frac=0.000000 U_entropy=0.000000 U_dev=0.000000 U_hard_change=0.000000
+[16:05:00.557] iteration 1000 : mean_dice : 0.728104, best_dice : 0.740575
+[16:05:25.665] SliceEqOcc diagnostics iteration 1200: L_frac=0.008050 L_entropy=0.004523 L_dev=0.001262; U_frac=0.010016 U_entropy=0.007415 U_dev=0.002300 U_hard_change=0.000324
+[16:05:31.154] iteration 1200 : mean_dice : 0.752019, best_dice : 0.752019
+[16:05:56.693] SliceEqOcc diagnostics iteration 1400: L_frac=0.003510 L_entropy=0.002560 L_dev=0.000795; U_frac=0.008441 U_entropy=0.005978 U_dev=0.001877 U_hard_change=0.000000
+[16:06:02.273] iteration 1400 : mean_dice : 0.736340, best_dice : 0.752019
+[16:06:27.354] SliceEqOcc diagnostics iteration 1600: L_frac=0.005299 L_entropy=0.004000 L_dev=0.001251; U_frac=0.012885 U_entropy=0.009048 U_dev=0.002678 U_hard_change=0.000000
+[16:06:32.984] iteration 1600 : mean_dice : 0.759437, best_dice : 0.759437
+[16:06:58.117] SliceEqOcc diagnostics iteration 1800: L_frac=0.005323 L_entropy=0.003700 L_dev=0.001091; U_frac=0.007927 U_entropy=0.005797 U_dev=0.001805 U_hard_change=0.000000
+[16:07:03.679] iteration 1800 : mean_dice : 0.751660, best_dice : 0.759437
+[16:07:29.378] SliceEqOcc diagnostics iteration 2000: L_frac=0.010122 L_entropy=0.006982 L_dev=0.001998; U_frac=0.007978 U_entropy=0.005304 U_dev=0.001626 U_hard_change=0.000000
+[16:07:34.986] iteration 2000 : mean_dice : 0.763684, best_dice : 0.763684
+[16:08:00.038] SliceEqOcc diagnostics iteration 2200: L_frac=0.009911 L_entropy=0.007550 L_dev=0.002354; U_frac=0.006121 U_entropy=0.004852 U_dev=0.001572 U_hard_change=0.000188
+[16:08:05.923] iteration 2200 : mean_dice : 0.750757, best_dice : 0.763684
+[16:08:31.589] SliceEqOcc diagnostics iteration 2400: L_frac=0.013631 L_entropy=0.009047 L_dev=0.002562; U_frac=0.006261 U_entropy=0.004926 U_dev=0.001596 U_hard_change=0.000131
+[16:08:37.151] iteration 2400 : mean_dice : 0.751082, best_dice : 0.763684
+[16:09:02.996] SliceEqOcc diagnostics iteration 2600: L_frac=0.013743 L_entropy=0.009544 L_dev=0.002810; U_frac=0.007589 U_entropy=0.004803 U_dev=0.001369 U_hard_change=0.000000
+[16:09:08.578] iteration 2600 : mean_dice : 0.756507, best_dice : 0.763684
+[16:09:33.722] SliceEqOcc diagnostics iteration 2800: L_frac=0.006251 L_entropy=0.003988 L_dev=0.001135; U_frac=0.007772 U_entropy=0.005955 U_dev=0.002062 U_hard_change=0.000818
+[16:09:39.275] iteration 2800 : mean_dice : 0.746695, best_dice : 0.763684
+[16:10:04.356] SliceEqOcc diagnostics iteration 3000: L_frac=0.012408 L_entropy=0.009020 L_dev=0.002628; U_frac=0.008467 U_entropy=0.006639 U_dev=0.002245 U_hard_change=0.000245
+[16:10:09.863] iteration 3000 : mean_dice : 0.755157, best_dice : 0.763684
+[16:10:09.872] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_3000.pth
+[16:10:35.517] SliceEqOcc diagnostics iteration 3200: L_frac=0.011987 L_entropy=0.007551 L_dev=0.002038; U_frac=0.007210 U_entropy=0.004931 U_dev=0.001402 U_hard_change=0.000000
+[16:10:41.125] iteration 3200 : mean_dice : 0.744110, best_dice : 0.763684
+[16:11:06.334] SliceEqOcc diagnostics iteration 3400: L_frac=0.008461 L_entropy=0.005679 L_dev=0.001595; U_frac=0.010440 U_entropy=0.007474 U_dev=0.002253 U_hard_change=0.000000
+[16:11:11.852] iteration 3400 : mean_dice : 0.744372, best_dice : 0.763684
+[16:11:37.140] SliceEqOcc diagnostics iteration 3600: L_frac=0.005840 L_entropy=0.004104 L_dev=0.001226; U_frac=0.006699 U_entropy=0.005116 U_dev=0.001646 U_hard_change=0.000000
+[16:11:42.683] iteration 3600 : mean_dice : 0.757224, best_dice : 0.763684
+[16:12:08.278] SliceEqOcc diagnostics iteration 3800: L_frac=0.007903 L_entropy=0.005624 L_dev=0.001631; U_frac=0.009983 U_entropy=0.006930 U_dev=0.001966 U_hard_change=0.000000
+[16:12:13.832] iteration 3800 : mean_dice : 0.745934, best_dice : 0.763684
+[16:12:38.969] SliceEqOcc diagnostics iteration 4000: L_frac=0.004963 L_entropy=0.003629 L_dev=0.001089; U_frac=0.011658 U_entropy=0.007895 U_dev=0.002409 U_hard_change=0.000000
+[16:12:44.450] iteration 4000 : mean_dice : 0.753854, best_dice : 0.763684
+[16:13:09.609] SliceEqOcc diagnostics iteration 4200: L_frac=0.005440 L_entropy=0.003838 L_dev=0.001138; U_frac=0.013379 U_entropy=0.009491 U_dev=0.002860 U_hard_change=0.000000
+[16:13:15.071] iteration 4200 : mean_dice : 0.747437, best_dice : 0.763684
+[16:13:40.893] SliceEqOcc diagnostics iteration 4400: L_frac=0.009254 L_entropy=0.006422 L_dev=0.001984; U_frac=0.001853 U_entropy=0.001070 U_dev=0.000291 U_hard_change=0.000000
+[16:13:46.505] iteration 4400 : mean_dice : 0.747793, best_dice : 0.763684
+[16:14:11.746] SliceEqOcc diagnostics iteration 4600: L_frac=0.005898 L_entropy=0.004288 L_dev=0.001353; U_frac=0.007188 U_entropy=0.004652 U_dev=0.001335 U_hard_change=0.000000
+[16:14:17.183] iteration 4600 : mean_dice : 0.756254, best_dice : 0.763684
+[16:14:42.249] SliceEqOcc diagnostics iteration 4800: L_frac=0.008498 L_entropy=0.005510 L_dev=0.001539; U_frac=0.004674 U_entropy=0.003565 U_dev=0.001111 U_hard_change=0.000000
+[16:14:47.755] iteration 4800 : mean_dice : 0.744382, best_dice : 0.763684
+[16:15:13.346] SliceEqOcc diagnostics iteration 5000: L_frac=0.007514 L_entropy=0.005618 L_dev=0.001639; U_frac=0.011854 U_entropy=0.009191 U_dev=0.002858 U_hard_change=0.000014
+[16:15:18.845] iteration 5000 : mean_dice : 0.756744, best_dice : 0.763684
+[16:15:44.055] SliceEqOcc diagnostics iteration 5200: L_frac=0.008605 L_entropy=0.006172 L_dev=0.001836; U_frac=0.009165 U_entropy=0.006794 U_dev=0.002187 U_hard_change=0.000000
+[16:15:49.535] iteration 5200 : mean_dice : 0.754434, best_dice : 0.763684
+[16:16:14.630] SliceEqOcc diagnostics iteration 5400: L_frac=0.011258 L_entropy=0.007801 L_dev=0.002241; U_frac=0.005475 U_entropy=0.004176 U_dev=0.001361 U_hard_change=0.000000
+[16:16:20.188] iteration 5400 : mean_dice : 0.757087, best_dice : 0.763684
+[16:16:45.785] SliceEqOcc diagnostics iteration 5600: L_frac=0.004078 L_entropy=0.002764 L_dev=0.000872; U_frac=0.010660 U_entropy=0.008468 U_dev=0.002683 U_hard_change=0.000032
+[16:16:51.322] iteration 5600 : mean_dice : 0.761478, best_dice : 0.763684
+[16:17:16.539] SliceEqOcc diagnostics iteration 5800: L_frac=0.006157 L_entropy=0.004570 L_dev=0.001382; U_frac=0.011570 U_entropy=0.007776 U_dev=0.002287 U_hard_change=0.000000
+[16:17:22.124] iteration 5800 : mean_dice : 0.762376, best_dice : 0.763684
+[16:17:47.374] SliceEqOcc diagnostics iteration 6000: L_frac=0.006274 L_entropy=0.004563 L_dev=0.001320; U_frac=0.006952 U_entropy=0.004359 U_dev=0.001226 U_hard_change=0.000010
+[16:17:52.910] iteration 6000 : mean_dice : 0.756903, best_dice : 0.763684
+[16:17:52.919] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_6000.pth
+[16:18:18.444] SliceEqOcc diagnostics iteration 6200: L_frac=0.007936 L_entropy=0.004348 L_dev=0.001135; U_frac=0.004846 U_entropy=0.003641 U_dev=0.001181 U_hard_change=0.000327
+[16:18:24.077] iteration 6200 : mean_dice : 0.765080, best_dice : 0.765080
+[16:18:49.264] SliceEqOcc diagnostics iteration 6400: L_frac=0.009787 L_entropy=0.006257 L_dev=0.001790; U_frac=0.006568 U_entropy=0.004987 U_dev=0.001568 U_hard_change=0.000000
+[16:18:54.755] iteration 6400 : mean_dice : 0.764364, best_dice : 0.765080
+[16:19:20.626] SliceEqOcc diagnostics iteration 6600: L_frac=0.005061 L_entropy=0.003872 L_dev=0.001199; U_frac=0.011234 U_entropy=0.008650 U_dev=0.003011 U_hard_change=0.000000
+[16:19:26.236] iteration 6600 : mean_dice : 0.773569, best_dice : 0.773569
+[16:19:51.984] SliceEqOcc diagnostics iteration 6800: L_frac=0.009038 L_entropy=0.005293 L_dev=0.001358; U_frac=0.009744 U_entropy=0.006896 U_dev=0.002127 U_hard_change=0.000000
+[16:19:57.503] iteration 6800 : mean_dice : 0.754449, best_dice : 0.773569
+[16:20:22.654] SliceEqOcc diagnostics iteration 7000: L_frac=0.011509 L_entropy=0.008539 L_dev=0.002619; U_frac=0.013086 U_entropy=0.009202 U_dev=0.002900 U_hard_change=0.000000
+[16:20:28.220] iteration 7000 : mean_dice : 0.768334, best_dice : 0.773569
+[16:20:53.282] SliceEqOcc diagnostics iteration 7200: L_frac=0.007978 L_entropy=0.005386 L_dev=0.001550; U_frac=0.010705 U_entropy=0.007963 U_dev=0.002524 U_hard_change=0.000184
+[16:20:58.762] iteration 7200 : mean_dice : 0.758961, best_dice : 0.773569
+[16:21:25.058] SliceEqOcc diagnostics iteration 7400: L_frac=0.006975 L_entropy=0.004895 L_dev=0.001448; U_frac=0.007797 U_entropy=0.005057 U_dev=0.001563 U_hard_change=0.000000
+[16:21:30.641] iteration 7400 : mean_dice : 0.771635, best_dice : 0.773569
+[16:21:55.852] SliceEqOcc diagnostics iteration 7600: L_frac=0.006948 L_entropy=0.004238 L_dev=0.001169; U_frac=0.010399 U_entropy=0.006758 U_dev=0.001893 U_hard_change=0.000000
+[16:22:01.424] iteration 7600 : mean_dice : 0.771179, best_dice : 0.773569
+[16:22:26.582] SliceEqOcc diagnostics iteration 7800: L_frac=0.005549 L_entropy=0.004271 L_dev=0.001324; U_frac=0.007399 U_entropy=0.005103 U_dev=0.001512 U_hard_change=0.000000
+[16:22:32.076] iteration 7800 : mean_dice : 0.768611, best_dice : 0.773569
+[16:22:57.846] SliceEqOcc diagnostics iteration 8000: L_frac=0.004448 L_entropy=0.003503 L_dev=0.001129; U_frac=0.010080 U_entropy=0.007273 U_dev=0.002217 U_hard_change=0.000000
+[16:23:03.455] iteration 8000 : mean_dice : 0.769425, best_dice : 0.773569
+[16:23:28.693] SliceEqOcc diagnostics iteration 8200: L_frac=0.008029 L_entropy=0.005363 L_dev=0.001528; U_frac=0.009346 U_entropy=0.007059 U_dev=0.002224 U_hard_change=0.000000
+[16:23:34.275] iteration 8200 : mean_dice : 0.761355, best_dice : 0.773569
+[16:23:59.363] SliceEqOcc diagnostics iteration 8400: L_frac=0.009279 L_entropy=0.006152 L_dev=0.001730; U_frac=0.013309 U_entropy=0.009708 U_dev=0.002920 U_hard_change=0.000000
+[16:24:04.937] iteration 8400 : mean_dice : 0.764991, best_dice : 0.773569
+[16:24:30.540] SliceEqOcc diagnostics iteration 8600: L_frac=0.012628 L_entropy=0.008294 L_dev=0.002363; U_frac=0.005658 U_entropy=0.003817 U_dev=0.001165 U_hard_change=0.000000
+[16:24:36.163] iteration 8600 : mean_dice : 0.760329, best_dice : 0.773569
+[16:25:01.196] SliceEqOcc diagnostics iteration 8800: L_frac=0.008626 L_entropy=0.005834 L_dev=0.001710; U_frac=0.009974 U_entropy=0.006874 U_dev=0.001993 U_hard_change=0.000000
+[16:25:06.836] iteration 8800 : mean_dice : 0.772395, best_dice : 0.773569
+[16:25:31.807] SliceEqOcc diagnostics iteration 9000: L_frac=0.011232 L_entropy=0.007251 L_dev=0.001980; U_frac=0.013515 U_entropy=0.008720 U_dev=0.002466 U_hard_change=0.000056
+[16:25:37.459] iteration 9000 : mean_dice : 0.774409, best_dice : 0.774409
+[16:25:37.469] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_9000.pth
+[16:26:03.197] SliceEqOcc diagnostics iteration 9200: L_frac=0.007666 L_entropy=0.005620 L_dev=0.001670; U_frac=0.008893 U_entropy=0.006695 U_dev=0.002153 U_hard_change=0.000000
+[16:26:08.738] iteration 9200 : mean_dice : 0.773930, best_dice : 0.774409
+[16:26:34.507] SliceEqOcc diagnostics iteration 9400: L_frac=0.009857 L_entropy=0.006784 L_dev=0.001944; U_frac=0.007894 U_entropy=0.005969 U_dev=0.001844 U_hard_change=0.000000
+[16:26:40.035] iteration 9400 : mean_dice : 0.778416, best_dice : 0.778416
+[16:27:05.101] SliceEqOcc diagnostics iteration 9600: L_frac=0.005947 L_entropy=0.004052 L_dev=0.001145; U_frac=0.005803 U_entropy=0.004060 U_dev=0.001129 U_hard_change=0.000000
+[16:27:10.777] iteration 9600 : mean_dice : 0.770448, best_dice : 0.778416
+[16:27:36.904] SliceEqOcc diagnostics iteration 9800: L_frac=0.016822 L_entropy=0.011955 L_dev=0.003518; U_frac=0.013832 U_entropy=0.008693 U_dev=0.002540 U_hard_change=0.000000
+[16:27:42.446] iteration 9800 : mean_dice : 0.777346, best_dice : 0.778416
+[16:28:07.563] SliceEqOcc diagnostics iteration 10000: L_frac=0.010386 L_entropy=0.007868 L_dev=0.002427; U_frac=0.008642 U_entropy=0.006574 U_dev=0.002001 U_hard_change=0.000137
+[16:28:13.084] iteration 10000 : mean_dice : 0.770852, best_dice : 0.778416
+[16:28:38.455] SliceEqOcc diagnostics iteration 10200: L_frac=0.005121 L_entropy=0.003015 L_dev=0.000869; U_frac=0.007955 U_entropy=0.005498 U_dev=0.001624 U_hard_change=0.000000
+[16:28:44.083] iteration 10200 : mean_dice : 0.778644, best_dice : 0.778644
+[16:29:09.974] SliceEqOcc diagnostics iteration 10400: L_frac=0.004691 L_entropy=0.003516 L_dev=0.001065; U_frac=0.013896 U_entropy=0.010000 U_dev=0.002963 U_hard_change=0.000000
+[16:29:15.817] iteration 10400 : mean_dice : 0.779175, best_dice : 0.779175
+[16:29:41.603] SliceEqOcc diagnostics iteration 10600: L_frac=0.009182 L_entropy=0.005600 L_dev=0.001542; U_frac=0.019895 U_entropy=0.012776 U_dev=0.003634 U_hard_change=0.000000
+[16:29:47.183] iteration 10600 : mean_dice : 0.780356, best_dice : 0.780356
+[16:30:12.548] SliceEqOcc diagnostics iteration 10800: L_frac=0.003726 L_entropy=0.001907 L_dev=0.000480; U_frac=0.008901 U_entropy=0.006700 U_dev=0.002092 U_hard_change=0.000000
+[16:30:18.366] iteration 10800 : mean_dice : 0.781824, best_dice : 0.781824
+[16:30:44.111] SliceEqOcc diagnostics iteration 11000: L_frac=0.008236 L_entropy=0.005322 L_dev=0.001595; U_frac=0.007753 U_entropy=0.005567 U_dev=0.001696 U_hard_change=0.000000
+[16:30:50.043] iteration 11000 : mean_dice : 0.783950, best_dice : 0.783950
+[16:31:15.289] SliceEqOcc diagnostics iteration 11200: L_frac=0.005873 L_entropy=0.003467 L_dev=0.000917; U_frac=0.011812 U_entropy=0.008464 U_dev=0.002667 U_hard_change=0.000000
+[16:31:20.855] iteration 11200 : mean_dice : 0.785282, best_dice : 0.785282
+[16:31:46.198] SliceEqOcc diagnostics iteration 11400: L_frac=0.009858 L_entropy=0.006549 L_dev=0.001900; U_frac=0.007332 U_entropy=0.005335 U_dev=0.001615 U_hard_change=0.000000
+[16:31:51.762] iteration 11400 : mean_dice : 0.778325, best_dice : 0.785282
+[16:32:18.020] SliceEqOcc diagnostics iteration 11600: L_frac=0.010223 L_entropy=0.007335 L_dev=0.002186; U_frac=0.009851 U_entropy=0.006575 U_dev=0.002009 U_hard_change=0.000000
+[16:32:23.675] iteration 11600 : mean_dice : 0.781425, best_dice : 0.785282
+[16:32:48.904] SliceEqOcc diagnostics iteration 11800: L_frac=0.006372 L_entropy=0.004787 L_dev=0.001484; U_frac=0.011204 U_entropy=0.008369 U_dev=0.002501 U_hard_change=0.000000
+[16:32:54.390] iteration 11800 : mean_dice : 0.784639, best_dice : 0.785282
+[16:33:19.532] SliceEqOcc diagnostics iteration 12000: L_frac=0.009969 L_entropy=0.007158 L_dev=0.002165; U_frac=0.007303 U_entropy=0.004722 U_dev=0.001346 U_hard_change=0.000000
+[16:33:25.001] iteration 12000 : mean_dice : 0.776485, best_dice : 0.785282
+[16:33:25.009] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_12000.pth
+[16:33:50.635] SliceEqOcc diagnostics iteration 12200: L_frac=0.011944 L_entropy=0.008055 L_dev=0.002291; U_frac=0.003653 U_entropy=0.002439 U_dev=0.000689 U_hard_change=0.000000
+[16:33:56.224] iteration 12200 : mean_dice : 0.785303, best_dice : 0.785303
+[16:34:21.390] SliceEqOcc diagnostics iteration 12400: L_frac=0.010841 L_entropy=0.007736 L_dev=0.002228; U_frac=0.009872 U_entropy=0.005779 U_dev=0.001542 U_hard_change=0.000000
+[16:34:27.034] iteration 12400 : mean_dice : 0.791338, best_dice : 0.791338
+[16:34:52.886] SliceEqOcc diagnostics iteration 12600: L_frac=0.005885 L_entropy=0.003800 L_dev=0.001036; U_frac=0.006957 U_entropy=0.005041 U_dev=0.001534 U_hard_change=0.000000
+[16:34:58.402] iteration 12600 : mean_dice : 0.780036, best_dice : 0.791338
+[16:35:24.659] SliceEqOcc diagnostics iteration 12800: L_frac=0.010448 L_entropy=0.007749 L_dev=0.002345; U_frac=0.006592 U_entropy=0.004467 U_dev=0.001285 U_hard_change=0.000000
+[16:35:30.218] iteration 12800 : mean_dice : 0.783381, best_dice : 0.791338
+[16:35:55.284] SliceEqOcc diagnostics iteration 13000: L_frac=0.007019 L_entropy=0.004230 L_dev=0.001112; U_frac=0.008297 U_entropy=0.005230 U_dev=0.001507 U_hard_change=0.000000
+[16:36:00.780] iteration 13000 : mean_dice : 0.779715, best_dice : 0.791338
+[16:36:26.038] SliceEqOcc diagnostics iteration 13200: L_frac=0.007575 L_entropy=0.005571 L_dev=0.001693; U_frac=0.009121 U_entropy=0.005800 U_dev=0.001571 U_hard_change=0.000000
+[16:36:31.485] iteration 13200 : mean_dice : 0.777961, best_dice : 0.791338
+[16:36:57.193] SliceEqOcc diagnostics iteration 13400: L_frac=0.004186 L_entropy=0.002947 L_dev=0.000859; U_frac=0.004927 U_entropy=0.003330 U_dev=0.000988 U_hard_change=0.000000
+[16:37:02.738] iteration 13400 : mean_dice : 0.781506, best_dice : 0.791338
+[16:37:27.981] SliceEqOcc diagnostics iteration 13600: L_frac=0.008416 L_entropy=0.005873 L_dev=0.001704; U_frac=0.007043 U_entropy=0.004811 U_dev=0.001406 U_hard_change=0.000000
+[16:37:33.512] iteration 13600 : mean_dice : 0.790362, best_dice : 0.791338
+[16:37:58.686] SliceEqOcc diagnostics iteration 13800: L_frac=0.007514 L_entropy=0.005098 L_dev=0.001532; U_frac=0.012417 U_entropy=0.008158 U_dev=0.002335 U_hard_change=0.000000
+[16:38:04.299] iteration 13800 : mean_dice : 0.784928, best_dice : 0.791338
+[16:38:29.972] SliceEqOcc diagnostics iteration 14000: L_frac=0.004697 L_entropy=0.003205 L_dev=0.000912; U_frac=0.004405 U_entropy=0.002870 U_dev=0.000804 U_hard_change=0.000000
+[16:38:35.543] iteration 14000 : mean_dice : 0.778946, best_dice : 0.791338
+[16:39:00.715] SliceEqOcc diagnostics iteration 14200: L_frac=0.010523 L_entropy=0.006858 L_dev=0.001858; U_frac=0.008176 U_entropy=0.005678 U_dev=0.001725 U_hard_change=0.000000
+[16:39:06.242] iteration 14200 : mean_dice : 0.790432, best_dice : 0.791338
+[16:39:31.593] SliceEqOcc diagnostics iteration 14400: L_frac=0.007425 L_entropy=0.005328 L_dev=0.001642; U_frac=0.007163 U_entropy=0.004859 U_dev=0.001361 U_hard_change=0.000000
+[16:39:37.162] iteration 14400 : mean_dice : 0.789022, best_dice : 0.791338
+[16:40:02.912] SliceEqOcc diagnostics iteration 14600: L_frac=0.009460 L_entropy=0.006713 L_dev=0.001946; U_frac=0.003639 U_entropy=0.002720 U_dev=0.000941 U_hard_change=0.000000
+[16:40:08.552] iteration 14600 : mean_dice : 0.779088, best_dice : 0.791338
+[16:40:33.668] SliceEqOcc diagnostics iteration 14800: L_frac=0.010804 L_entropy=0.008359 L_dev=0.002617; U_frac=0.012160 U_entropy=0.008033 U_dev=0.002181 U_hard_change=0.000000
+[16:40:39.345] iteration 14800 : mean_dice : 0.786598, best_dice : 0.791338
+[16:41:04.467] SliceEqOcc diagnostics iteration 15000: L_frac=0.006457 L_entropy=0.004128 L_dev=0.001143; U_frac=0.010712 U_entropy=0.007154 U_dev=0.002003 U_hard_change=0.000046
+[16:41:10.113] iteration 15000 : mean_dice : 0.785926, best_dice : 0.791338
+[16:41:10.122] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_15000.pth
+[16:41:35.841] SliceEqOcc diagnostics iteration 15200: L_frac=0.011072 L_entropy=0.007689 L_dev=0.002326; U_frac=0.007205 U_entropy=0.003747 U_dev=0.000920 U_hard_change=0.000000
+[16:41:41.505] iteration 15200 : mean_dice : 0.793298, best_dice : 0.793298
+[16:42:06.650] SliceEqOcc diagnostics iteration 15400: L_frac=0.010750 L_entropy=0.006332 L_dev=0.001748; U_frac=0.007633 U_entropy=0.005476 U_dev=0.001674 U_hard_change=0.000000
+[16:42:12.503] iteration 15400 : mean_dice : 0.779076, best_dice : 0.793298
+[16:42:37.950] SliceEqOcc diagnostics iteration 15600: L_frac=0.007971 L_entropy=0.005671 L_dev=0.001661; U_frac=0.008582 U_entropy=0.006065 U_dev=0.001836 U_hard_change=0.000000
+[16:42:43.559] iteration 15600 : mean_dice : 0.787455, best_dice : 0.793298
+[16:43:09.142] SliceEqOcc diagnostics iteration 15800: L_frac=0.008289 L_entropy=0.006051 L_dev=0.001863; U_frac=0.004576 U_entropy=0.003280 U_dev=0.000963 U_hard_change=0.000000
+[16:43:14.635] iteration 15800 : mean_dice : 0.786854, best_dice : 0.793298
+[16:43:39.636] SliceEqOcc diagnostics iteration 16000: L_frac=0.006316 L_entropy=0.004091 L_dev=0.001143; U_frac=0.008284 U_entropy=0.006093 U_dev=0.001884 U_hard_change=0.000000
+[16:43:45.062] iteration 16000 : mean_dice : 0.792262, best_dice : 0.793298
+[16:44:10.343] SliceEqOcc diagnostics iteration 16200: L_frac=0.006298 L_entropy=0.004185 L_dev=0.001223; U_frac=0.011906 U_entropy=0.008040 U_dev=0.002352 U_hard_change=0.000000
+[16:44:15.852] iteration 16200 : mean_dice : 0.786459, best_dice : 0.793298
+[16:44:41.484] SliceEqOcc diagnostics iteration 16400: L_frac=0.006078 L_entropy=0.003785 L_dev=0.001080; U_frac=0.007225 U_entropy=0.005588 U_dev=0.001757 U_hard_change=0.000000
+[16:44:47.033] iteration 16400 : mean_dice : 0.795387, best_dice : 0.795387
+[16:45:12.538] SliceEqOcc diagnostics iteration 16600: L_frac=0.007275 L_entropy=0.005315 L_dev=0.001587; U_frac=0.004237 U_entropy=0.002865 U_dev=0.000856 U_hard_change=0.000000
+[16:45:18.151] iteration 16600 : mean_dice : 0.783521, best_dice : 0.795387
+[16:45:43.283] SliceEqOcc diagnostics iteration 16800: L_frac=0.009261 L_entropy=0.006754 L_dev=0.001974; U_frac=0.004957 U_entropy=0.003272 U_dev=0.000966 U_hard_change=0.000000
+[16:45:48.810] iteration 16800 : mean_dice : 0.793769, best_dice : 0.795387
+[16:46:14.740] SliceEqOcc diagnostics iteration 17000: L_frac=0.009647 L_entropy=0.006264 L_dev=0.001706; U_frac=0.004827 U_entropy=0.003075 U_dev=0.000874 U_hard_change=0.000000
+[16:46:20.232] iteration 17000 : mean_dice : 0.793056, best_dice : 0.795387
+[16:46:45.294] SliceEqOcc diagnostics iteration 17200: L_frac=0.008102 L_entropy=0.004752 L_dev=0.001289; U_frac=0.011372 U_entropy=0.008574 U_dev=0.002765 U_hard_change=0.000145
+[16:46:50.823] iteration 17200 : mean_dice : 0.792878, best_dice : 0.795387
+[16:47:15.875] SliceEqOcc diagnostics iteration 17400: L_frac=0.008452 L_entropy=0.006247 L_dev=0.001884; U_frac=0.009527 U_entropy=0.006510 U_dev=0.001912 U_hard_change=0.000000
+[16:47:21.401] iteration 17400 : mean_dice : 0.795454, best_dice : 0.795454
+[16:47:47.342] SliceEqOcc diagnostics iteration 17600: L_frac=0.008579 L_entropy=0.005358 L_dev=0.001547; U_frac=0.011757 U_entropy=0.007871 U_dev=0.002235 U_hard_change=0.000000
+[16:47:52.856] iteration 17600 : mean_dice : 0.790287, best_dice : 0.795454
+[16:48:18.085] SliceEqOcc diagnostics iteration 17800: L_frac=0.008283 L_entropy=0.005624 L_dev=0.001608; U_frac=0.008907 U_entropy=0.004273 U_dev=0.001051 U_hard_change=0.000000
+[16:48:23.619] iteration 17800 : mean_dice : 0.792041, best_dice : 0.795454
+[16:48:49.424] SliceEqOcc diagnostics iteration 18000: L_frac=0.006978 L_entropy=0.004413 L_dev=0.001249; U_frac=0.007594 U_entropy=0.005610 U_dev=0.001683 U_hard_change=0.000047
+[16:48:54.978] iteration 18000 : mean_dice : 0.800836, best_dice : 0.800836
+[16:48:54.985] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_18000.pth
+[16:49:21.273] SliceEqOcc diagnostics iteration 18200: L_frac=0.007801 L_entropy=0.005508 L_dev=0.001646; U_frac=0.009096 U_entropy=0.006633 U_dev=0.002078 U_hard_change=0.000224
+[16:49:26.919] iteration 18200 : mean_dice : 0.788016, best_dice : 0.800836
+[16:49:52.185] SliceEqOcc diagnostics iteration 18400: L_frac=0.004988 L_entropy=0.003555 L_dev=0.001055; U_frac=0.013674 U_entropy=0.009358 U_dev=0.002741 U_hard_change=0.000000
+[16:49:57.649] iteration 18400 : mean_dice : 0.798361, best_dice : 0.800836
+[16:50:22.788] SliceEqOcc diagnostics iteration 18600: L_frac=0.013274 L_entropy=0.009987 L_dev=0.003061; U_frac=0.008621 U_entropy=0.004771 U_dev=0.001224 U_hard_change=0.000000
+[16:50:28.465] iteration 18600 : mean_dice : 0.793811, best_dice : 0.800836
+[16:50:54.032] SliceEqOcc diagnostics iteration 18800: L_frac=0.007167 L_entropy=0.004424 L_dev=0.001279; U_frac=0.005896 U_entropy=0.004376 U_dev=0.001341 U_hard_change=0.000000
+[16:50:59.634] iteration 18800 : mean_dice : 0.792642, best_dice : 0.800836
+[16:51:24.863] SliceEqOcc diagnostics iteration 19000: L_frac=0.008027 L_entropy=0.006029 L_dev=0.001842; U_frac=0.009026 U_entropy=0.005713 U_dev=0.001727 U_hard_change=0.000000
+[16:51:30.490] iteration 19000 : mean_dice : 0.796599, best_dice : 0.800836
+[16:51:55.646] SliceEqOcc diagnostics iteration 19200: L_frac=0.005569 L_entropy=0.003223 L_dev=0.000896; U_frac=0.006981 U_entropy=0.005337 U_dev=0.001709 U_hard_change=0.000000
+[16:52:01.237] iteration 19200 : mean_dice : 0.792909, best_dice : 0.800836
+[16:52:26.729] SliceEqOcc diagnostics iteration 19400: L_frac=0.007359 L_entropy=0.004455 L_dev=0.001222; U_frac=0.007559 U_entropy=0.005637 U_dev=0.001786 U_hard_change=0.000048
+[16:52:32.338] iteration 19400 : mean_dice : 0.801527, best_dice : 0.801527
+[16:52:57.901] SliceEqOcc diagnostics iteration 19600: L_frac=0.014376 L_entropy=0.009446 L_dev=0.002728; U_frac=0.007420 U_entropy=0.005605 U_dev=0.001776 U_hard_change=0.000084
+[16:53:03.724] iteration 19600 : mean_dice : 0.792989, best_dice : 0.801527
+[16:53:29.092] SliceEqOcc diagnostics iteration 19800: L_frac=0.008221 L_entropy=0.005177 L_dev=0.001407; U_frac=0.005011 U_entropy=0.003342 U_dev=0.001010 U_hard_change=0.000000
+[16:53:34.701] iteration 19800 : mean_dice : 0.795295, best_dice : 0.801527
+[16:54:00.452] SliceEqOcc diagnostics iteration 20000: L_frac=0.009160 L_entropy=0.005950 L_dev=0.001628; U_frac=0.010801 U_entropy=0.008116 U_dev=0.002485 U_hard_change=0.000136
+[16:54:06.032] iteration 20000 : mean_dice : 0.794843, best_dice : 0.801527
+[16:54:31.279] SliceEqOcc diagnostics iteration 20200: L_frac=0.008853 L_entropy=0.006402 L_dev=0.001990; U_frac=0.009244 U_entropy=0.006022 U_dev=0.001788 U_hard_change=0.000020
+[16:54:36.715] iteration 20200 : mean_dice : 0.792189, best_dice : 0.801527
+[16:55:02.034] SliceEqOcc diagnostics iteration 20400: L_frac=0.010071 L_entropy=0.006426 L_dev=0.001779; U_frac=0.012928 U_entropy=0.008149 U_dev=0.002288 U_hard_change=0.000004
+[16:55:07.502] iteration 20400 : mean_dice : 0.790233, best_dice : 0.801527
+[16:55:33.270] SliceEqOcc diagnostics iteration 20600: L_frac=0.005494 L_entropy=0.003616 L_dev=0.001017; U_frac=0.008336 U_entropy=0.005832 U_dev=0.001687 U_hard_change=0.000036
+[16:55:38.852] iteration 20600 : mean_dice : 0.794623, best_dice : 0.801527
+[16:56:04.220] SliceEqOcc diagnostics iteration 20800: L_frac=0.003707 L_entropy=0.002629 L_dev=0.000769; U_frac=0.008630 U_entropy=0.005797 U_dev=0.001691 U_hard_change=0.000069
+[16:56:09.670] iteration 20800 : mean_dice : 0.804280, best_dice : 0.804280
+[16:56:35.196] SliceEqOcc diagnostics iteration 21000: L_frac=0.005914 L_entropy=0.003755 L_dev=0.001034; U_frac=0.007383 U_entropy=0.004927 U_dev=0.001454 U_hard_change=0.000000
+[16:56:41.026] iteration 21000 : mean_dice : 0.792448, best_dice : 0.804280
+[16:56:41.036] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_21000.pth
+[16:57:06.690] SliceEqOcc diagnostics iteration 21200: L_frac=0.009946 L_entropy=0.006651 L_dev=0.001866; U_frac=0.006087 U_entropy=0.004990 U_dev=0.001625 U_hard_change=0.000048
+[16:57:12.242] iteration 21200 : mean_dice : 0.785791, best_dice : 0.804280
+[16:57:37.461] SliceEqOcc diagnostics iteration 21400: L_frac=0.005189 L_entropy=0.004004 L_dev=0.001253; U_frac=0.005534 U_entropy=0.003518 U_dev=0.000956 U_hard_change=0.000000
+[16:57:43.041] iteration 21400 : mean_dice : 0.791595, best_dice : 0.804280
+[16:58:08.160] SliceEqOcc diagnostics iteration 21600: L_frac=0.005641 L_entropy=0.003795 L_dev=0.001086; U_frac=0.009300 U_entropy=0.006078 U_dev=0.001705 U_hard_change=0.000000
+[16:58:13.596] iteration 21600 : mean_dice : 0.799858, best_dice : 0.804280
+[16:58:39.186] SliceEqOcc diagnostics iteration 21800: L_frac=0.008656 L_entropy=0.005796 L_dev=0.001661; U_frac=0.010564 U_entropy=0.006735 U_dev=0.001893 U_hard_change=0.000000
+[16:58:44.663] iteration 21800 : mean_dice : 0.800536, best_dice : 0.804280
+[16:59:09.688] SliceEqOcc diagnostics iteration 22000: L_frac=0.011088 L_entropy=0.008362 L_dev=0.002583; U_frac=0.010850 U_entropy=0.007747 U_dev=0.002283 U_hard_change=0.000000
+[16:59:15.127] iteration 22000 : mean_dice : 0.801529, best_dice : 0.804280
+[16:59:40.291] SliceEqOcc diagnostics iteration 22200: L_frac=0.007877 L_entropy=0.005632 L_dev=0.001647; U_frac=0.014426 U_entropy=0.009941 U_dev=0.002829 U_hard_change=0.000108
+[16:59:45.874] iteration 22200 : mean_dice : 0.781270, best_dice : 0.804280
+[17:00:11.507] SliceEqOcc diagnostics iteration 22400: L_frac=0.009776 L_entropy=0.006773 L_dev=0.001947; U_frac=0.003974 U_entropy=0.002757 U_dev=0.000798 U_hard_change=0.000000
+[17:00:17.004] iteration 22400 : mean_dice : 0.805054, best_dice : 0.805054
+[17:00:42.675] SliceEqOcc diagnostics iteration 22600: L_frac=0.009762 L_entropy=0.007386 L_dev=0.002237; U_frac=0.008579 U_entropy=0.006407 U_dev=0.001883 U_hard_change=0.000000
+[17:00:48.419] iteration 22600 : mean_dice : 0.797085, best_dice : 0.805054
+[17:01:13.517] SliceEqOcc diagnostics iteration 22800: L_frac=0.006579 L_entropy=0.004484 L_dev=0.001303; U_frac=0.011592 U_entropy=0.008460 U_dev=0.002544 U_hard_change=0.000000
+[17:01:18.979] iteration 22800 : mean_dice : 0.804592, best_dice : 0.805054
+[17:01:44.466] SliceEqOcc diagnostics iteration 23000: L_frac=0.006081 L_entropy=0.003533 L_dev=0.000915; U_frac=0.008906 U_entropy=0.006411 U_dev=0.001924 U_hard_change=0.000000
+[17:01:50.010] iteration 23000 : mean_dice : 0.815152, best_dice : 0.815152
+[17:02:15.287] SliceEqOcc diagnostics iteration 23200: L_frac=0.008710 L_entropy=0.005571 L_dev=0.001599; U_frac=0.006612 U_entropy=0.004645 U_dev=0.001393 U_hard_change=0.000000
+[17:02:21.069] iteration 23200 : mean_dice : 0.809930, best_dice : 0.815152
+[17:02:46.466] SliceEqOcc diagnostics iteration 23400: L_frac=0.006401 L_entropy=0.004602 L_dev=0.001334; U_frac=0.007303 U_entropy=0.004907 U_dev=0.001378 U_hard_change=0.000000
+[17:02:51.909] iteration 23400 : mean_dice : 0.798432, best_dice : 0.815152
+[17:03:17.664] SliceEqOcc diagnostics iteration 23600: L_frac=0.003597 L_entropy=0.002564 L_dev=0.000769; U_frac=0.008153 U_entropy=0.005359 U_dev=0.001539 U_hard_change=0.000000
+[17:03:23.199] iteration 23600 : mean_dice : 0.793671, best_dice : 0.815152
+[17:03:48.347] SliceEqOcc diagnostics iteration 23800: L_frac=0.008586 L_entropy=0.005766 L_dev=0.001738; U_frac=0.007512 U_entropy=0.004753 U_dev=0.001288 U_hard_change=0.000000
+[17:03:53.877] iteration 23800 : mean_dice : 0.810185, best_dice : 0.815152
+[17:04:18.834] SliceEqOcc diagnostics iteration 24000: L_frac=0.005666 L_entropy=0.004329 L_dev=0.001368; U_frac=0.004871 U_entropy=0.003076 U_dev=0.000858 U_hard_change=0.000000
+[17:04:24.255] iteration 24000 : mean_dice : 0.805828, best_dice : 0.815152
+[17:04:24.264] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_24000.pth
+[17:04:49.775] SliceEqOcc diagnostics iteration 24200: L_frac=0.006145 L_entropy=0.004549 L_dev=0.001412; U_frac=0.010635 U_entropy=0.006381 U_dev=0.001712 U_hard_change=0.000000
+[17:04:55.228] iteration 24200 : mean_dice : 0.793922, best_dice : 0.815152
+[17:05:20.436] SliceEqOcc diagnostics iteration 24400: L_frac=0.008884 L_entropy=0.005323 L_dev=0.001452; U_frac=0.010496 U_entropy=0.007242 U_dev=0.002141 U_hard_change=0.000000
+[17:05:25.957] iteration 24400 : mean_dice : 0.806546, best_dice : 0.815152
+[17:05:51.223] SliceEqOcc diagnostics iteration 24600: L_frac=0.006545 L_entropy=0.004364 L_dev=0.001196; U_frac=0.008202 U_entropy=0.006218 U_dev=0.001857 U_hard_change=0.000000
+[17:05:56.753] iteration 24600 : mean_dice : 0.801779, best_dice : 0.815152
+[17:06:22.339] SliceEqOcc diagnostics iteration 24800: L_frac=0.010326 L_entropy=0.006401 L_dev=0.001828; U_frac=0.014834 U_entropy=0.011019 U_dev=0.003391 U_hard_change=0.000000
+[17:06:27.834] iteration 24800 : mean_dice : 0.806417, best_dice : 0.815152
+[17:06:52.931] SliceEqOcc diagnostics iteration 25000: L_frac=0.006109 L_entropy=0.003527 L_dev=0.000895; U_frac=0.008526 U_entropy=0.006437 U_dev=0.001985 U_hard_change=0.000000
+[17:06:58.389] iteration 25000 : mean_dice : 0.807052, best_dice : 0.815152
+[17:07:23.562] SliceEqOcc diagnostics iteration 25200: L_frac=0.011702 L_entropy=0.007770 L_dev=0.002179; U_frac=0.011028 U_entropy=0.008089 U_dev=0.002420 U_hard_change=0.000000
+[17:07:29.035] iteration 25200 : mean_dice : 0.809741, best_dice : 0.815152
+[17:07:54.615] SliceEqOcc diagnostics iteration 25400: L_frac=0.010515 L_entropy=0.006932 L_dev=0.001935; U_frac=0.014865 U_entropy=0.010575 U_dev=0.003120 U_hard_change=0.000000
+[17:08:00.066] iteration 25400 : mean_dice : 0.673511, best_dice : 0.815152
+[17:08:25.200] SliceEqOcc diagnostics iteration 25600: L_frac=0.007852 L_entropy=0.005488 L_dev=0.001715; U_frac=0.007001 U_entropy=0.004643 U_dev=0.001324 U_hard_change=0.000000
+[17:08:30.709] iteration 25600 : mean_dice : 0.800198, best_dice : 0.815152
+[17:08:55.988] SliceEqOcc diagnostics iteration 25800: L_frac=0.006298 L_entropy=0.004254 L_dev=0.001216; U_frac=0.011739 U_entropy=0.007948 U_dev=0.002350 U_hard_change=0.000000
+[17:09:01.441] iteration 25800 : mean_dice : 0.810523, best_dice : 0.815152
+[17:09:27.227] SliceEqOcc diagnostics iteration 26000: L_frac=0.006962 L_entropy=0.004464 L_dev=0.001283; U_frac=0.009328 U_entropy=0.006341 U_dev=0.001783 U_hard_change=0.000000
+[17:09:32.713] iteration 26000 : mean_dice : 0.811499, best_dice : 0.815152
+[17:09:57.898] SliceEqOcc diagnostics iteration 26200: L_frac=0.007395 L_entropy=0.004961 L_dev=0.001477; U_frac=0.007675 U_entropy=0.004941 U_dev=0.001381 U_hard_change=0.000000
+[17:10:03.437] iteration 26200 : mean_dice : 0.814569, best_dice : 0.815152
+[17:10:28.611] SliceEqOcc diagnostics iteration 26400: L_frac=0.006872 L_entropy=0.004717 L_dev=0.001391; U_frac=0.009399 U_entropy=0.006536 U_dev=0.001890 U_hard_change=0.000027
+[17:10:34.034] iteration 26400 : mean_dice : 0.808608, best_dice : 0.815152
+[17:10:59.733] SliceEqOcc diagnostics iteration 26600: L_frac=0.010965 L_entropy=0.007036 L_dev=0.002035; U_frac=0.006435 U_entropy=0.004874 U_dev=0.001531 U_hard_change=0.000000
+[17:11:05.212] iteration 26600 : mean_dice : 0.799650, best_dice : 0.815152
+[17:11:30.441] SliceEqOcc diagnostics iteration 26800: L_frac=0.007730 L_entropy=0.005412 L_dev=0.001661; U_frac=0.009684 U_entropy=0.006827 U_dev=0.001945 U_hard_change=0.000000
+[17:11:36.051] iteration 26800 : mean_dice : 0.813480, best_dice : 0.815152
+[17:12:01.193] SliceEqOcc diagnostics iteration 27000: L_frac=0.008430 L_entropy=0.005906 L_dev=0.001760; U_frac=0.013681 U_entropy=0.009055 U_dev=0.002648 U_hard_change=0.000000
+[17:12:06.729] iteration 27000 : mean_dice : 0.812834, best_dice : 0.815152
+[17:12:06.738] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_27000.pth
+[17:12:32.351] SliceEqOcc diagnostics iteration 27200: L_frac=0.009964 L_entropy=0.006967 L_dev=0.002028; U_frac=0.007704 U_entropy=0.005380 U_dev=0.001545 U_hard_change=0.000000
+[17:12:37.809] iteration 27200 : mean_dice : 0.802268, best_dice : 0.815152
+[17:13:03.070] SliceEqOcc diagnostics iteration 27400: L_frac=0.012302 L_entropy=0.008821 L_dev=0.002619; U_frac=0.007435 U_entropy=0.005656 U_dev=0.001859 U_hard_change=0.000060
+[17:13:08.548] iteration 27400 : mean_dice : 0.805202, best_dice : 0.815152
+[17:13:33.767] SliceEqOcc diagnostics iteration 27600: L_frac=0.011883 L_entropy=0.007315 L_dev=0.001982; U_frac=0.008161 U_entropy=0.005253 U_dev=0.001465 U_hard_change=0.000000
+[17:13:39.232] iteration 27600 : mean_dice : 0.802631, best_dice : 0.815152
+[17:14:04.905] SliceEqOcc diagnostics iteration 27800: L_frac=0.009614 L_entropy=0.006445 L_dev=0.001936; U_frac=0.008720 U_entropy=0.006477 U_dev=0.002035 U_hard_change=0.000000
+[17:14:10.404] iteration 27800 : mean_dice : 0.807219, best_dice : 0.815152
+[17:14:35.584] SliceEqOcc diagnostics iteration 28000: L_frac=0.008522 L_entropy=0.006215 L_dev=0.001856; U_frac=0.007520 U_entropy=0.004750 U_dev=0.001327 U_hard_change=0.000000
+[17:14:41.130] iteration 28000 : mean_dice : 0.802888, best_dice : 0.815152
+[17:15:06.093] SliceEqOcc diagnostics iteration 28200: L_frac=0.008762 L_entropy=0.006063 L_dev=0.001767; U_frac=0.010422 U_entropy=0.006439 U_dev=0.001766 U_hard_change=0.000000
+[17:15:11.601] iteration 28200 : mean_dice : 0.806513, best_dice : 0.815152
+[17:15:37.244] SliceEqOcc diagnostics iteration 28400: L_frac=0.005801 L_entropy=0.003437 L_dev=0.000953; U_frac=0.009018 U_entropy=0.005803 U_dev=0.001674 U_hard_change=0.000000
+[17:15:42.807] iteration 28400 : mean_dice : 0.809863, best_dice : 0.815152
+[17:16:07.848] SliceEqOcc diagnostics iteration 28600: L_frac=0.010222 L_entropy=0.007228 L_dev=0.002193; U_frac=0.009688 U_entropy=0.006524 U_dev=0.001854 U_hard_change=0.000000
+[17:16:13.345] iteration 28600 : mean_dice : 0.800014, best_dice : 0.815152
+[17:16:38.608] SliceEqOcc diagnostics iteration 28800: L_frac=0.008492 L_entropy=0.005514 L_dev=0.001552; U_frac=0.007804 U_entropy=0.005667 U_dev=0.001684 U_hard_change=0.000000
+[17:16:44.108] iteration 28800 : mean_dice : 0.816474, best_dice : 0.816474
+[17:17:09.724] SliceEqOcc diagnostics iteration 29000: L_frac=0.010109 L_entropy=0.006191 L_dev=0.001746; U_frac=0.015469 U_entropy=0.010504 U_dev=0.003042 U_hard_change=0.000139
+[17:17:15.279] iteration 29000 : mean_dice : 0.817338, best_dice : 0.817338
+[17:17:40.474] SliceEqOcc diagnostics iteration 29200: L_frac=0.010853 L_entropy=0.006853 L_dev=0.001950; U_frac=0.008872 U_entropy=0.006036 U_dev=0.001791 U_hard_change=0.000000
+[17:17:45.951] iteration 29200 : mean_dice : 0.811964, best_dice : 0.817338
+[17:18:11.268] SliceEqOcc diagnostics iteration 29400: L_frac=0.008547 L_entropy=0.005477 L_dev=0.001525; U_frac=0.009313 U_entropy=0.006463 U_dev=0.001934 U_hard_change=0.000000
+[17:18:16.715] iteration 29400 : mean_dice : 0.798431, best_dice : 0.817338
+[17:18:42.837] SliceEqOcc diagnostics iteration 29600: L_frac=0.006847 L_entropy=0.004844 L_dev=0.001457; U_frac=0.005714 U_entropy=0.003923 U_dev=0.001138 U_hard_change=0.000000
+[17:18:48.253] iteration 29600 : mean_dice : 0.785954, best_dice : 0.817338
+[17:19:13.359] SliceEqOcc diagnostics iteration 29800: L_frac=0.008238 L_entropy=0.006115 L_dev=0.001815; U_frac=0.004793 U_entropy=0.002880 U_dev=0.000837 U_hard_change=0.000000
+[17:19:18.774] iteration 29800 : mean_dice : 0.811292, best_dice : 0.817338
+[17:19:43.790] SliceEqOcc diagnostics iteration 30000: L_frac=0.008773 L_entropy=0.006654 L_dev=0.002034; U_frac=0.005947 U_entropy=0.004403 U_dev=0.001322 U_hard_change=0.000000
+[17:19:49.236] iteration 30000 : mean_dice : 0.817373, best_dice : 0.817373
+[17:19:49.244] save model to ../model/SliceEqOcc_PROMISE12_7_labeled/self_train/unet/iter_30000.pth

@@ -1,0 +1,116 @@
+[10:11:57.282] ================ START BMER SELF-TRAINING ================
+[10:11:57.282] Namespace(root_path='/home/aiteam/zhengtaoma/Baseline/data/PROMISE12_h5_training_source', exp='BMER_PROMISE12', model='unet', pre_iterations=10000, max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, patch_size=[256, 256], seed=1337, num_classes=2, labeled_bs=12, labelnum=7, ema_decay=0.99, consistency_type='mse', consistency=0.1, consistency_rampup=200.0, bmer_radius=8, bmer_sectors=16, bmer_position_bins=3, bmer_probability=0.5, bmer_strength_min=0.5, bmer_strength_max=1.0, bmer_min_foreground_pixels=32, bmer_bank_batch_size=24)
+[10:11:57.320] Loaded pre-trained weights and optimizer from ../model/BMER_PROMISE12_7_labeled/pre_train/unet/unet_best_model.pth
+[10:12:03.183] Frozen BMER bank: {'version': 1, 'radius': 8, 'sectors': 16, 'position_bins': 3, 'min_foreground_pixels': 32, 'counts': {0: 94, 1: 209, 2: 68}, 'total': 371, 'skipped': 378, 'frozen': True}
+[10:12:03.183] Saved BMER bank to ../model/BMER_PROMISE12_7_labeled/self_train/unet/bmer_profile_bank.pt
+[10:12:03.189] 15 iterations per epoch
+[10:12:35.265] iteration 200 : mean_dice : 0.675111, best_dice : 0.675111
+[10:13:06.884] iteration 400 : mean_dice : 0.662822, best_dice : 0.675111
+[10:13:38.583] iteration 600 : mean_dice : 0.713700, best_dice : 0.713700
+[10:14:10.706] iteration 800 : mean_dice : 0.635398, best_dice : 0.713700
+[10:14:42.437] iteration 1000 : mean_dice : 0.651695, best_dice : 0.713700
+[10:15:15.203] iteration 1200 : mean_dice : 0.720936, best_dice : 0.720936
+[10:15:47.069] iteration 1400 : mean_dice : 0.581734, best_dice : 0.720936
+[10:16:19.854] iteration 1600 : mean_dice : 0.671083, best_dice : 0.720936
+[10:16:51.596] iteration 1800 : mean_dice : 0.725424, best_dice : 0.725424
+[10:17:23.537] iteration 2000 : mean_dice : 0.695238, best_dice : 0.725424
+[10:17:55.251] iteration 2200 : mean_dice : 0.682751, best_dice : 0.725424
+[10:18:27.113] iteration 2400 : mean_dice : 0.718115, best_dice : 0.725424
+[10:18:59.224] iteration 2600 : mean_dice : 0.697166, best_dice : 0.725424
+[10:19:30.889] iteration 2800 : mean_dice : 0.713142, best_dice : 0.725424
+[10:20:02.625] iteration 3000 : mean_dice : 0.721398, best_dice : 0.725424
+[10:20:02.633] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_3000.pth
+[10:20:34.715] iteration 3200 : mean_dice : 0.704481, best_dice : 0.725424
+[10:21:06.603] iteration 3400 : mean_dice : 0.705686, best_dice : 0.725424
+[10:21:38.391] iteration 3600 : mean_dice : 0.727007, best_dice : 0.727007
+[10:22:10.172] iteration 3800 : mean_dice : 0.706779, best_dice : 0.727007
+[10:22:41.928] iteration 4000 : mean_dice : 0.731447, best_dice : 0.731447
+[10:23:14.399] iteration 4200 : mean_dice : 0.749069, best_dice : 0.749069
+[10:23:47.294] iteration 4400 : mean_dice : 0.748891, best_dice : 0.749069
+[10:24:19.184] iteration 4600 : mean_dice : 0.731464, best_dice : 0.749069
+[10:24:50.939] iteration 4800 : mean_dice : 0.747917, best_dice : 0.749069
+[10:25:22.815] iteration 5000 : mean_dice : 0.738199, best_dice : 0.749069
+[10:25:54.564] iteration 5200 : mean_dice : 0.739612, best_dice : 0.749069
+[10:26:26.375] iteration 5400 : mean_dice : 0.742815, best_dice : 0.749069
+[10:26:59.092] iteration 5600 : mean_dice : 0.751196, best_dice : 0.751196
+[10:27:31.625] iteration 5800 : mean_dice : 0.730378, best_dice : 0.751196
+[10:28:03.560] iteration 6000 : mean_dice : 0.731035, best_dice : 0.751196
+[10:28:03.570] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_6000.pth
+[10:28:35.728] iteration 6200 : mean_dice : 0.745349, best_dice : 0.751196
+[10:29:07.711] iteration 6400 : mean_dice : 0.756873, best_dice : 0.756873
+[10:29:39.393] iteration 6600 : mean_dice : 0.743606, best_dice : 0.756873
+[10:30:12.189] iteration 6800 : mean_dice : 0.752430, best_dice : 0.756873
+[10:30:44.107] iteration 7000 : mean_dice : 0.746805, best_dice : 0.756873
+[10:31:15.702] iteration 7200 : mean_dice : 0.758663, best_dice : 0.758663
+[10:31:47.626] iteration 7400 : mean_dice : 0.757288, best_dice : 0.758663
+[10:32:19.692] iteration 7600 : mean_dice : 0.752353, best_dice : 0.758663
+[10:32:51.958] iteration 7800 : mean_dice : 0.767890, best_dice : 0.767890
+[10:33:23.902] iteration 8000 : mean_dice : 0.764044, best_dice : 0.767890
+[10:33:55.652] iteration 8200 : mean_dice : 0.751297, best_dice : 0.767890
+[10:34:27.922] iteration 8400 : mean_dice : 0.751996, best_dice : 0.767890
+[10:34:59.996] iteration 8600 : mean_dice : 0.746252, best_dice : 0.767890
+[10:35:31.633] iteration 8800 : mean_dice : 0.768274, best_dice : 0.768274
+[10:36:03.461] iteration 9000 : mean_dice : 0.757357, best_dice : 0.768274
+[10:36:03.470] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_9000.pth
+[10:36:36.300] iteration 9200 : mean_dice : 0.770691, best_dice : 0.770691
+[10:37:08.037] iteration 9400 : mean_dice : 0.759842, best_dice : 0.770691
+[10:37:40.372] iteration 9600 : mean_dice : 0.764461, best_dice : 0.770691
+[10:38:12.456] iteration 9800 : mean_dice : 0.775367, best_dice : 0.775367
+[10:38:44.732] iteration 10000 : mean_dice : 0.755328, best_dice : 0.775367
+[10:39:16.711] iteration 10200 : mean_dice : 0.771065, best_dice : 0.775367
+[10:39:48.847] iteration 10400 : mean_dice : 0.772678, best_dice : 0.775367
+[10:40:20.485] iteration 10600 : mean_dice : 0.768692, best_dice : 0.775367
+[10:40:52.158] iteration 10800 : mean_dice : 0.773797, best_dice : 0.775367
+[10:41:24.139] iteration 11000 : mean_dice : 0.772083, best_dice : 0.775367
+[10:41:55.938] iteration 11200 : mean_dice : 0.782094, best_dice : 0.782094
+[10:42:28.499] iteration 11400 : mean_dice : 0.781979, best_dice : 0.782094
+[10:43:00.335] iteration 11600 : mean_dice : 0.776544, best_dice : 0.782094
+[10:43:32.069] iteration 11800 : mean_dice : 0.768007, best_dice : 0.782094
+[10:44:03.674] iteration 12000 : mean_dice : 0.778191, best_dice : 0.782094
+[10:44:03.683] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_12000.pth
+[10:44:35.648] iteration 12200 : mean_dice : 0.778434, best_dice : 0.782094
+[10:45:07.388] iteration 12400 : mean_dice : 0.778590, best_dice : 0.782094
+[10:45:39.055] iteration 12600 : mean_dice : 0.786754, best_dice : 0.786754
+[10:46:10.915] iteration 12800 : mean_dice : 0.781128, best_dice : 0.786754
+[10:46:43.274] iteration 13000 : mean_dice : 0.782380, best_dice : 0.786754
+[10:47:15.172] iteration 13200 : mean_dice : 0.777587, best_dice : 0.786754
+[10:47:47.084] iteration 13400 : mean_dice : 0.781799, best_dice : 0.786754
+[10:48:18.731] iteration 13600 : mean_dice : 0.775734, best_dice : 0.786754
+[10:48:50.362] iteration 13800 : mean_dice : 0.781952, best_dice : 0.786754
+[10:49:22.267] iteration 14000 : mean_dice : 0.780334, best_dice : 0.786754
+[10:49:54.066] iteration 14200 : mean_dice : 0.776265, best_dice : 0.786754
+[10:50:25.833] iteration 14400 : mean_dice : 0.782225, best_dice : 0.786754
+[10:50:57.893] iteration 14600 : mean_dice : 0.781562, best_dice : 0.786754
+[10:51:29.529] iteration 14800 : mean_dice : 0.777293, best_dice : 0.786754
+[10:52:01.159] iteration 15000 : mean_dice : 0.771937, best_dice : 0.786754
+[10:52:01.169] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_15000.pth
+[10:52:33.371] iteration 15200 : mean_dice : 0.782345, best_dice : 0.786754
+[10:53:05.080] iteration 15400 : mean_dice : 0.788501, best_dice : 0.788501
+[10:53:37.016] iteration 15600 : mean_dice : 0.780107, best_dice : 0.788501
+[10:54:09.277] iteration 15800 : mean_dice : 0.766026, best_dice : 0.788501
+[10:54:40.971] iteration 16000 : mean_dice : 0.787317, best_dice : 0.788501
+[10:55:12.534] iteration 16200 : mean_dice : 0.785807, best_dice : 0.788501
+[10:55:44.380] iteration 16400 : mean_dice : 0.782389, best_dice : 0.788501
+[10:56:16.134] iteration 16600 : mean_dice : 0.768982, best_dice : 0.788501
+[10:56:47.769] iteration 16800 : mean_dice : 0.778794, best_dice : 0.788501
+[10:57:19.633] iteration 17000 : mean_dice : 0.765107, best_dice : 0.788501
+[10:57:51.287] iteration 17200 : mean_dice : 0.775319, best_dice : 0.788501
+[10:58:22.971] iteration 17400 : mean_dice : 0.773810, best_dice : 0.788501
+[10:58:54.927] iteration 17600 : mean_dice : 0.768663, best_dice : 0.788501
+[10:59:26.603] iteration 17800 : mean_dice : 0.773578, best_dice : 0.788501
+[10:59:58.372] iteration 18000 : mean_dice : 0.775434, best_dice : 0.788501
+[10:59:58.381] save model to ../model/BMER_PROMISE12_7_labeled/self_train/unet/iter_18000.pth
+[11:00:30.252] iteration 18200 : mean_dice : 0.766097, best_dice : 0.788501
+[11:01:01.994] iteration 18400 : mean_dice : 0.774122, best_dice : 0.788501
+[11:01:33.509] iteration 18600 : mean_dice : 0.762705, best_dice : 0.788501
+[11:02:05.435] iteration 18800 : mean_dice : 0.763228, best_dice : 0.788501
+[11:02:37.205] iteration 19000 : mean_dice : 0.766545, best_dice : 0.788501
+[11:03:08.828] iteration 19200 : mean_dice : 0.772773, best_dice : 0.788501
+[11:03:40.926] iteration 19400 : mean_dice : 0.762451, best_dice : 0.788501
+[11:04:12.642] iteration 19600 : mean_dice : 0.773235, best_dice : 0.788501
+[11:04:44.924] iteration 19800 : mean_dice : 0.767872, best_dice : 0.788501
+[11:05:16.868] iteration 20000 : mean_dice : 0.764974, best_dice : 0.788501
+[11:05:48.640] iteration 20200 : mean_dice : 0.767861, best_dice : 0.788501
+[11:06:20.347] iteration 20400 : mean_dice : 0.770734, best_dice : 0.788501
+[11:06:52.296] iteration 20600 : mean_dice : 0.764232, best_dice : 0.788501
+[11:07:24.031] iteration 20800 : mean_dice : 0.767375, best_dice : 0.788501

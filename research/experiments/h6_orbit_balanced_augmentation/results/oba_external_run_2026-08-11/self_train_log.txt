@@ -1,0 +1,165 @@
+[12:07:05.534] ================ START OBA SELF-TRAINING ================
+[12:07:05.534] Namespace(root_path='/home/aiteam/zhengtaoma/Baseline/data/PROMISE12_h5_training_source', exp='OBA_PROMISE12', model='unet', pre_iterations=10000, max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, patch_size=[256, 256], seed=1337, num_classes=2, labeled_bs=12, labelnum=7, ema_decay=0.99, consistency_type='mse', consistency=0.1, consistency_rampup=200.0, oba_augmentations='log_gamma,smooth_bias,gaussian_noise', oba_gamma_min=0.1, oba_gamma_max=0.4, oba_bias_min=0.1, oba_bias_max=0.35, oba_noise_min=0.05, oba_noise_max=0.15, oba_bias_grid_size=8)
+[12:07:05.572] Loaded pre-trained weights and optimizer from ../model/OBA_PROMISE12_7_labeled/pre_train/unet/unet_best_model.pth
+[12:07:05.573] 15 iterations per epoch
+[12:07:05.573] OBA post-warmup student batch: 36 = 12 labeled + 2 x 12 unlabeled
+[12:07:25.063] iteration 200 : mean_dice : 0.604100, best_dice : 0.604100
+[12:07:44.183] iteration 400 : mean_dice : 0.621809, best_dice : 0.621809
+[12:08:03.408] iteration 600 : mean_dice : 0.641268, best_dice : 0.641268
+[12:08:22.652] iteration 800 : mean_dice : 0.621633, best_dice : 0.641268
+[12:08:41.806] iteration 1000 : mean_dice : 0.636833, best_dice : 0.641268
+[12:09:04.768] iteration 1200 : mean_dice : 0.642570, best_dice : 0.642570
+[12:09:27.846] iteration 1400 : mean_dice : 0.617795, best_dice : 0.642570
+[12:09:50.834] iteration 1600 : mean_dice : 0.681954, best_dice : 0.681954
+[12:10:13.791] iteration 1800 : mean_dice : 0.692076, best_dice : 0.692076
+[12:10:37.332] iteration 2000 : mean_dice : 0.641159, best_dice : 0.692076
+[12:11:00.154] iteration 2200 : mean_dice : 0.666726, best_dice : 0.692076
+[12:11:23.533] iteration 2400 : mean_dice : 0.683034, best_dice : 0.692076
+[12:11:46.696] iteration 2600 : mean_dice : 0.666427, best_dice : 0.692076
+[12:12:09.437] iteration 2800 : mean_dice : 0.668687, best_dice : 0.692076
+[12:12:32.204] iteration 3000 : mean_dice : 0.673571, best_dice : 0.692076
+[12:12:32.213] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_3000.pth
+[12:12:55.331] iteration 3200 : mean_dice : 0.712665, best_dice : 0.712665
+[12:13:18.212] iteration 3400 : mean_dice : 0.712263, best_dice : 0.712665
+[12:13:41.371] iteration 3600 : mean_dice : 0.689420, best_dice : 0.712665
+[12:14:04.818] iteration 3800 : mean_dice : 0.711078, best_dice : 0.712665
+[12:14:27.629] iteration 4000 : mean_dice : 0.706875, best_dice : 0.712665
+[12:14:50.462] iteration 4200 : mean_dice : 0.736058, best_dice : 0.736058
+[12:15:13.562] iteration 4400 : mean_dice : 0.713194, best_dice : 0.736058
+[12:15:36.561] iteration 4600 : mean_dice : 0.739341, best_dice : 0.739341
+[12:15:59.412] iteration 4800 : mean_dice : 0.719284, best_dice : 0.739341
+[12:16:22.629] iteration 5000 : mean_dice : 0.751103, best_dice : 0.751103
+[12:16:45.504] iteration 5200 : mean_dice : 0.756371, best_dice : 0.756371
+[12:17:08.771] iteration 5400 : mean_dice : 0.754807, best_dice : 0.756371
+[12:17:31.954] iteration 5600 : mean_dice : 0.736049, best_dice : 0.756371
+[12:17:54.802] iteration 5800 : mean_dice : 0.735588, best_dice : 0.756371
+[12:18:17.548] iteration 6000 : mean_dice : 0.755919, best_dice : 0.756371
+[12:18:17.557] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_6000.pth
+[12:18:40.688] iteration 6200 : mean_dice : 0.750816, best_dice : 0.756371
+[12:19:03.451] iteration 6400 : mean_dice : 0.743933, best_dice : 0.756371
+[12:19:26.245] iteration 6600 : mean_dice : 0.754954, best_dice : 0.756371
+[12:19:49.394] iteration 6800 : mean_dice : 0.759756, best_dice : 0.759756
+[12:20:12.875] iteration 7000 : mean_dice : 0.773373, best_dice : 0.773373
+[12:20:36.058] iteration 7200 : mean_dice : 0.776164, best_dice : 0.776164
+[12:20:59.434] iteration 7400 : mean_dice : 0.771265, best_dice : 0.776164
+[12:21:22.315] iteration 7600 : mean_dice : 0.769341, best_dice : 0.776164
+[12:21:45.207] iteration 7800 : mean_dice : 0.767658, best_dice : 0.776164
+[12:22:08.359] iteration 8000 : mean_dice : 0.776951, best_dice : 0.776951
+[12:22:31.233] iteration 8200 : mean_dice : 0.770926, best_dice : 0.776951
+[12:22:54.066] iteration 8400 : mean_dice : 0.783630, best_dice : 0.783630
+[12:23:17.121] iteration 8600 : mean_dice : 0.769817, best_dice : 0.783630
+[12:23:39.933] iteration 8800 : mean_dice : 0.772330, best_dice : 0.783630
+[12:24:02.911] iteration 9000 : mean_dice : 0.774338, best_dice : 0.783630
+[12:24:02.920] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_9000.pth
+[12:24:26.074] iteration 9200 : mean_dice : 0.780152, best_dice : 0.783630
+[12:24:48.915] iteration 9400 : mean_dice : 0.787683, best_dice : 0.787683
+[12:25:12.364] iteration 9600 : mean_dice : 0.775313, best_dice : 0.787683
+[12:25:35.502] iteration 9800 : mean_dice : 0.780841, best_dice : 0.787683
+[12:25:58.320] iteration 10000 : mean_dice : 0.775065, best_dice : 0.787683
+[12:26:21.147] iteration 10200 : mean_dice : 0.771700, best_dice : 0.787683
+[12:26:44.234] iteration 10400 : mean_dice : 0.784237, best_dice : 0.787683
+[12:27:07.010] iteration 10600 : mean_dice : 0.782766, best_dice : 0.787683
+[12:27:29.779] iteration 10800 : mean_dice : 0.789114, best_dice : 0.789114
+[12:27:52.900] iteration 11000 : mean_dice : 0.788632, best_dice : 0.789114
+[12:28:16.326] iteration 11200 : mean_dice : 0.784794, best_dice : 0.789114
+[12:28:39.307] iteration 11400 : mean_dice : 0.785644, best_dice : 0.789114
+[12:29:02.399] iteration 11600 : mean_dice : 0.788627, best_dice : 0.789114
+[12:29:25.314] iteration 11800 : mean_dice : 0.782134, best_dice : 0.789114
+[12:29:48.145] iteration 12000 : mean_dice : 0.784505, best_dice : 0.789114
+[12:29:48.154] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_12000.pth
+[12:30:11.343] iteration 12200 : mean_dice : 0.787407, best_dice : 0.789114
+[12:30:34.211] iteration 12400 : mean_dice : 0.787979, best_dice : 0.789114
+[12:30:57.059] iteration 12600 : mean_dice : 0.784190, best_dice : 0.789114
+[12:31:20.180] iteration 12800 : mean_dice : 0.783574, best_dice : 0.789114
+[12:31:43.016] iteration 13000 : mean_dice : 0.786951, best_dice : 0.789114
+[12:32:05.936] iteration 13200 : mean_dice : 0.793552, best_dice : 0.793552
+[12:32:29.072] iteration 13400 : mean_dice : 0.789763, best_dice : 0.793552
+[12:32:51.970] iteration 13600 : mean_dice : 0.787320, best_dice : 0.793552
+[12:33:14.814] iteration 13800 : mean_dice : 0.793850, best_dice : 0.793850
+[12:33:37.922] iteration 14000 : mean_dice : 0.789833, best_dice : 0.793850
+[12:34:00.786] iteration 14200 : mean_dice : 0.789692, best_dice : 0.793850
+[12:34:23.699] iteration 14400 : mean_dice : 0.785705, best_dice : 0.793850
+[12:34:46.862] iteration 14600 : mean_dice : 0.786381, best_dice : 0.793850
+[12:35:09.616] iteration 14800 : mean_dice : 0.785611, best_dice : 0.793850
+[12:35:32.404] iteration 15000 : mean_dice : 0.786096, best_dice : 0.793850
+[12:35:32.413] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_15000.pth
+[12:35:55.510] iteration 15200 : mean_dice : 0.779410, best_dice : 0.793850
+[12:36:18.271] iteration 15400 : mean_dice : 0.780564, best_dice : 0.793850
+[12:36:40.961] iteration 15600 : mean_dice : 0.783623, best_dice : 0.793850
+[12:37:04.205] iteration 15800 : mean_dice : 0.783511, best_dice : 0.793850
+[12:37:26.982] iteration 16000 : mean_dice : 0.789904, best_dice : 0.793850
+[12:37:49.816] iteration 16200 : mean_dice : 0.780232, best_dice : 0.793850
+[12:38:12.806] iteration 16400 : mean_dice : 0.781092, best_dice : 0.793850
+[12:38:35.590] iteration 16600 : mean_dice : 0.780236, best_dice : 0.793850
+[12:38:58.371] iteration 16800 : mean_dice : 0.778829, best_dice : 0.793850
+[12:39:21.254] iteration 17000 : mean_dice : 0.789226, best_dice : 0.793850
+[12:39:44.103] iteration 17200 : mean_dice : 0.790062, best_dice : 0.793850
+[12:40:06.921] iteration 17400 : mean_dice : 0.789881, best_dice : 0.793850
+[12:40:30.047] iteration 17600 : mean_dice : 0.771514, best_dice : 0.793850
+[12:40:52.867] iteration 17800 : mean_dice : 0.766036, best_dice : 0.793850
+[12:41:15.632] iteration 18000 : mean_dice : 0.768372, best_dice : 0.793850
+[12:41:15.640] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_18000.pth
+[12:41:38.725] iteration 18200 : mean_dice : 0.770753, best_dice : 0.793850
+[12:42:01.413] iteration 18400 : mean_dice : 0.765474, best_dice : 0.793850
+[12:42:24.145] iteration 18600 : mean_dice : 0.753032, best_dice : 0.793850
+[12:42:47.259] iteration 18800 : mean_dice : 0.762081, best_dice : 0.793850
+[12:43:10.026] iteration 19000 : mean_dice : 0.769352, best_dice : 0.793850
+[12:43:32.842] iteration 19200 : mean_dice : 0.764794, best_dice : 0.793850
+[12:43:55.853] iteration 19400 : mean_dice : 0.768051, best_dice : 0.793850
+[12:44:18.526] iteration 19600 : mean_dice : 0.739854, best_dice : 0.793850
+[12:44:41.370] iteration 19800 : mean_dice : 0.747549, best_dice : 0.793850
+[12:45:04.334] iteration 20000 : mean_dice : 0.753770, best_dice : 0.793850
+[12:45:27.177] iteration 20200 : mean_dice : 0.748348, best_dice : 0.793850
+[12:45:49.907] iteration 20400 : mean_dice : 0.757319, best_dice : 0.793850
+[12:46:13.003] iteration 20600 : mean_dice : 0.749748, best_dice : 0.793850
+[12:46:35.864] iteration 20800 : mean_dice : 0.755264, best_dice : 0.793850
+[12:46:58.631] iteration 21000 : mean_dice : 0.757773, best_dice : 0.793850
+[12:46:58.639] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_21000.pth
+[12:47:21.639] iteration 21200 : mean_dice : 0.748862, best_dice : 0.793850
+[12:47:44.401] iteration 21400 : mean_dice : 0.748279, best_dice : 0.793850
+[12:48:07.438] iteration 21600 : mean_dice : 0.744789, best_dice : 0.793850
+[12:48:30.426] iteration 21800 : mean_dice : 0.748298, best_dice : 0.793850
+[12:48:53.139] iteration 22000 : mean_dice : 0.737953, best_dice : 0.793850
+[12:49:15.892] iteration 22200 : mean_dice : 0.733838, best_dice : 0.793850
+[12:49:39.047] iteration 22400 : mean_dice : 0.750349, best_dice : 0.793850
+[12:50:01.852] iteration 22600 : mean_dice : 0.733777, best_dice : 0.793850
+[12:50:24.612] iteration 22800 : mean_dice : 0.747243, best_dice : 0.793850
+[12:50:47.695] iteration 23000 : mean_dice : 0.735550, best_dice : 0.793850
+[12:51:10.451] iteration 23200 : mean_dice : 0.751916, best_dice : 0.793850
+[12:51:33.338] iteration 23400 : mean_dice : 0.755015, best_dice : 0.793850
+[12:51:56.459] iteration 23600 : mean_dice : 0.734223, best_dice : 0.793850
+[12:52:19.290] iteration 23800 : mean_dice : 0.757757, best_dice : 0.793850
+[12:52:42.090] iteration 24000 : mean_dice : 0.735329, best_dice : 0.793850
+[12:52:42.099] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_24000.pth
+[12:53:05.193] iteration 24200 : mean_dice : 0.719555, best_dice : 0.793850
+[12:53:28.166] iteration 24400 : mean_dice : 0.728247, best_dice : 0.793850
+[12:53:50.836] iteration 24600 : mean_dice : 0.729225, best_dice : 0.793850
+[12:54:13.914] iteration 24800 : mean_dice : 0.729207, best_dice : 0.793850
+[12:54:36.831] iteration 25000 : mean_dice : 0.740820, best_dice : 0.793850
+[12:54:59.685] iteration 25200 : mean_dice : 0.738452, best_dice : 0.793850
+[12:55:22.788] iteration 25400 : mean_dice : 0.722306, best_dice : 0.793850
+[12:55:45.585] iteration 25600 : mean_dice : 0.740615, best_dice : 0.793850
+[12:56:08.332] iteration 25800 : mean_dice : 0.718073, best_dice : 0.793850
+[12:56:31.459] iteration 26000 : mean_dice : 0.708707, best_dice : 0.793850
+[12:56:54.193] iteration 26200 : mean_dice : 0.738204, best_dice : 0.793850
+[12:57:17.134] iteration 26400 : mean_dice : 0.732280, best_dice : 0.793850
+[12:57:40.272] iteration 26600 : mean_dice : 0.719302, best_dice : 0.793850
+[12:58:03.036] iteration 26800 : mean_dice : 0.727665, best_dice : 0.793850
+[12:58:25.868] iteration 27000 : mean_dice : 0.726136, best_dice : 0.793850
+[12:58:25.877] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_27000.pth
+[12:58:49.207] iteration 27200 : mean_dice : 0.710663, best_dice : 0.793850
+[12:59:12.201] iteration 27400 : mean_dice : 0.708501, best_dice : 0.793850
+[12:59:35.207] iteration 27600 : mean_dice : 0.715392, best_dice : 0.793850
+[12:59:58.561] iteration 27800 : mean_dice : 0.722061, best_dice : 0.793850
+[13:00:21.364] iteration 28000 : mean_dice : 0.710570, best_dice : 0.793850
+[13:00:44.281] iteration 28200 : mean_dice : 0.696766, best_dice : 0.793850
+[13:01:07.228] iteration 28400 : mean_dice : 0.740693, best_dice : 0.793850
+[13:01:30.120] iteration 28600 : mean_dice : 0.699056, best_dice : 0.793850
+[13:01:53.277] iteration 28800 : mean_dice : 0.701681, best_dice : 0.793850
+[13:02:16.534] iteration 29000 : mean_dice : 0.709662, best_dice : 0.793850
+[13:02:39.379] iteration 29200 : mean_dice : 0.724380, best_dice : 0.793850
+[13:03:02.327] iteration 29400 : mean_dice : 0.723524, best_dice : 0.793850
+[13:03:25.461] iteration 29600 : mean_dice : 0.718713, best_dice : 0.793850
+[13:03:48.820] iteration 29800 : mean_dice : 0.688310, best_dice : 0.793850
+[13:04:11.779] iteration 30000 : mean_dice : 0.699411, best_dice : 0.793850
+[13:04:11.788] save model to ../model/OBA_PROMISE12_7_labeled/self_train/unet/iter_30000.pth

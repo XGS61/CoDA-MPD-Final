@@ -1,0 +1,640 @@
+[09:12:36.192] ============= START SliceEqOccOAACStrong SELF-TRAINING =============
+[09:12:36.192] Namespace(root_path='/home/aiteam/zhengtaoma/Baseline/data/PROMISE12_h5_training_source', exp='SliceEqOccOAACStrong_PROMISE12', model='unet', max_iterations=30000, batch_size=24, deterministic=1, base_lr=0.01, patch_size=[256, 256], seed=1337, num_classes=2, labeled_bs=12, labelnum=7, ema_decay=0.99, consistency_type='mse', consistency=0.1, consistency_rampup=200.0, pretrained_checkpoint='/home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth', sliceeq_radius=1, sliceeq_sigma_min=0.45, sliceeq_sigma_max=0.85, sliceeq_phase_min=-0.25, sliceeq_phase_max=0.25)
+[09:12:36.192] OAAC Strong-all post-acquisition U appearance: log-gamma=[-0.25,0.25], log-contrast=[-0.1875,0.1875], brightness-span=[-0.125,0.125], probability=1.0, seed=1339
+[09:12:36.192] H7.15 periodic raw-student checkpoints: every 1000 iterations; validation and best-model selection unchanged
+[09:12:36.192] OAAC keeps L branches, occupancy targets, student batch36, teacher, loss, validation and inference unchanged
+[09:12:36.575] OAAC CUDA smoke passed: L/targets exact, U active/monotonic/finite, independent RNG reproducible and parent-visible RNG unchanged
+[09:12:36.624] Loaded shared pretrain checkpoint: /home/aiteam/zhengtaoma/UniMatch_35_5_10_Pre10000_Self30000_label7_seed1337_7_labeled/pre_train/unet/unet_best_model.pth
+[09:12:36.625] Shared pretrain SHA-256: 49e8883039a5712102dc17c5277009504b55c232a10a0af1de4d26fbb414b9b9
+[09:12:36.627] 15 iterations per epoch
+[09:12:36.627] SliceEqOcc profile: offsets=(-1,0,1), sigma=[0.450, 0.850], phase=[-0.250, 0.250]
+[09:12:36.627] SliceEqOcc effective student batch after warmup: 36 (12 original-L + 12 reacquired-L + 12 reacquired-U)
+[09:12:36.627] SliceEqOcc objective: Lsup=0.5*(L_original_hard + L_reacquired_labeled_soft); total=Lsup+lambda*L_unlabeled_soft
+[09:12:36.627] SliceEqOcc profile RNG seeds: unlabeled=1337, labeled=1338
+[09:12:59.426] SliceEqOcc train iteration 200: lambda=0.003541 loss(original/L-eq/U-eq)=0.010119/0.000000/0.000000; L-profile(sigma/abs_phase/center_w)=0.0000/0.0000/1.0000; U-profile=0.0000/0.0000/1.0000
+[09:12:59.427] SliceEqOcc occupancy iteration 200: L(frac/entropy/dev/hard_change)=0.000000/0.000000/0.000000/0.000000; U=0.000000/0.000000/0.000000/0.000000; clamp(L/U)=0.1667/0.0000
+[09:13:05.436] iteration 200 : mean_dice : 0.739862, best_dice : 0.739862
+[09:13:27.011] SliceEqOcc train iteration 400: lambda=0.003721 loss(original/L-eq/U-eq)=0.011622/0.000000/0.000000; L-profile(sigma/abs_phase/center_w)=0.0000/0.0000/1.0000; U-profile=0.0000/0.0000/1.0000
+[09:13:27.012] SliceEqOcc occupancy iteration 400: L(frac/entropy/dev/hard_change)=0.000000/0.000000/0.000000/0.000000; U=0.000000/0.000000/0.000000/0.000000; clamp(L/U)=0.0833/0.0000
+[09:13:32.691] iteration 400 : mean_dice : 0.723455, best_dice : 0.739862
+[09:13:55.106] SliceEqOcc train iteration 600: lambda=0.003910 loss(original/L-eq/U-eq)=0.007861/0.000000/0.000000; L-profile(sigma/abs_phase/center_w)=0.0000/0.0000/1.0000; U-profile=0.0000/0.0000/1.0000
+[09:13:55.106] SliceEqOcc occupancy iteration 600: L(frac/entropy/dev/hard_change)=0.000000/0.000000/0.000000/0.000000; U=0.000000/0.000000/0.000000/0.000000; clamp(L/U)=0.0000/0.0833
+[09:14:00.706] iteration 600 : mean_dice : 0.721221, best_dice : 0.739862
+[09:14:23.541] SliceEqOcc train iteration 800: lambda=0.004312 loss(original/L-eq/U-eq)=0.010403/0.000000/0.000000; L-profile(sigma/abs_phase/center_w)=0.0000/0.0000/1.0000; U-profile=0.0000/0.0000/1.0000
+[09:14:23.542] SliceEqOcc occupancy iteration 800: L(frac/entropy/dev/hard_change)=0.000000/0.000000/0.000000/0.000000; U=0.000000/0.000000/0.000000/0.000000; clamp(L/U)=0.2500/0.0000
+[09:14:29.228] iteration 800 : mean_dice : 0.715755, best_dice : 0.739862
+[09:14:51.419] SliceEqOcc train iteration 1000: lambda=0.004527 loss(original/L-eq/U-eq)=0.010833/0.000000/0.000000; L-profile(sigma/abs_phase/center_w)=0.0000/0.0000/1.0000; U-profile=0.0000/0.0000/1.0000
+[09:14:51.420] SliceEqOcc occupancy iteration 1000: L(frac/entropy/dev/hard_change)=0.000000/0.000000/0.000000/0.000000; U=0.000000/0.000000/0.000000/0.000000; clamp(L/U)=0.0000/0.0000
+[09:14:56.982] iteration 1000 : mean_dice : 0.728078, best_dice : 0.739862
+[09:14:56.991] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_1000.pth
+[09:14:57.031] OAAC appearance iteration 1001: abs(log_gamma/log_contrast/brightness)=0.132616/0.113459/0.075186; normalized_abs_change=0.067552; active_samples=1.000000; outside(low/high)=0.206811/0.000257
+[09:15:22.181] OAAC appearance iteration 1200: abs(log_gamma/log_contrast/brightness)=0.106617/0.119661/0.070723; normalized_abs_change=0.075957; active_samples=1.000000; outside(low/high)=0.360797/0.000320
+[09:15:22.302] SliceEqOcc train iteration 1200: lambda=0.004752 loss(original/L-eq/U-eq)=0.010021/0.010155/0.097321; L-profile(sigma/abs_phase/center_w)=0.6222/0.1393/0.6480; U-profile=0.7132/0.1434/0.5796
+[09:15:22.302] SliceEqOcc occupancy iteration 1200: L(frac/entropy/dev/hard_change)=0.008050/0.004523/0.001262/0.000000; U=0.012011/0.008885/0.002745/0.000273; clamp(L/U)=0.0833/0.0833
+[09:15:27.964] iteration 1200 : mean_dice : 0.751336, best_dice : 0.751336
+[09:15:54.389] OAAC appearance iteration 1400: abs(log_gamma/log_contrast/brightness)=0.106158/0.092347/0.047794; normalized_abs_change=0.038134; active_samples=1.000000; outside(low/high)=0.221550/0.000052
+[09:15:54.500] SliceEqOcc train iteration 1400: lambda=0.005230 loss(original/L-eq/U-eq)=0.008496/0.005508/0.046355; L-profile(sigma/abs_phase/center_w)=0.6584/0.1262/0.6208; U-profile=0.6468/0.1272/0.6238
+[09:15:54.500] SliceEqOcc occupancy iteration 1400: L(frac/entropy/dev/hard_change)=0.003510/0.002560/0.000795/0.000000; U=0.008556/0.005980/0.001882/0.000000; clamp(L/U)=0.1667/0.0000
+[09:16:00.179] iteration 1400 : mean_dice : 0.738273, best_dice : 0.751336
+[09:16:26.441] OAAC appearance iteration 1600: abs(log_gamma/log_contrast/brightness)=0.141210/0.116687/0.056992; normalized_abs_change=0.069376; active_samples=1.000000; outside(low/high)=0.089883/0.000334
+[09:16:26.555] SliceEqOcc train iteration 1600: lambda=0.005485 loss(original/L-eq/U-eq)=0.008193/0.006860/0.171810; L-profile(sigma/abs_phase/center_w)=0.6846/0.1440/0.5923; U-profile=0.6516/0.1215/0.6207
+[09:16:26.555] SliceEqOcc occupancy iteration 1600: L(frac/entropy/dev/hard_change)=0.005299/0.004000/0.001251/0.000000; U=0.013641/0.009167/0.002643/0.000000; clamp(L/U)=0.0833/0.0000
+[09:16:32.282] iteration 1600 : mean_dice : 0.751057, best_dice : 0.751336
+[09:16:58.500] OAAC appearance iteration 1800: abs(log_gamma/log_contrast/brightness)=0.110586/0.119453/0.063856; normalized_abs_change=0.067557; active_samples=1.000000; outside(low/high)=0.222579/0.000038
+[09:16:58.599] SliceEqOcc train iteration 1800: lambda=0.005752 loss(original/L-eq/U-eq)=0.006688/0.008847/0.092944; L-profile(sigma/abs_phase/center_w)=0.6184/0.1095/0.6543; U-profile=0.6449/0.1487/0.6245
+[09:16:58.599] SliceEqOcc occupancy iteration 1800: L(frac/entropy/dev/hard_change)=0.005323/0.003700/0.001091/0.000000; U=0.009191/0.006393/0.001900/0.000000; clamp(L/U)=0.1667/0.0833
+[09:17:04.327] iteration 1800 : mean_dice : 0.748638, best_dice : 0.751336
+[09:17:30.248] OAAC appearance iteration 2000: abs(log_gamma/log_contrast/brightness)=0.144734/0.112114/0.056835; normalized_abs_change=0.058688; active_samples=1.000000; outside(low/high)=0.185767/0.000312
+[09:17:30.354] SliceEqOcc train iteration 2000: lambda=0.006319 loss(original/L-eq/U-eq)=0.009140/0.008205/0.077878; L-profile(sigma/abs_phase/center_w)=0.6715/0.1065/0.6106; U-profile=0.6810/0.1112/0.6060
+[09:17:30.354] SliceEqOcc occupancy iteration 2000: L(frac/entropy/dev/hard_change)=0.010122/0.006982/0.001998/0.000000; U=0.008506/0.005844/0.001803/0.000000; clamp(L/U)=0.0833/0.0000
+[09:17:36.241] iteration 2000 : mean_dice : 0.761066, best_dice : 0.761066
+[09:17:36.249] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_2000.pth
+[09:18:01.425] OAAC appearance iteration 2200: abs(log_gamma/log_contrast/brightness)=0.103395/0.128001/0.074034; normalized_abs_change=0.087424; active_samples=1.000000; outside(low/high)=0.131748/0.001002
+[09:18:01.527] SliceEqOcc train iteration 2200: lambda=0.006620 loss(original/L-eq/U-eq)=0.012267/0.010806/0.098263; L-profile(sigma/abs_phase/center_w)=0.6786/0.1114/0.6063; U-profile=0.6864/0.1021/0.5953
+[09:18:01.527] SliceEqOcc occupancy iteration 2200: L(frac/entropy/dev/hard_change)=0.009911/0.007550/0.002354/0.000000; U=0.006583/0.005145/0.001677/0.000183; clamp(L/U)=0.0833/0.2500
+[09:18:07.280] iteration 2200 : mean_dice : 0.748444, best_dice : 0.761066
+[09:18:32.839] OAAC appearance iteration 2400: abs(log_gamma/log_contrast/brightness)=0.102847/0.106809/0.074854; normalized_abs_change=0.081432; active_samples=1.000000; outside(low/high)=0.368645/0.000097
+[09:18:32.940] SliceEqOcc train iteration 2400: lambda=0.006934 loss(original/L-eq/U-eq)=0.010674/0.011138/0.051679; L-profile(sigma/abs_phase/center_w)=0.6482/0.1224/0.6217; U-profile=0.7186/0.1409/0.5696
+[09:18:32.941] SliceEqOcc occupancy iteration 2400: L(frac/entropy/dev/hard_change)=0.013631/0.009047/0.002562/0.000000; U=0.006035/0.004717/0.001512/0.000113; clamp(L/U)=0.0833/0.2500
+[09:18:38.707] iteration 2400 : mean_dice : 0.750323, best_dice : 0.761066
+[09:19:04.881] OAAC appearance iteration 2600: abs(log_gamma/log_contrast/brightness)=0.100166/0.078039/0.050611; normalized_abs_change=0.051442; active_samples=1.000000; outside(low/high)=0.258672/0.000011
+[09:19:04.980] SliceEqOcc train iteration 2600: lambda=0.007603 loss(original/L-eq/U-eq)=0.008861/0.011563/0.088320; L-profile(sigma/abs_phase/center_w)=0.6633/0.1147/0.6179; U-profile=0.6314/0.1292/0.6432
+[09:19:04.980] SliceEqOcc occupancy iteration 2600: L(frac/entropy/dev/hard_change)=0.013743/0.009544/0.002810/0.000000; U=0.008195/0.005166/0.001464/0.000000; clamp(L/U)=0.0833/0.0000
+[09:19:10.729] iteration 2600 : mean_dice : 0.750583, best_dice : 0.761066
+[09:19:36.178] OAAC appearance iteration 2800: abs(log_gamma/log_contrast/brightness)=0.136891/0.096779/0.068000; normalized_abs_change=0.079782; active_samples=1.000000; outside(low/high)=0.120413/0.000450
+[09:19:36.284] SliceEqOcc train iteration 2800: lambda=0.007957 loss(original/L-eq/U-eq)=0.007331/0.006972/0.088781; L-profile(sigma/abs_phase/center_w)=0.5856/0.1347/0.6844; U-profile=0.6620/0.1146/0.6253
+[09:19:36.284] SliceEqOcc occupancy iteration 2800: L(frac/entropy/dev/hard_change)=0.006251/0.003988/0.001135/0.000000; U=0.007467/0.005690/0.001918/0.000456; clamp(L/U)=0.0000/0.0833
+[09:19:42.039] iteration 2800 : mean_dice : 0.739821, best_dice : 0.761066
+[09:20:07.377] OAAC appearance iteration 3000: abs(log_gamma/log_contrast/brightness)=0.148147/0.103299/0.054656; normalized_abs_change=0.071863; active_samples=1.000000; outside(low/high)=0.175415/0.000048
+[09:20:07.475] SliceEqOcc train iteration 3000: lambda=0.008327 loss(original/L-eq/U-eq)=0.008882/0.012004/0.145502; L-profile(sigma/abs_phase/center_w)=0.6552/0.1365/0.6181; U-profile=0.6818/0.1395/0.5939
+[09:20:07.475] SliceEqOcc occupancy iteration 3000: L(frac/entropy/dev/hard_change)=0.012408/0.009020/0.002628/0.000000; U=0.008263/0.006455/0.002173/0.000150; clamp(L/U)=0.0000/0.0833
+[09:20:13.207] iteration 3000 : mean_dice : 0.744494, best_dice : 0.761066
+[09:20:13.216] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_3000.pth
+[09:20:39.172] OAAC appearance iteration 3200: abs(log_gamma/log_contrast/brightness)=0.111553/0.087626/0.063772; normalized_abs_change=0.062265; active_samples=1.000000; outside(low/high)=0.238677/0.000184
+[09:20:39.290] SliceEqOcc train iteration 3200: lambda=0.009111 loss(original/L-eq/U-eq)=0.010405/0.010623/0.031925; L-profile(sigma/abs_phase/center_w)=0.6052/0.1541/0.6478; U-profile=0.6134/0.1190/0.6577
+[09:20:39.290] SliceEqOcc occupancy iteration 3200: L(frac/entropy/dev/hard_change)=0.011987/0.007551/0.002038/0.000000; U=0.007799/0.005188/0.001476/0.000000; clamp(L/U)=0.1667/0.0000
+[09:20:44.995] iteration 3200 : mean_dice : 0.735958, best_dice : 0.761066
+[09:21:10.753] OAAC appearance iteration 3400: abs(log_gamma/log_contrast/brightness)=0.145751/0.074443/0.064441; normalized_abs_change=0.080604; active_samples=1.000000; outside(low/high)=0.238463/0.000235
+[09:21:10.846] SliceEqOcc train iteration 3400: lambda=0.009527 loss(original/L-eq/U-eq)=0.007102/0.006970/0.106093; L-profile(sigma/abs_phase/center_w)=0.6599/0.1448/0.6146; U-profile=0.6695/0.1373/0.6045
+[09:21:10.846] SliceEqOcc occupancy iteration 3400: L(frac/entropy/dev/hard_change)=0.008461/0.005679/0.001595/0.000000; U=0.010909/0.007778/0.002351/0.000000; clamp(L/U)=0.0833/0.0000
+[09:21:16.671] iteration 3400 : mean_dice : 0.746790, best_dice : 0.761066
+[09:21:42.356] OAAC appearance iteration 3600: abs(log_gamma/log_contrast/brightness)=0.129159/0.124617/0.055730; normalized_abs_change=0.051441; active_samples=1.000000; outside(low/high)=0.100557/0.000291
+[09:21:42.458] SliceEqOcc train iteration 3600: lambda=0.009959 loss(original/L-eq/U-eq)=0.007434/0.006339/0.030754; L-profile(sigma/abs_phase/center_w)=0.6569/0.1234/0.6124; U-profile=0.6987/0.1229/0.5839
+[09:21:42.458] SliceEqOcc occupancy iteration 3600: L(frac/entropy/dev/hard_change)=0.005840/0.004104/0.001226/0.000000; U=0.006371/0.005004/0.001608/0.000000; clamp(L/U)=0.0833/0.1667
+[09:21:48.212] iteration 3600 : mean_dice : 0.751589, best_dice : 0.761066
+[09:22:14.153] OAAC appearance iteration 3800: abs(log_gamma/log_contrast/brightness)=0.128824/0.092133/0.058782; normalized_abs_change=0.061098; active_samples=1.000000; outside(low/high)=0.146278/0.000072
+[09:22:14.286] SliceEqOcc train iteration 3800: lambda=0.010875 loss(original/L-eq/U-eq)=0.008173/0.007311/0.026856; L-profile(sigma/abs_phase/center_w)=0.6555/0.0872/0.6324; U-profile=0.6315/0.0970/0.6430
+[09:22:14.287] SliceEqOcc occupancy iteration 3800: L(frac/entropy/dev/hard_change)=0.007903/0.005624/0.001631/0.000000; U=0.011539/0.008175/0.002405/0.000000; clamp(L/U)=0.1667/0.0000
+[09:22:20.129] iteration 3800 : mean_dice : 0.742908, best_dice : 0.761066
+[09:22:45.380] OAAC appearance iteration 4000: abs(log_gamma/log_contrast/brightness)=0.116446/0.088569/0.066865; normalized_abs_change=0.080401; active_samples=1.000000; outside(low/high)=0.103814/0.000128
+[09:22:45.482] SliceEqOcc train iteration 4000: lambda=0.011360 loss(original/L-eq/U-eq)=0.006577/0.005818/0.104179; L-profile(sigma/abs_phase/center_w)=0.6322/0.1350/0.6364; U-profile=0.6619/0.1728/0.6059
+[09:22:45.483] SliceEqOcc occupancy iteration 4000: L(frac/entropy/dev/hard_change)=0.004963/0.003629/0.001089/0.000000; U=0.013831/0.009187/0.002760/0.000000; clamp(L/U)=0.0833/0.0000
+[09:22:51.126] iteration 4000 : mean_dice : 0.742508, best_dice : 0.761066
+[09:22:51.135] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_4000.pth
+[09:23:16.107] OAAC appearance iteration 4200: abs(log_gamma/log_contrast/brightness)=0.150633/0.096394/0.069401; normalized_abs_change=0.077497; active_samples=1.000000; outside(low/high)=0.148664/0.000128
+[09:23:16.205] SliceEqOcc train iteration 4200: lambda=0.011864 loss(original/L-eq/U-eq)=0.009541/0.010208/0.074035; L-profile(sigma/abs_phase/center_w)=0.6323/0.1342/0.6351; U-profile=0.6446/0.1192/0.6363
+[09:23:16.205] SliceEqOcc occupancy iteration 4200: L(frac/entropy/dev/hard_change)=0.005440/0.003838/0.001138/0.000000; U=0.015402/0.010709/0.003142/0.000000; clamp(L/U)=0.0000/0.0833
+[09:23:21.755] iteration 4200 : mean_dice : 0.730855, best_dice : 0.761066
+[09:23:47.362] OAAC appearance iteration 4400: abs(log_gamma/log_contrast/brightness)=0.126665/0.113679/0.072651; normalized_abs_change=0.075648; active_samples=1.000000; outside(low/high)=0.412401/0.000048
+[09:23:47.471] SliceEqOcc train iteration 4400: lambda=0.012929 loss(original/L-eq/U-eq)=0.009602/0.007261/0.069532; L-profile(sigma/abs_phase/center_w)=0.6733/0.1325/0.6038; U-profile=0.6279/0.0895/0.6623
+[09:23:47.471] SliceEqOcc occupancy iteration 4400: L(frac/entropy/dev/hard_change)=0.009254/0.006422/0.001984/0.000000; U=0.004401/0.002109/0.000482/0.000000; clamp(L/U)=0.0000/0.0000
+[09:23:53.031] iteration 4400 : mean_dice : 0.733456, best_dice : 0.761066
+[09:24:18.084] OAAC appearance iteration 4600: abs(log_gamma/log_contrast/brightness)=0.115134/0.113461/0.068520; normalized_abs_change=0.070781; active_samples=1.000000; outside(low/high)=0.290241/0.000121
+[09:24:18.190] SliceEqOcc train iteration 4600: lambda=0.013492 loss(original/L-eq/U-eq)=0.008956/0.006454/0.022512; L-profile(sigma/abs_phase/center_w)=0.6964/0.1160/0.5993; U-profile=0.6162/0.1286/0.6464
+[09:24:18.190] SliceEqOcc occupancy iteration 4600: L(frac/entropy/dev/hard_change)=0.005898/0.004288/0.001353/0.000000; U=0.007173/0.004561/0.001276/0.000000; clamp(L/U)=0.0000/0.0000
+[09:24:23.692] iteration 4600 : mean_dice : 0.744259, best_dice : 0.761066
+[09:24:48.636] OAAC appearance iteration 4800: abs(log_gamma/log_contrast/brightness)=0.119775/0.105209/0.071032; normalized_abs_change=0.076129; active_samples=1.000000; outside(low/high)=0.218143/0.000092
+[09:24:48.723] SliceEqOcc train iteration 4800: lambda=0.014076 loss(original/L-eq/U-eq)=0.009951/0.008428/0.056249; L-profile(sigma/abs_phase/center_w)=0.6027/0.1337/0.6625; U-profile=0.6229/0.1403/0.6302
+[09:24:48.723] SliceEqOcc occupancy iteration 4800: L(frac/entropy/dev/hard_change)=0.008498/0.005510/0.001539/0.000000; U=0.005446/0.004056/0.001235/0.000000; clamp(L/U)=0.1667/0.0000
+[09:24:54.341] iteration 4800 : mean_dice : 0.744935, best_dice : 0.761066
+[09:25:19.897] OAAC appearance iteration 5000: abs(log_gamma/log_contrast/brightness)=0.084343/0.114678/0.068970; normalized_abs_change=0.077806; active_samples=1.000000; outside(low/high)=0.157132/0.000585
+[09:25:20.000] SliceEqOcc train iteration 5000: lambda=0.015310 loss(original/L-eq/U-eq)=0.007951/0.010439/0.067325; L-profile(sigma/abs_phase/center_w)=0.6846/0.0996/0.6001; U-profile=0.7248/0.1187/0.5640
+[09:25:20.000] SliceEqOcc occupancy iteration 5000: L(frac/entropy/dev/hard_change)=0.007514/0.005618/0.001639/0.000000; U=0.012575/0.009752/0.003059/0.000169; clamp(L/U)=0.0000/0.0000
+[09:25:25.628] iteration 5000 : mean_dice : 0.746145, best_dice : 0.761066
+[09:25:25.638] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_5000.pth
+[09:25:50.731] OAAC appearance iteration 5200: abs(log_gamma/log_contrast/brightness)=0.151764/0.060662/0.057815; normalized_abs_change=0.071523; active_samples=1.000000; outside(low/high)=0.236629/0.000320
+[09:25:50.841] SliceEqOcc train iteration 5200: lambda=0.015960 loss(original/L-eq/U-eq)=0.009716/0.007793/0.026864; L-profile(sigma/abs_phase/center_w)=0.6661/0.1043/0.6145; U-profile=0.7136/0.0999/0.5906
+[09:25:50.842] SliceEqOcc occupancy iteration 5200: L(frac/entropy/dev/hard_change)=0.008605/0.006172/0.001836/0.000006; U=0.008278/0.006124/0.001955/0.000000; clamp(L/U)=0.1667/0.0000
+[09:25:56.521] iteration 5200 : mean_dice : 0.748026, best_dice : 0.761066
+[09:26:22.140] OAAC appearance iteration 5400: abs(log_gamma/log_contrast/brightness)=0.104919/0.083814/0.075370; normalized_abs_change=0.074214; active_samples=1.000000; outside(low/high)=0.285229/0.000008
+[09:26:22.256] SliceEqOcc train iteration 5400: lambda=0.016635 loss(original/L-eq/U-eq)=0.006920/0.007511/0.040825; L-profile(sigma/abs_phase/center_w)=0.6882/0.1189/0.5964; U-profile=0.6644/0.1350/0.6135
+[09:26:22.256] SliceEqOcc occupancy iteration 5400: L(frac/entropy/dev/hard_change)=0.011258/0.007801/0.002241/0.000000; U=0.005514/0.004212/0.001373/0.000000; clamp(L/U)=0.0000/0.0833
+[09:26:27.953] iteration 5400 : mean_dice : 0.751159, best_dice : 0.761066
+[09:26:53.917] OAAC appearance iteration 5600: abs(log_gamma/log_contrast/brightness)=0.123909/0.118832/0.049232; normalized_abs_change=0.048986; active_samples=1.000000; outside(low/high)=0.147753/0.000476
+[09:26:54.036] SliceEqOcc train iteration 5600: lambda=0.018056 loss(original/L-eq/U-eq)=0.004863/0.004724/0.018582; L-profile(sigma/abs_phase/center_w)=0.5872/0.1237/0.6765; U-profile=0.7195/0.1198/0.5726
+[09:26:54.037] SliceEqOcc occupancy iteration 5600: L(frac/entropy/dev/hard_change)=0.004078/0.002764/0.000872/0.000000; U=0.010473/0.008257/0.002607/0.000048; clamp(L/U)=0.1667/0.1667
+[09:26:59.796] iteration 5600 : mean_dice : 0.759988, best_dice : 0.761066
+[09:27:25.448] OAAC appearance iteration 5800: abs(log_gamma/log_contrast/brightness)=0.114197/0.068273/0.059781; normalized_abs_change=0.075869; active_samples=1.000000; outside(low/high)=0.176633/0.000195
+[09:27:25.549] SliceEqOcc train iteration 5800: lambda=0.018805 loss(original/L-eq/U-eq)=0.006372/0.005263/0.030402; L-profile(sigma/abs_phase/center_w)=0.6746/0.1129/0.6067; U-profile=0.6560/0.1319/0.6154
+[09:27:25.549] SliceEqOcc occupancy iteration 5800: L(frac/entropy/dev/hard_change)=0.006157/0.004570/0.001382/0.000000; U=0.011143/0.007625/0.002268/0.000000; clamp(L/U)=0.0833/0.0000
+[09:27:31.318] iteration 5800 : mean_dice : 0.755973, best_dice : 0.761066
+[09:27:57.166] OAAC appearance iteration 6000: abs(log_gamma/log_contrast/brightness)=0.115605/0.098156/0.069980; normalized_abs_change=0.072607; active_samples=1.000000; outside(low/high)=0.218000/0.000490
+[09:27:57.270] SliceEqOcc train iteration 6000: lambda=0.019579 loss(original/L-eq/U-eq)=0.008205/0.007542/0.028481; L-profile(sigma/abs_phase/center_w)=0.7001/0.0951/0.5848; U-profile=0.5924/0.1395/0.6707
+[09:27:57.271] SliceEqOcc occupancy iteration 6000: L(frac/entropy/dev/hard_change)=0.006274/0.004563/0.001320/0.000000; U=0.006973/0.004387/0.001241/0.000015; clamp(L/U)=0.0833/0.0833
+[09:28:02.997] iteration 6000 : mean_dice : 0.745832, best_dice : 0.761066
+[09:28:03.006] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_6000.pth
+[09:28:29.357] OAAC appearance iteration 6200: abs(log_gamma/log_contrast/brightness)=0.144064/0.113023/0.062595; normalized_abs_change=0.059277; active_samples=1.000000; outside(low/high)=0.189513/0.000060
+[09:28:29.462] SliceEqOcc train iteration 6200: lambda=0.021210 loss(original/L-eq/U-eq)=0.007659/0.007251/0.044300; L-profile(sigma/abs_phase/center_w)=0.6031/0.1080/0.6688; U-profile=0.7049/0.1675/0.5761
+[09:28:29.462] SliceEqOcc occupancy iteration 6200: L(frac/entropy/dev/hard_change)=0.007936/0.004348/0.001135/0.000000; U=0.006491/0.004800/0.001547/0.000497; clamp(L/U)=0.0000/0.1667
+[09:28:35.291] iteration 6200 : mean_dice : 0.760412, best_dice : 0.761066
+[09:29:01.080] OAAC appearance iteration 6400: abs(log_gamma/log_contrast/brightness)=0.131665/0.102535/0.061225; normalized_abs_change=0.053618; active_samples=1.000000; outside(low/high)=0.187271/0.000092
+[09:29:01.200] SliceEqOcc train iteration 6400: lambda=0.022068 loss(original/L-eq/U-eq)=0.007554/0.007692/0.025565; L-profile(sigma/abs_phase/center_w)=0.6527/0.1381/0.6139; U-profile=0.6768/0.1361/0.6004
+[09:29:01.200] SliceEqOcc occupancy iteration 6400: L(frac/entropy/dev/hard_change)=0.009787/0.006257/0.001790/0.000000; U=0.009650/0.007803/0.002610/0.000000; clamp(L/U)=0.1667/0.2500
+[09:29:07.039] iteration 6400 : mean_dice : 0.764996, best_dice : 0.764996
+[09:29:32.910] OAAC appearance iteration 6600: abs(log_gamma/log_contrast/brightness)=0.123231/0.093505/0.059238; normalized_abs_change=0.052864; active_samples=1.000000; outside(low/high)=0.240913/0.000149
+[09:29:33.008] SliceEqOcc train iteration 6600: lambda=0.022954 loss(original/L-eq/U-eq)=0.006009/0.005584/0.026975; L-profile(sigma/abs_phase/center_w)=0.6519/0.1259/0.6227; U-profile=0.6697/0.1062/0.6162
+[09:29:33.009] SliceEqOcc occupancy iteration 6600: L(frac/entropy/dev/hard_change)=0.005061/0.003872/0.001199/0.000000; U=0.011608/0.008755/0.003008/0.000000; clamp(L/U)=0.0000/0.0000
+[09:29:38.780] iteration 6600 : mean_dice : 0.772602, best_dice : 0.772602
+[09:30:04.775] OAAC appearance iteration 6800: abs(log_gamma/log_contrast/brightness)=0.128521/0.119674/0.069624; normalized_abs_change=0.075708; active_samples=1.000000; outside(low/high)=0.018584/0.000520
+[09:30:04.880] SliceEqOcc train iteration 6800: lambda=0.024816 loss(original/L-eq/U-eq)=0.007006/0.008255/0.057556; L-profile(sigma/abs_phase/center_w)=0.6413/0.1404/0.6270; U-profile=0.6656/0.1363/0.6028
+[09:30:04.880] SliceEqOcc occupancy iteration 6800: L(frac/entropy/dev/hard_change)=0.009038/0.005293/0.001358/0.000000; U=0.011809/0.008604/0.002668/0.000000; clamp(L/U)=0.2500/0.0000
+[09:30:10.559] iteration 6800 : mean_dice : 0.749787, best_dice : 0.772602
+[09:30:36.692] OAAC appearance iteration 7000: abs(log_gamma/log_contrast/brightness)=0.086653/0.082396/0.043548; normalized_abs_change=0.052331; active_samples=1.000000; outside(low/high)=0.141693/0.000306
+[09:30:36.805] SliceEqOcc train iteration 7000: lambda=0.025793 loss(original/L-eq/U-eq)=0.006621/0.009077/0.025201; L-profile(sigma/abs_phase/center_w)=0.6610/0.1283/0.6084; U-profile=0.6957/0.1518/0.5847
+[09:30:36.806] SliceEqOcc occupancy iteration 7000: L(frac/entropy/dev/hard_change)=0.011509/0.008539/0.002619/0.000000; U=0.012388/0.008688/0.002633/0.000000; clamp(L/U)=0.0833/0.0000
+[09:30:42.564] iteration 7000 : mean_dice : 0.765557, best_dice : 0.772602
+[09:30:42.572] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_7000.pth
+[09:31:08.091] OAAC appearance iteration 7200: abs(log_gamma/log_contrast/brightness)=0.123817/0.111146/0.055113; normalized_abs_change=0.062064; active_samples=1.000000; outside(low/high)=0.296764/0.000025
+[09:31:08.192] SliceEqOcc train iteration 7200: lambda=0.026802 loss(original/L-eq/U-eq)=0.006413/0.006312/0.036183; L-profile(sigma/abs_phase/center_w)=0.6452/0.1480/0.6269; U-profile=0.7031/0.1389/0.5872
+[09:31:08.192] SliceEqOcc occupancy iteration 7200: L(frac/entropy/dev/hard_change)=0.007978/0.005386/0.001550/0.000000; U=0.010536/0.008154/0.002697/0.000225; clamp(L/U)=0.0000/0.0833
+[09:31:14.201] iteration 7200 : mean_dice : 0.764482, best_dice : 0.772602
+[09:31:40.594] OAAC appearance iteration 7400: abs(log_gamma/log_contrast/brightness)=0.135726/0.099678/0.054779; normalized_abs_change=0.061577; active_samples=1.000000; outside(low/high)=0.121070/0.000188
+[09:31:40.690] SliceEqOcc train iteration 7400: lambda=0.028919 loss(original/L-eq/U-eq)=0.006526/0.006125/0.023541; L-profile(sigma/abs_phase/center_w)=0.6838/0.1276/0.6081; U-profile=0.6047/0.1436/0.6631
+[09:31:40.690] SliceEqOcc occupancy iteration 7400: L(frac/entropy/dev/hard_change)=0.006975/0.004895/0.001448/0.000000; U=0.008045/0.005352/0.001681/0.000000; clamp(L/U)=0.0833/0.0000
+[09:31:46.250] iteration 7400 : mean_dice : 0.761253, best_dice : 0.772602
+[09:32:11.449] OAAC appearance iteration 7600: abs(log_gamma/log_contrast/brightness)=0.125087/0.113422/0.057027; normalized_abs_change=0.083246; active_samples=1.000000; outside(low/high)=0.241915/0.000238
+[09:32:11.541] SliceEqOcc train iteration 7600: lambda=0.030027 loss(original/L-eq/U-eq)=0.007426/0.006523/0.015827; L-profile(sigma/abs_phase/center_w)=0.6352/0.1422/0.6409; U-profile=0.6267/0.1039/0.6561
+[09:32:11.541] SliceEqOcc occupancy iteration 7600: L(frac/entropy/dev/hard_change)=0.006948/0.004238/0.001169/0.000010; U=0.010456/0.006817/0.001919/0.000000; clamp(L/U)=0.1667/0.0833
+[09:32:17.277] iteration 7600 : mean_dice : 0.771977, best_dice : 0.772602
+[09:32:42.601] OAAC appearance iteration 7800: abs(log_gamma/log_contrast/brightness)=0.102839/0.093976/0.038577; normalized_abs_change=0.048501; active_samples=1.000000; outside(low/high)=0.068741/0.000116
+[09:32:42.703] SliceEqOcc train iteration 7800: lambda=0.031171 loss(original/L-eq/U-eq)=0.007814/0.005726/0.030476; L-profile(sigma/abs_phase/center_w)=0.6929/0.1284/0.5915; U-profile=0.6188/0.1505/0.6420
+[09:32:42.703] SliceEqOcc occupancy iteration 7800: L(frac/entropy/dev/hard_change)=0.005549/0.004271/0.001324/0.000000; U=0.008490/0.005823/0.001697/0.000000; clamp(L/U)=0.0833/0.0833
+[09:32:48.300] iteration 7800 : mean_dice : 0.766829, best_dice : 0.772602
+[09:33:13.763] OAAC appearance iteration 8000: abs(log_gamma/log_contrast/brightness)=0.107193/0.093452/0.065905; normalized_abs_change=0.064315; active_samples=1.000000; outside(low/high)=0.353338/0.000145
+[09:33:13.868] SliceEqOcc train iteration 8000: lambda=0.033565 loss(original/L-eq/U-eq)=0.006400/0.005056/0.020945; L-profile(sigma/abs_phase/center_w)=0.7580/0.1342/0.5405; U-profile=0.6071/0.1198/0.6578
+[09:33:13.868] SliceEqOcc occupancy iteration 8000: L(frac/entropy/dev/hard_change)=0.004448/0.003503/0.001129/0.000148; U=0.009650/0.006895/0.002082/0.000000; clamp(L/U)=0.0833/0.0833
+[09:33:19.491] iteration 8000 : mean_dice : 0.760736, best_dice : 0.772602
+[09:33:19.500] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_8000.pth
+[09:33:44.422] OAAC appearance iteration 8200: abs(log_gamma/log_contrast/brightness)=0.154890/0.080620/0.050129; normalized_abs_change=0.074303; active_samples=1.000000; outside(low/high)=0.246049/0.000084
+[09:33:44.522] SliceEqOcc train iteration 8200: lambda=0.034817 loss(original/L-eq/U-eq)=0.008016/0.007532/0.059139; L-profile(sigma/abs_phase/center_w)=0.6289/0.1147/0.6473; U-profile=0.7064/0.0909/0.5871
+[09:33:44.522] SliceEqOcc occupancy iteration 8200: L(frac/entropy/dev/hard_change)=0.008029/0.005363/0.001528/0.000000; U=0.011833/0.009277/0.002999/0.000000; clamp(L/U)=0.2500/0.0833
+[09:33:50.052] iteration 8200 : mean_dice : 0.758078, best_dice : 0.772602
+[09:34:14.910] OAAC appearance iteration 8400: abs(log_gamma/log_contrast/brightness)=0.131981/0.078825/0.059351; normalized_abs_change=0.061217; active_samples=1.000000; outside(low/high)=0.256114/0.000123
+[09:34:15.002] SliceEqOcc train iteration 8400: lambda=0.036107 loss(original/L-eq/U-eq)=0.006300/0.006794/0.055910; L-profile(sigma/abs_phase/center_w)=0.6214/0.1363/0.6444; U-profile=0.6692/0.0898/0.6167
+[09:34:15.002] SliceEqOcc occupancy iteration 8400: L(frac/entropy/dev/hard_change)=0.009279/0.006152/0.001730/0.000000; U=0.014108/0.010269/0.003090/0.000000; clamp(L/U)=0.1667/0.0000
+[09:34:20.525] iteration 8400 : mean_dice : 0.755097, best_dice : 0.772602
+[09:34:45.951] OAAC appearance iteration 8600: abs(log_gamma/log_contrast/brightness)=0.161579/0.094910/0.079714; normalized_abs_change=0.091825; active_samples=1.000000; outside(low/high)=0.371293/0.000187
+[09:34:46.062] SliceEqOcc train iteration 8600: lambda=0.038802 loss(original/L-eq/U-eq)=0.007057/0.008272/0.043334; L-profile(sigma/abs_phase/center_w)=0.7022/0.1395/0.5813; U-profile=0.6515/0.0856/0.6360
+[09:34:46.062] SliceEqOcc occupancy iteration 8600: L(frac/entropy/dev/hard_change)=0.012628/0.008294/0.002363/0.000000; U=0.006540/0.004286/0.001246/0.000000; clamp(L/U)=0.2500/0.0000
+[09:34:51.754] iteration 8600 : mean_dice : 0.772406, best_dice : 0.772602
+[09:35:16.780] OAAC appearance iteration 8800: abs(log_gamma/log_contrast/brightness)=0.124792/0.082435/0.058288; normalized_abs_change=0.060828; active_samples=1.000000; outside(low/high)=0.157269/0.000058
+[09:35:16.878] SliceEqOcc train iteration 8800: lambda=0.040210 loss(original/L-eq/U-eq)=0.008058/0.012227/0.027550; L-profile(sigma/abs_phase/center_w)=0.6912/0.1362/0.5891; U-profile=0.6381/0.1453/0.6316
+[09:35:16.878] SliceEqOcc occupancy iteration 8800: L(frac/entropy/dev/hard_change)=0.008626/0.005834/0.001710/0.000000; U=0.009881/0.006900/0.002024/0.000000; clamp(L/U)=0.0000/0.0000
+[09:35:22.548] iteration 8800 : mean_dice : 0.772350, best_dice : 0.772602
+[09:35:47.720] OAAC appearance iteration 9000: abs(log_gamma/log_contrast/brightness)=0.100357/0.084536/0.073697; normalized_abs_change=0.084950; active_samples=1.000000; outside(low/high)=0.235967/0.000081
+[09:35:47.816] SliceEqOcc train iteration 9000: lambda=0.041658 loss(original/L-eq/U-eq)=0.006389/0.006772/0.033984; L-profile(sigma/abs_phase/center_w)=0.6513/0.0867/0.6254; U-profile=0.6267/0.1304/0.6439
+[09:35:47.817] SliceEqOcc occupancy iteration 9000: L(frac/entropy/dev/hard_change)=0.011232/0.007251/0.001980/0.000000; U=0.013143/0.008376/0.002340/0.000055; clamp(L/U)=0.0833/0.0000
+[09:35:53.528] iteration 9000 : mean_dice : 0.778591, best_dice : 0.778591
+[09:35:53.536] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_9000.pth
+[09:36:19.818] OAAC appearance iteration 9200: abs(log_gamma/log_contrast/brightness)=0.138841/0.096598/0.062254; normalized_abs_change=0.074580; active_samples=1.000000; outside(low/high)=0.267351/0.000006
+[09:36:19.924] SliceEqOcc train iteration 9200: lambda=0.044678 loss(original/L-eq/U-eq)=0.008120/0.011859/0.035644; L-profile(sigma/abs_phase/center_w)=0.6312/0.0985/0.6471; U-profile=0.7025/0.1055/0.5809
+[09:36:19.925] SliceEqOcc occupancy iteration 9200: L(frac/entropy/dev/hard_change)=0.007666/0.005620/0.001670/0.000000; U=0.008231/0.006330/0.002046/0.000000; clamp(L/U)=0.0833/0.0833
+[09:36:25.491] iteration 9200 : mean_dice : 0.774558, best_dice : 0.778591
+[09:36:50.517] OAAC appearance iteration 9400: abs(log_gamma/log_contrast/brightness)=0.121919/0.119588/0.054441; normalized_abs_change=0.060655; active_samples=1.000000; outside(low/high)=0.081487/0.000505
+[09:36:50.625] SliceEqOcc train iteration 9400: lambda=0.046252 loss(original/L-eq/U-eq)=0.010986/0.011443/0.065035; L-profile(sigma/abs_phase/center_w)=0.6930/0.1364/0.5783; U-profile=0.6397/0.1388/0.6259
+[09:36:50.625] SliceEqOcc occupancy iteration 9400: L(frac/entropy/dev/hard_change)=0.009857/0.006784/0.001944/0.000000; U=0.006823/0.005082/0.001517/0.000000; clamp(L/U)=0.0000/0.1667
+[09:36:56.326] iteration 9400 : mean_dice : 0.771867, best_dice : 0.778591
+[09:37:21.646] OAAC appearance iteration 9600: abs(log_gamma/log_contrast/brightness)=0.123311/0.084708/0.076441; normalized_abs_change=0.089646; active_samples=1.000000; outside(low/high)=0.302048/0.000043
+[09:37:21.740] SliceEqOcc train iteration 9600: lambda=0.047870 loss(original/L-eq/U-eq)=0.010964/0.009097/0.023683; L-profile(sigma/abs_phase/center_w)=0.6441/0.1174/0.6303; U-profile=0.6659/0.1453/0.6032
+[09:37:21.740] SliceEqOcc occupancy iteration 9600: L(frac/entropy/dev/hard_change)=0.005947/0.004052/0.001145/0.000000; U=0.006949/0.004954/0.001407/0.000000; clamp(L/U)=0.0833/0.0000
+[09:37:27.437] iteration 9600 : mean_dice : 0.763992, best_dice : 0.778591
+[09:37:53.559] OAAC appearance iteration 9800: abs(log_gamma/log_contrast/brightness)=0.133503/0.077457/0.055560; normalized_abs_change=0.060604; active_samples=1.000000; outside(low/high)=0.149022/0.000069
+[09:37:53.671] SliceEqOcc train iteration 9800: lambda=0.051238 loss(original/L-eq/U-eq)=0.007170/0.011358/0.020313; L-profile(sigma/abs_phase/center_w)=0.6569/0.1449/0.6068; U-profile=0.6162/0.1609/0.6421
+[09:37:53.671] SliceEqOcc occupancy iteration 9800: L(frac/entropy/dev/hard_change)=0.016822/0.011955/0.003518/0.000000; U=0.013409/0.008285/0.002400/0.000000; clamp(L/U)=0.0000/0.0000
+[09:37:59.434] iteration 9800 : mean_dice : 0.774814, best_dice : 0.778591
+[09:38:25.184] OAAC appearance iteration 10000: abs(log_gamma/log_contrast/brightness)=0.119186/0.081959/0.038619; normalized_abs_change=0.044851; active_samples=1.000000; outside(low/high)=0.077028/0.000150
+[09:38:25.287] SliceEqOcc train iteration 10000: lambda=0.052990 loss(original/L-eq/U-eq)=0.010014/0.012046/0.016772; L-profile(sigma/abs_phase/center_w)=0.6935/0.1505/0.5821; U-profile=0.6959/0.0644/0.6064
+[09:38:25.287] SliceEqOcc occupancy iteration 10000: L(frac/entropy/dev/hard_change)=0.010386/0.007868/0.002427/0.000108; U=0.008375/0.006280/0.001902/0.000131; clamp(L/U)=0.0833/0.0833
+[09:38:31.178] iteration 10000 : mean_dice : 0.768849, best_dice : 0.778591
+[09:38:31.188] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_10000.pth
+[09:38:56.892] OAAC appearance iteration 10200: abs(log_gamma/log_contrast/brightness)=0.129573/0.074564/0.057818; normalized_abs_change=0.065263; active_samples=1.000000; outside(low/high)=0.097014/0.000298
+[09:38:56.991] SliceEqOcc train iteration 10200: lambda=0.054789 loss(original/L-eq/U-eq)=0.006694/0.005961/0.027763; L-profile(sigma/abs_phase/center_w)=0.6461/0.1595/0.6323; U-profile=0.6334/0.1356/0.6402
+[09:38:56.991] SliceEqOcc occupancy iteration 10200: L(frac/entropy/dev/hard_change)=0.005121/0.003015/0.000869/0.000102; U=0.007914/0.005448/0.001604/0.000000; clamp(L/U)=0.0833/0.0000
+[09:39:02.652] iteration 10200 : mean_dice : 0.771112, best_dice : 0.778591
+[09:39:28.495] OAAC appearance iteration 10400: abs(log_gamma/log_contrast/brightness)=0.098823/0.098089/0.070941; normalized_abs_change=0.088267; active_samples=1.000000; outside(low/high)=0.165970/0.000294
+[09:39:28.604] SliceEqOcc train iteration 10400: lambda=0.058527 loss(original/L-eq/U-eq)=0.006647/0.004714/0.043533; L-profile(sigma/abs_phase/center_w)=0.7091/0.1205/0.5699; U-profile=0.6577/0.1093/0.6156
+[09:39:28.604] SliceEqOcc occupancy iteration 10400: L(frac/entropy/dev/hard_change)=0.004691/0.003516/0.001065/0.000000; U=0.012866/0.009296/0.002792/0.000000; clamp(L/U)=0.0000/0.0000
+[09:39:34.236] iteration 10400 : mean_dice : 0.773951, best_dice : 0.778591
+[09:39:59.306] OAAC appearance iteration 10600: abs(log_gamma/log_contrast/brightness)=0.112166/0.103458/0.064670; normalized_abs_change=0.060077; active_samples=1.000000; outside(low/high)=0.278194/0.000336
+[09:39:59.397] SliceEqOcc train iteration 10600: lambda=0.060468 loss(original/L-eq/U-eq)=0.006495/0.007074/0.039355; L-profile(sigma/abs_phase/center_w)=0.5929/0.1315/0.6723; U-profile=0.6224/0.1395/0.6426
+[09:39:59.397] SliceEqOcc occupancy iteration 10600: L(frac/entropy/dev/hard_change)=0.009182/0.005600/0.001542/0.000000; U=0.019269/0.012447/0.003568/0.000000; clamp(L/U)=0.0000/0.0000
+[09:40:04.970] iteration 10600 : mean_dice : 0.779550, best_dice : 0.779550
+[09:40:29.988] OAAC appearance iteration 10800: abs(log_gamma/log_contrast/brightness)=0.131087/0.094319/0.060056; normalized_abs_change=0.072557; active_samples=1.000000; outside(low/high)=0.244686/0.000132
+[09:40:30.085] SliceEqOcc train iteration 10800: lambda=0.062457 loss(original/L-eq/U-eq)=0.007254/0.005533/0.023194; L-profile(sigma/abs_phase/center_w)=0.6197/0.1300/0.6493; U-profile=0.6486/0.1218/0.6320
+[09:40:30.085] SliceEqOcc occupancy iteration 10800: L(frac/entropy/dev/hard_change)=0.003726/0.001907/0.000480/0.000000; U=0.009506/0.007082/0.002179/0.000000; clamp(L/U)=0.2500/0.0833
+[09:40:35.663] iteration 10800 : mean_dice : 0.783781, best_dice : 0.783781
+[09:41:01.652] OAAC appearance iteration 11000: abs(log_gamma/log_contrast/brightness)=0.114521/0.107160/0.054293; normalized_abs_change=0.056321; active_samples=1.000000; outside(low/high)=0.026530/0.001736
+[09:41:01.773] SliceEqOcc train iteration 11000: lambda=0.066585 loss(original/L-eq/U-eq)=0.006424/0.007039/0.020847; L-profile(sigma/abs_phase/center_w)=0.6585/0.1192/0.6234; U-profile=0.6868/0.1159/0.5968
+[09:41:01.773] SliceEqOcc occupancy iteration 11000: L(frac/entropy/dev/hard_change)=0.008236/0.005322/0.001595/0.000000; U=0.007486/0.005294/0.001630/0.000000; clamp(L/U)=0.0000/0.0000
+[09:41:07.561] iteration 11000 : mean_dice : 0.783384, best_dice : 0.783781
+[09:41:07.570] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_11000.pth
+[09:41:33.026] OAAC appearance iteration 11200: abs(log_gamma/log_contrast/brightness)=0.157821/0.093003/0.066465; normalized_abs_change=0.072038; active_samples=1.000000; outside(low/high)=0.147446/0.001146
+[09:41:33.139] SliceEqOcc train iteration 11200: lambda=0.068725 loss(original/L-eq/U-eq)=0.005845/0.006066/0.025158; L-profile(sigma/abs_phase/center_w)=0.5845/0.0999/0.6920; U-profile=0.6644/0.1689/0.6049
+[09:41:33.139] SliceEqOcc occupancy iteration 11200: L(frac/entropy/dev/hard_change)=0.005873/0.003467/0.000917/0.000067; U=0.013096/0.009453/0.002959/0.000000; clamp(L/U)=0.0000/0.0000
+[09:41:38.836] iteration 11200 : mean_dice : 0.786069, best_dice : 0.786069
+[09:42:04.544] OAAC appearance iteration 11400: abs(log_gamma/log_contrast/brightness)=0.151627/0.099396/0.069656; normalized_abs_change=0.074306; active_samples=1.000000; outside(low/high)=0.251390/0.000743
+[09:42:04.649] SliceEqOcc train iteration 11400: lambda=0.070915 loss(original/L-eq/U-eq)=0.006512/0.006305/0.014035; L-profile(sigma/abs_phase/center_w)=0.6968/0.1082/0.5947; U-profile=0.6560/0.1180/0.6196
+[09:42:04.650] SliceEqOcc occupancy iteration 11400: L(frac/entropy/dev/hard_change)=0.009858/0.006549/0.001900/0.000000; U=0.006490/0.004814/0.001485/0.000000; clamp(L/U)=0.0000/0.0833
+[09:42:10.292] iteration 11400 : mean_dice : 0.771807, best_dice : 0.786069
+[09:42:36.324] OAAC appearance iteration 11600: abs(log_gamma/log_contrast/brightness)=0.112869/0.079746/0.064493; normalized_abs_change=0.062012; active_samples=1.000000; outside(low/high)=0.150177/0.000827
+[09:42:36.440] SliceEqOcc train iteration 11600: lambda=0.075451 loss(original/L-eq/U-eq)=0.007208/0.007548/0.018671; L-profile(sigma/abs_phase/center_w)=0.6989/0.0996/0.5938; U-profile=0.6233/0.1572/0.6412
+[09:42:36.440] SliceEqOcc occupancy iteration 11600: L(frac/entropy/dev/hard_change)=0.010223/0.007335/0.002186/0.000000; U=0.009791/0.006555/0.002022/0.000000; clamp(L/U)=0.0833/0.1667
+[09:42:42.188] iteration 11600 : mean_dice : 0.780746, best_dice : 0.786069
+[09:43:07.973] OAAC appearance iteration 11800: abs(log_gamma/log_contrast/brightness)=0.132925/0.079898/0.073180; normalized_abs_change=0.078538; active_samples=1.000000; outside(low/high)=0.188970/0.000036
+[09:43:08.065] SliceEqOcc train iteration 11800: lambda=0.077797 loss(original/L-eq/U-eq)=0.005276/0.004760/0.027248; L-profile(sigma/abs_phase/center_w)=0.6509/0.1417/0.6242; U-profile=0.6886/0.0950/0.5963
+[09:43:08.065] SliceEqOcc occupancy iteration 11800: L(frac/entropy/dev/hard_change)=0.006372/0.004787/0.001484/0.000097; U=0.012385/0.009299/0.002839/0.000000; clamp(L/U)=0.0000/0.0000
+[09:43:13.704] iteration 11800 : mean_dice : 0.774165, best_dice : 0.786069
+[09:43:38.843] OAAC appearance iteration 12000: abs(log_gamma/log_contrast/brightness)=0.090927/0.125398/0.047541; normalized_abs_change=0.059047; active_samples=1.000000; outside(low/high)=0.012101/0.000786
+[09:43:38.943] SliceEqOcc train iteration 12000: lambda=0.080197 loss(original/L-eq/U-eq)=0.009024/0.008043/0.014344; L-profile(sigma/abs_phase/center_w)=0.7082/0.1354/0.5869; U-profile=0.6458/0.1257/0.6362
+[09:43:38.943] SliceEqOcc occupancy iteration 12000: L(frac/entropy/dev/hard_change)=0.009969/0.007158/0.002165/0.000113; U=0.008270/0.005607/0.001612/0.000006; clamp(L/U)=0.0833/0.0833
+[09:43:44.574] iteration 12000 : mean_dice : 0.767014, best_dice : 0.786069
+[09:43:44.583] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_12000.pth
+[09:44:10.896] OAAC appearance iteration 12200: abs(log_gamma/log_contrast/brightness)=0.143602/0.081691/0.047980; normalized_abs_change=0.064193; active_samples=1.000000; outside(low/high)=0.154291/0.000865
+[09:44:11.012] SliceEqOcc train iteration 12200: lambda=0.085156 loss(original/L-eq/U-eq)=0.006920/0.008021/0.011015; L-profile(sigma/abs_phase/center_w)=0.6405/0.1501/0.6174; U-profile=0.6335/0.1284/0.6410
+[09:44:11.012] SliceEqOcc occupancy iteration 12200: L(frac/entropy/dev/hard_change)=0.011944/0.008055/0.002291/0.000000; U=0.003518/0.002386/0.000697/0.000000; clamp(L/U)=0.0000/0.0833
+[09:44:16.676] iteration 12200 : mean_dice : 0.777091, best_dice : 0.786069
+[09:44:42.570] OAAC appearance iteration 12400: abs(log_gamma/log_contrast/brightness)=0.123704/0.087139/0.068172; normalized_abs_change=0.073621; active_samples=1.000000; outside(low/high)=0.142171/0.000121
+[09:44:42.669] SliceEqOcc train iteration 12400: lambda=0.087716 loss(original/L-eq/U-eq)=0.006718/0.007332/0.021239; L-profile(sigma/abs_phase/center_w)=0.6172/0.1202/0.6567; U-profile=0.5871/0.1018/0.6710
+[09:44:42.669] SliceEqOcc occupancy iteration 12400: L(frac/entropy/dev/hard_change)=0.010841/0.007736/0.002228/0.000000; U=0.011054/0.006506/0.001721/0.000000; clamp(L/U)=0.1667/0.0000
+[09:44:48.330] iteration 12400 : mean_dice : 0.791199, best_dice : 0.791199
+[09:45:19.592] OAAC appearance iteration 12600: abs(log_gamma/log_contrast/brightness)=0.138226/0.085451/0.078658; normalized_abs_change=0.078918; active_samples=1.000000; outside(low/high)=0.380859/0.000158
+[09:45:19.693] SliceEqOcc train iteration 12600: lambda=0.090331 loss(original/L-eq/U-eq)=0.010544/0.006241/0.020192; L-profile(sigma/abs_phase/center_w)=0.6746/0.1309/0.5968; U-profile=0.6563/0.1086/0.6242
+[09:45:19.693] SliceEqOcc occupancy iteration 12600: L(frac/entropy/dev/hard_change)=0.005885/0.003800/0.001036/0.000000; U=0.006968/0.005072/0.001530/0.000000; clamp(L/U)=0.0000/0.0833
+[09:45:26.697] iteration 12600 : mean_dice : 0.780629, best_dice : 0.791199
+[09:45:54.653] OAAC appearance iteration 12800: abs(log_gamma/log_contrast/brightness)=0.141186/0.063884/0.069238; normalized_abs_change=0.067896; active_samples=1.000000; outside(low/high)=0.207565/0.000018
+[09:45:54.774] SliceEqOcc train iteration 12800: lambda=0.095725 loss(original/L-eq/U-eq)=0.007203/0.007964/0.020012; L-profile(sigma/abs_phase/center_w)=0.6704/0.1522/0.5971; U-profile=0.5935/0.1171/0.6684
+[09:45:54.774] SliceEqOcc occupancy iteration 12800: L(frac/entropy/dev/hard_change)=0.010448/0.007749/0.002345/0.000000; U=0.006858/0.004492/0.001265/0.000000; clamp(L/U)=0.0833/0.0833
+[09:46:00.611] iteration 12800 : mean_dice : 0.783831, best_dice : 0.791199
+[09:46:26.309] OAAC appearance iteration 13000: abs(log_gamma/log_contrast/brightness)=0.104457/0.121611/0.064295; normalized_abs_change=0.069332; active_samples=1.000000; outside(low/high)=0.248183/0.000819
+[09:46:26.411] SliceEqOcc train iteration 13000: lambda=0.098505 loss(original/L-eq/U-eq)=0.005620/0.005342/0.013728; L-profile(sigma/abs_phase/center_w)=0.6286/0.1243/0.6384; U-profile=0.6038/0.1110/0.6617
+[09:46:26.411] SliceEqOcc occupancy iteration 13000: L(frac/entropy/dev/hard_change)=0.007019/0.004230/0.001112/0.000000; U=0.006926/0.004134/0.001147/0.000000; clamp(L/U)=0.0833/0.0833
+[09:46:32.146] iteration 13000 : mean_dice : 0.783823, best_dice : 0.791199
+[09:46:32.155] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_13000.pth
+[09:46:57.819] OAAC appearance iteration 13200: abs(log_gamma/log_contrast/brightness)=0.126536/0.093577/0.048072; normalized_abs_change=0.062460; active_samples=1.000000; outside(low/high)=0.130931/0.000423
+[09:46:57.924] SliceEqOcc train iteration 13200: lambda=0.101340 loss(original/L-eq/U-eq)=0.007042/0.007163/0.020042; L-profile(sigma/abs_phase/center_w)=0.6530/0.1519/0.6156; U-profile=0.6355/0.1202/0.6331
+[09:46:57.924] SliceEqOcc occupancy iteration 13200: L(frac/entropy/dev/hard_change)=0.007575/0.005571/0.001693/0.000000; U=0.009211/0.006090/0.001690/0.000000; clamp(L/U)=0.0833/0.0000
+[09:47:03.568] iteration 13200 : mean_dice : 0.779870, best_dice : 0.791199
+[09:47:29.387] OAAC appearance iteration 13400: abs(log_gamma/log_contrast/brightness)=0.145564/0.084958/0.069353; normalized_abs_change=0.067990; active_samples=1.000000; outside(low/high)=0.142283/0.000772
+[09:47:29.487] SliceEqOcc train iteration 13400: lambda=0.107177 loss(original/L-eq/U-eq)=0.006300/0.005120/0.013840; L-profile(sigma/abs_phase/center_w)=0.6755/0.1158/0.5976; U-profile=0.6277/0.1211/0.6495
+[09:47:29.487] SliceEqOcc occupancy iteration 13400: L(frac/entropy/dev/hard_change)=0.004186/0.002947/0.000859/0.000000; U=0.005526/0.003711/0.001080/0.000000; clamp(L/U)=0.2500/0.0000
+[09:47:35.271] iteration 13400 : mean_dice : 0.788586, best_dice : 0.791199
+[09:48:00.373] OAAC appearance iteration 13600: abs(log_gamma/log_contrast/brightness)=0.122501/0.082910/0.065597; normalized_abs_change=0.059261; active_samples=1.000000; outside(low/high)=0.132697/0.000306
+[09:48:00.473] SliceEqOcc train iteration 13600: lambda=0.110179 loss(original/L-eq/U-eq)=0.006922/0.006141/0.018757; L-profile(sigma/abs_phase/center_w)=0.6529/0.1277/0.6240; U-profile=0.6497/0.1139/0.6275
+[09:48:00.473] SliceEqOcc occupancy iteration 13600: L(frac/entropy/dev/hard_change)=0.008416/0.005873/0.001704/0.000094; U=0.009757/0.006342/0.001794/0.000000; clamp(L/U)=0.0000/0.0833
+[09:48:05.996] iteration 13600 : mean_dice : 0.792134, best_dice : 0.792134
+[09:48:31.336] OAAC appearance iteration 13800: abs(log_gamma/log_contrast/brightness)=0.100631/0.073848/0.040884; normalized_abs_change=0.040453; active_samples=1.000000; outside(low/high)=0.080555/0.000094
+[09:48:31.432] SliceEqOcc train iteration 13800: lambda=0.113237 loss(original/L-eq/U-eq)=0.006908/0.006634/0.021640; L-profile(sigma/abs_phase/center_w)=0.6485/0.1302/0.6369; U-profile=0.6676/0.1244/0.6193
+[09:48:31.432] SliceEqOcc occupancy iteration 13800: L(frac/entropy/dev/hard_change)=0.007514/0.005098/0.001532/0.000223; U=0.013170/0.008709/0.002497/0.000000; clamp(L/U)=0.0000/0.0000
+[09:48:37.027] iteration 13800 : mean_dice : 0.788006, best_dice : 0.792134
+[09:49:02.435] OAAC appearance iteration 14000: abs(log_gamma/log_contrast/brightness)=0.090384/0.105753/0.063449; normalized_abs_change=0.062814; active_samples=1.000000; outside(low/high)=0.105895/0.000830
+[09:49:02.546] SliceEqOcc train iteration 14000: lambda=0.119520 loss(original/L-eq/U-eq)=0.004639/0.004628/0.014060; L-profile(sigma/abs_phase/center_w)=0.6104/0.1107/0.6600; U-profile=0.6490/0.0825/0.6347
+[09:49:02.546] SliceEqOcc occupancy iteration 14000: L(frac/entropy/dev/hard_change)=0.004697/0.003205/0.000912/0.000065; U=0.005601/0.003566/0.000977/0.000000; clamp(L/U)=0.0833/0.0833
+[09:49:08.109] iteration 14000 : mean_dice : 0.791516, best_dice : 0.792134
+[09:49:08.118] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_14000.pth
+[09:49:33.156] OAAC appearance iteration 14200: abs(log_gamma/log_contrast/brightness)=0.137516/0.100929/0.057786; normalized_abs_change=0.057020; active_samples=1.000000; outside(low/high)=0.117799/0.000595
+[09:49:33.264] SliceEqOcc train iteration 14200: lambda=0.122745 loss(original/L-eq/U-eq)=0.009228/0.009155/0.012732; L-profile(sigma/abs_phase/center_w)=0.6518/0.1004/0.6188; U-profile=0.6928/0.0986/0.5909
+[09:49:33.264] SliceEqOcc occupancy iteration 14200: L(frac/entropy/dev/hard_change)=0.010523/0.006858/0.001858/0.000000; U=0.007623/0.005169/0.001511/0.000000; clamp(L/U)=0.0833/0.1667
+[09:49:38.818] iteration 14200 : mean_dice : 0.799164, best_dice : 0.799164
+[09:50:04.363] OAAC appearance iteration 14400: abs(log_gamma/log_contrast/brightness)=0.144408/0.071189/0.059657; normalized_abs_change=0.067064; active_samples=1.000000; outside(low/high)=0.151641/0.000028
+[09:50:04.461] SliceEqOcc train iteration 14400: lambda=0.126025 loss(original/L-eq/U-eq)=0.007750/0.006517/0.011461; L-profile(sigma/abs_phase/center_w)=0.6469/0.1226/0.6279; U-profile=0.6048/0.1067/0.6633
+[09:50:04.461] SliceEqOcc occupancy iteration 14400: L(frac/entropy/dev/hard_change)=0.007425/0.005328/0.001642/0.000000; U=0.007167/0.004875/0.001361/0.000000; clamp(L/U)=0.0000/0.1667
+[09:50:10.279] iteration 14400 : mean_dice : 0.793619, best_dice : 0.799164
+[09:50:35.884] OAAC appearance iteration 14600: abs(log_gamma/log_contrast/brightness)=0.111865/0.088092/0.072253; normalized_abs_change=0.085751; active_samples=1.000000; outside(low/high)=0.103457/0.000470
+[09:50:35.990] SliceEqOcc train iteration 14600: lambda=0.132752 loss(original/L-eq/U-eq)=0.007477/0.007986/0.024639; L-profile(sigma/abs_phase/center_w)=0.6991/0.1153/0.5849; U-profile=0.7312/0.1157/0.5627
+[09:50:35.990] SliceEqOcc occupancy iteration 14600: L(frac/entropy/dev/hard_change)=0.009460/0.006713/0.001946/0.000000; U=0.004429/0.003062/0.000993/0.000000; clamp(L/U)=0.0000/0.2500
+[09:50:41.573] iteration 14600 : mean_dice : 0.796813, best_dice : 0.799164
+[09:51:06.692] OAAC appearance iteration 14800: abs(log_gamma/log_contrast/brightness)=0.093124/0.063903/0.078878; normalized_abs_change=0.090898; active_samples=1.000000; outside(low/high)=0.258414/0.000931
+[09:51:06.786] SliceEqOcc train iteration 14800: lambda=0.136198 loss(original/L-eq/U-eq)=0.006548/0.007989/0.022138; L-profile(sigma/abs_phase/center_w)=0.7134/0.1038/0.5809; U-profile=0.6467/0.1194/0.6166
+[09:51:06.786] SliceEqOcc occupancy iteration 14800: L(frac/entropy/dev/hard_change)=0.010804/0.008359/0.002617/0.000000; U=0.010736/0.007101/0.001948/0.000000; clamp(L/U)=0.2500/0.0000
+[09:51:12.330] iteration 14800 : mean_dice : 0.790131, best_dice : 0.799164
+[09:51:37.212] OAAC appearance iteration 15000: abs(log_gamma/log_contrast/brightness)=0.134540/0.075994/0.076118; normalized_abs_change=0.093345; active_samples=1.000000; outside(low/high)=0.098626/0.001659
+[09:51:37.302] SliceEqOcc train iteration 15000: lambda=0.139698 loss(original/L-eq/U-eq)=0.007361/0.006953/0.018368; L-profile(sigma/abs_phase/center_w)=0.6385/0.1128/0.6476; U-profile=0.6392/0.1027/0.6368
+[09:51:37.303] SliceEqOcc occupancy iteration 15000: L(frac/entropy/dev/hard_change)=0.006457/0.004128/0.001143/0.000000; U=0.010841/0.007423/0.002180/0.000097; clamp(L/U)=0.0000/0.0833
+[09:51:42.899] iteration 15000 : mean_dice : 0.806695, best_dice : 0.806695
+[09:51:42.907] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_15000.pth
+[09:52:08.366] OAAC appearance iteration 15200: abs(log_gamma/log_contrast/brightness)=0.138788/0.102617/0.078623; normalized_abs_change=0.097163; active_samples=1.000000; outside(low/high)=0.197717/0.001773
+[09:52:08.473] SliceEqOcc train iteration 15200: lambda=0.146860 loss(original/L-eq/U-eq)=0.009453/0.008898/0.047806; L-profile(sigma/abs_phase/center_w)=0.6490/0.1317/0.6177; U-profile=0.6270/0.1401/0.6481
+[09:52:08.473] SliceEqOcc occupancy iteration 15200: L(frac/entropy/dev/hard_change)=0.011072/0.007689/0.002326/0.000000; U=0.006584/0.003577/0.000884/0.000000; clamp(L/U)=0.0833/0.1667
+[09:52:14.138] iteration 15200 : mean_dice : 0.784062, best_dice : 0.806695
+[09:52:39.030] OAAC appearance iteration 15400: abs(log_gamma/log_contrast/brightness)=0.135755/0.085731/0.063610; normalized_abs_change=0.067535; active_samples=1.000000; outside(low/high)=0.232691/0.000609
+[09:52:39.137] SliceEqOcc train iteration 15400: lambda=0.150522 loss(original/L-eq/U-eq)=0.007935/0.007231/0.011652; L-profile(sigma/abs_phase/center_w)=0.6487/0.1241/0.6287; U-profile=0.6715/0.1708/0.6072
+[09:52:39.137] SliceEqOcc occupancy iteration 15400: L(frac/entropy/dev/hard_change)=0.010750/0.006332/0.001748/0.000000; U=0.007339/0.005257/0.001595/0.000000; clamp(L/U)=0.0000/0.1667
+[09:52:44.993] iteration 15400 : mean_dice : 0.790400, best_dice : 0.806695
+[09:53:09.990] OAAC appearance iteration 15600: abs(log_gamma/log_contrast/brightness)=0.119005/0.105549/0.063146; normalized_abs_change=0.059549; active_samples=1.000000; outside(low/high)=0.150419/0.000041
+[09:53:10.082] SliceEqOcc train iteration 15600: lambda=0.154236 loss(original/L-eq/U-eq)=0.007407/0.007473/0.024654; L-profile(sigma/abs_phase/center_w)=0.6308/0.1119/0.6433; U-profile=0.6675/0.1420/0.6010
+[09:53:10.083] SliceEqOcc occupancy iteration 15600: L(frac/entropy/dev/hard_change)=0.007971/0.005671/0.001661/0.000000; U=0.010267/0.006891/0.002005/0.000000; clamp(L/U)=0.0000/0.1667
+[09:53:15.575] iteration 15600 : mean_dice : 0.789663, best_dice : 0.806695
+[09:53:41.118] OAAC appearance iteration 15800: abs(log_gamma/log_contrast/brightness)=0.136967/0.113149/0.058614; normalized_abs_change=0.058032; active_samples=1.000000; outside(low/high)=0.254709/0.000067
+[09:53:41.221] SliceEqOcc train iteration 15800: lambda=0.161820 loss(original/L-eq/U-eq)=0.008074/0.007322/0.007090; L-profile(sigma/abs_phase/center_w)=0.6179/0.1225/0.6558; U-profile=0.6680/0.0965/0.6109
+[09:53:41.222] SliceEqOcc occupancy iteration 15800: L(frac/entropy/dev/hard_change)=0.008289/0.006051/0.001863/0.000000; U=0.004749/0.003430/0.001020/0.000000; clamp(L/U)=0.0833/0.0833
+[09:53:46.747] iteration 15800 : mean_dice : 0.788844, best_dice : 0.806695
+[09:54:11.524] OAAC appearance iteration 16000: abs(log_gamma/log_contrast/brightness)=0.099725/0.078555/0.043804; normalized_abs_change=0.044569; active_samples=1.000000; outside(low/high)=0.224925/0.000047
+[09:54:11.623] SliceEqOcc train iteration 16000: lambda=0.165688 loss(original/L-eq/U-eq)=0.008021/0.006081/0.011098; L-profile(sigma/abs_phase/center_w)=0.6221/0.1415/0.6422; U-profile=0.6331/0.1654/0.6271
+[09:54:11.623] SliceEqOcc occupancy iteration 16000: L(frac/entropy/dev/hard_change)=0.006316/0.004091/0.001143/0.000000; U=0.008865/0.006547/0.002031/0.000000; clamp(L/U)=0.0833/0.0000
+[09:54:17.159] iteration 16000 : mean_dice : 0.806269, best_dice : 0.806695
+[09:54:17.168] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_16000.pth
+[09:54:42.262] OAAC appearance iteration 16200: abs(log_gamma/log_contrast/brightness)=0.143151/0.113035/0.051868; normalized_abs_change=0.055940; active_samples=1.000000; outside(low/high)=0.075653/0.000657
+[09:54:42.364] SliceEqOcc train iteration 16200: lambda=0.169607 loss(original/L-eq/U-eq)=0.006243/0.006326/0.021665; L-profile(sigma/abs_phase/center_w)=0.6534/0.1122/0.6257; U-profile=0.6223/0.1120/0.6481
+[09:54:42.364] SliceEqOcc occupancy iteration 16200: L(frac/entropy/dev/hard_change)=0.006298/0.004185/0.001223/0.000000; U=0.009548/0.006365/0.001857/0.000000; clamp(L/U)=0.1667/0.0833
+[09:54:47.837] iteration 16200 : mean_dice : 0.793762, best_dice : 0.806695
+[09:55:13.269] OAAC appearance iteration 16400: abs(log_gamma/log_contrast/brightness)=0.148335/0.095902/0.068383; normalized_abs_change=0.084332; active_samples=1.000000; outside(low/high)=0.237990/0.000047
+[09:55:13.354] SliceEqOcc train iteration 16400: lambda=0.177591 loss(original/L-eq/U-eq)=0.010609/0.008982/0.028813; L-profile(sigma/abs_phase/center_w)=0.6628/0.1434/0.6026; U-profile=0.6386/0.1062/0.6383
+[09:55:13.354] SliceEqOcc occupancy iteration 16400: L(frac/entropy/dev/hard_change)=0.006078/0.003785/0.001080/0.000000; U=0.006831/0.005259/0.001618/0.000000; clamp(L/U)=0.0833/0.0833
+[09:55:18.858] iteration 16400 : mean_dice : 0.810903, best_dice : 0.810903
+[09:55:44.432] OAAC appearance iteration 16600: abs(log_gamma/log_contrast/brightness)=0.105778/0.090281/0.049105; normalized_abs_change=0.053526; active_samples=1.000000; outside(low/high)=0.120401/0.000294
+[09:55:44.531] SliceEqOcc train iteration 16600: lambda=0.181655 loss(original/L-eq/U-eq)=0.006286/0.006547/0.012712; L-profile(sigma/abs_phase/center_w)=0.6912/0.0998/0.5925; U-profile=0.6472/0.1252/0.6203
+[09:55:44.532] SliceEqOcc occupancy iteration 16600: L(frac/entropy/dev/hard_change)=0.007275/0.005315/0.001587/0.000000; U=0.004931/0.003386/0.001036/0.000000; clamp(L/U)=0.0833/0.0833
+[09:55:50.122] iteration 16600 : mean_dice : 0.801228, best_dice : 0.810903
+[09:56:15.067] OAAC appearance iteration 16800: abs(log_gamma/log_contrast/brightness)=0.132004/0.107753/0.061957; normalized_abs_change=0.061760; active_samples=1.000000; outside(low/high)=0.119230/0.000257
+[09:56:15.164] SliceEqOcc train iteration 16800: lambda=0.185765 loss(original/L-eq/U-eq)=0.006937/0.007917/0.012109; L-profile(sigma/abs_phase/center_w)=0.6691/0.1308/0.6003; U-profile=0.6107/0.1575/0.6523
+[09:56:15.164] SliceEqOcc occupancy iteration 16800: L(frac/entropy/dev/hard_change)=0.009261/0.006754/0.001974/0.000000; U=0.006180/0.003857/0.001096/0.000000; clamp(L/U)=0.0000/0.1667
+[09:56:20.712] iteration 16800 : mean_dice : 0.804069, best_dice : 0.810903
+[09:56:46.344] OAAC appearance iteration 17000: abs(log_gamma/log_contrast/brightness)=0.110141/0.111781/0.062141; normalized_abs_change=0.075643; active_samples=1.000000; outside(low/high)=0.245064/0.000135
+[09:56:46.439] SliceEqOcc train iteration 17000: lambda=0.194121 loss(original/L-eq/U-eq)=0.007333/0.006901/0.010186; L-profile(sigma/abs_phase/center_w)=0.6420/0.1058/0.6355; U-profile=0.5887/0.1137/0.6819
+[09:56:46.439] SliceEqOcc occupancy iteration 17000: L(frac/entropy/dev/hard_change)=0.009647/0.006264/0.001706/0.000103; U=0.005708/0.003285/0.000848/0.000000; clamp(L/U)=0.0833/0.0833
+[09:56:52.020] iteration 17000 : mean_dice : 0.804882, best_dice : 0.810903
+[09:56:52.029] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_17000.pth
+[09:57:16.829] OAAC appearance iteration 17200: abs(log_gamma/log_contrast/brightness)=0.123594/0.063838/0.086472; normalized_abs_change=0.086403; active_samples=1.000000; outside(low/high)=0.344385/0.000394
+[09:57:16.924] SliceEqOcc train iteration 17200: lambda=0.198365 loss(original/L-eq/U-eq)=0.006577/0.007695/0.017058; L-profile(sigma/abs_phase/center_w)=0.5921/0.1275/0.6750; U-profile=0.7222/0.1778/0.5618
+[09:57:16.924] SliceEqOcc occupancy iteration 17200: L(frac/entropy/dev/hard_change)=0.008102/0.004752/0.001289/0.000000; U=0.010905/0.008291/0.002779/0.000131; clamp(L/U)=0.1667/0.0000
+[09:57:22.464] iteration 17200 : mean_dice : 0.801125, best_dice : 0.810903
+[09:57:47.357] OAAC appearance iteration 17400: abs(log_gamma/log_contrast/brightness)=0.115435/0.092286/0.077608; normalized_abs_change=0.081509; active_samples=1.000000; outside(low/high)=0.228320/0.000085
+[09:57:47.463] SliceEqOcc train iteration 17400: lambda=0.202651 loss(original/L-eq/U-eq)=0.005414/0.006630/0.017696; L-profile(sigma/abs_phase/center_w)=0.6773/0.1334/0.6037; U-profile=0.6653/0.1014/0.6097
+[09:57:47.463] SliceEqOcc occupancy iteration 17400: L(frac/entropy/dev/hard_change)=0.008452/0.006247/0.001884/0.000000; U=0.009237/0.006269/0.001809/0.000000; clamp(L/U)=0.1667/0.1667
+[09:57:52.930] iteration 17400 : mean_dice : 0.808336, best_dice : 0.810903
+[09:58:18.659] OAAC appearance iteration 17600: abs(log_gamma/log_contrast/brightness)=0.118143/0.104459/0.065269; normalized_abs_change=0.072372; active_samples=1.000000; outside(low/high)=0.136013/0.001066
+[09:58:18.758] SliceEqOcc train iteration 17600: lambda=0.211343 loss(original/L-eq/U-eq)=0.006428/0.006166/0.018117; L-profile(sigma/abs_phase/center_w)=0.6403/0.1138/0.6418; U-profile=0.6832/0.1543/0.5904
+[09:58:18.758] SliceEqOcc occupancy iteration 17600: L(frac/entropy/dev/hard_change)=0.008579/0.005358/0.001547/0.000000; U=0.011256/0.007442/0.002085/0.000000; clamp(L/U)=0.0000/0.0833
+[09:58:24.261] iteration 17600 : mean_dice : 0.807438, best_dice : 0.810903
+[09:58:49.282] OAAC appearance iteration 17800: abs(log_gamma/log_contrast/brightness)=0.128382/0.080438/0.054511; normalized_abs_change=0.052439; active_samples=1.000000; outside(low/high)=0.202113/0.000028
+[09:58:49.392] SliceEqOcc train iteration 17800: lambda=0.215747 loss(original/L-eq/U-eq)=0.007238/0.006996/0.017745; L-profile(sigma/abs_phase/center_w)=0.6090/0.1179/0.6585; U-profile=0.5754/0.1602/0.6843
+[09:58:49.392] SliceEqOcc occupancy iteration 17800: L(frac/entropy/dev/hard_change)=0.008283/0.005624/0.001608/0.000000; U=0.010513/0.004516/0.001070/0.000000; clamp(L/U)=0.0833/0.0000
+[09:58:54.908] iteration 17800 : mean_dice : 0.803881, best_dice : 0.810903
+[09:59:19.890] OAAC appearance iteration 18000: abs(log_gamma/log_contrast/brightness)=0.131234/0.086069/0.064155; normalized_abs_change=0.072277; active_samples=1.000000; outside(low/high)=0.141402/0.000809
+[09:59:19.989] SliceEqOcc train iteration 18000: lambda=0.220188 loss(original/L-eq/U-eq)=0.007221/0.005477/0.012188; L-profile(sigma/abs_phase/center_w)=0.6746/0.1216/0.6043; U-profile=0.7105/0.1197/0.5791
+[09:59:19.989] SliceEqOcc occupancy iteration 18000: L(frac/entropy/dev/hard_change)=0.006978/0.004413/0.001249/0.000000; U=0.008375/0.006403/0.002002/0.000301; clamp(L/U)=0.0000/0.2500
+[09:59:25.497] iteration 18000 : mean_dice : 0.810439, best_dice : 0.810903
+[09:59:25.506] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_18000.pth
+[09:59:51.131] OAAC appearance iteration 18200: abs(log_gamma/log_contrast/brightness)=0.123275/0.127068/0.083274; normalized_abs_change=0.081136; active_samples=1.000000; outside(low/high)=0.171000/0.000214
+[09:59:51.237] SliceEqOcc train iteration 18200: lambda=0.229174 loss(original/L-eq/U-eq)=0.007033/0.006712/0.018149; L-profile(sigma/abs_phase/center_w)=0.7034/0.0918/0.5921; U-profile=0.6889/0.1545/0.5873
+[09:59:51.237] SliceEqOcc occupancy iteration 18200: L(frac/entropy/dev/hard_change)=0.007801/0.005508/0.001646/0.000024; U=0.010826/0.007792/0.002449/0.000432; clamp(L/U)=0.0000/0.0000
+[09:59:56.742] iteration 18200 : mean_dice : 0.801768, best_dice : 0.810903
+[10:00:21.670] OAAC appearance iteration 18400: abs(log_gamma/log_contrast/brightness)=0.129340/0.073353/0.049678; normalized_abs_change=0.056262; active_samples=1.000000; outside(low/high)=0.076811/0.000259
+[10:00:21.780] SliceEqOcc train iteration 18400: lambda=0.233716 loss(original/L-eq/U-eq)=0.014098/0.012331/0.034416; L-profile(sigma/abs_phase/center_w)=0.6324/0.1287/0.6274; U-profile=0.6476/0.1256/0.6307
+[10:00:21.780] SliceEqOcc occupancy iteration 18400: L(frac/entropy/dev/hard_change)=0.004988/0.003555/0.001055/0.000000; U=0.013140/0.009367/0.002765/0.000000; clamp(L/U)=0.2500/0.0833
+[10:00:27.325] iteration 18400 : mean_dice : 0.795486, best_dice : 0.810903
+[10:00:52.377] OAAC appearance iteration 18600: abs(log_gamma/log_contrast/brightness)=0.170286/0.110963/0.053289; normalized_abs_change=0.067472; active_samples=1.000000; outside(low/high)=0.205256/0.000839
+[10:00:52.464] SliceEqOcc train iteration 18600: lambda=0.238289 loss(original/L-eq/U-eq)=0.006717/0.010471/0.018618; L-profile(sigma/abs_phase/center_w)=0.6848/0.1416/0.5937; U-profile=0.5784/0.1351/0.6778
+[10:00:52.465] SliceEqOcc occupancy iteration 18600: L(frac/entropy/dev/hard_change)=0.013274/0.009987/0.003061/0.000000; U=0.008761/0.005000/0.001283/0.000000; clamp(L/U)=0.0833/0.0000
+[10:00:58.016] iteration 18600 : mean_dice : 0.808917, best_dice : 0.810903
+[10:01:23.867] OAAC appearance iteration 18800: abs(log_gamma/log_contrast/brightness)=0.130867/0.067068/0.076822; normalized_abs_change=0.095422; active_samples=1.000000; outside(low/high)=0.320502/0.000572
+[10:01:23.970] SliceEqOcc train iteration 18800: lambda=0.247518 loss(original/L-eq/U-eq)=0.007517/0.006650/0.010072; L-profile(sigma/abs_phase/center_w)=0.6166/0.1395/0.6481; U-profile=0.6719/0.1254/0.5933
+[10:01:23.971] SliceEqOcc occupancy iteration 18800: L(frac/entropy/dev/hard_change)=0.007167/0.004424/0.001279/0.000000; U=0.005540/0.004151/0.001283/0.000000; clamp(L/U)=0.0000/0.0000
+[10:01:29.604] iteration 18800 : mean_dice : 0.809675, best_dice : 0.810903
+[10:01:55.578] OAAC appearance iteration 19000: abs(log_gamma/log_contrast/brightness)=0.144473/0.086997/0.067633; normalized_abs_change=0.076613; active_samples=1.000000; outside(low/high)=0.212760/0.000535
+[10:01:55.688] SliceEqOcc train iteration 19000: lambda=0.252171 loss(original/L-eq/U-eq)=0.009575/0.008339/0.012315; L-profile(sigma/abs_phase/center_w)=0.7204/0.1200/0.5692; U-profile=0.6761/0.0924/0.6103
+[10:01:55.689] SliceEqOcc occupancy iteration 19000: L(frac/entropy/dev/hard_change)=0.008027/0.006029/0.001842/0.000000; U=0.009135/0.006016/0.001803/0.000000; clamp(L/U)=0.0833/0.0000
+[10:02:01.382] iteration 19000 : mean_dice : 0.817612, best_dice : 0.817612
+[10:02:01.390] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_19000.pth
+[10:02:27.595] OAAC appearance iteration 19200: abs(log_gamma/log_contrast/brightness)=0.108220/0.093963/0.063319; normalized_abs_change=0.074482; active_samples=1.000000; outside(low/high)=0.178589/0.001310
+[10:02:27.683] SliceEqOcc train iteration 19200: lambda=0.256848 loss(original/L-eq/U-eq)=0.004691/0.004534/0.011700; L-profile(sigma/abs_phase/center_w)=0.6544/0.1588/0.6162; U-profile=0.7021/0.1417/0.5792
+[10:02:27.683] SliceEqOcc occupancy iteration 19200: L(frac/entropy/dev/hard_change)=0.005569/0.003223/0.000896/0.000000; U=0.007179/0.005480/0.001741/0.000000; clamp(L/U)=0.0833/0.1667
+[10:02:33.440] iteration 19200 : mean_dice : 0.808601, best_dice : 0.817612
+[10:03:03.348] OAAC appearance iteration 19400: abs(log_gamma/log_contrast/brightness)=0.127464/0.126414/0.062305; normalized_abs_change=0.070144; active_samples=1.000000; outside(low/high)=0.186745/0.000053
+[10:03:03.483] SliceEqOcc train iteration 19400: lambda=0.266263 loss(original/L-eq/U-eq)=0.008356/0.007273/0.011756; L-profile(sigma/abs_phase/center_w)=0.6100/0.1257/0.6568; U-profile=0.6947/0.1539/0.5894
+[10:03:03.483] SliceEqOcc occupancy iteration 19400: L(frac/entropy/dev/hard_change)=0.007359/0.004455/0.001222/0.000000; U=0.006133/0.004668/0.001469/0.000051; clamp(L/U)=0.0833/0.0000
+[10:03:18.092] iteration 19400 : mean_dice : 0.821685, best_dice : 0.821685
+[10:04:02.224] OAAC appearance iteration 19600: abs(log_gamma/log_contrast/brightness)=0.120505/0.110439/0.063347; normalized_abs_change=0.072232; active_samples=1.000000; outside(low/high)=0.239141/0.000047
+[10:04:02.405] SliceEqOcc train iteration 19600: lambda=0.270997 loss(original/L-eq/U-eq)=0.006542/0.008464/0.014009; L-profile(sigma/abs_phase/center_w)=0.6209/0.1647/0.6418; U-profile=0.6269/0.1312/0.6434
+[10:04:02.407] SliceEqOcc occupancy iteration 19600: L(frac/entropy/dev/hard_change)=0.014376/0.009446/0.002728/0.000000; U=0.008209/0.006239/0.002026/0.000465; clamp(L/U)=0.0833/0.1667
+[10:04:11.536] iteration 19600 : mean_dice : 0.801458, best_dice : 0.821685
+[10:04:53.442] OAAC appearance iteration 19800: abs(log_gamma/log_contrast/brightness)=0.078888/0.073646/0.063752; normalized_abs_change=0.061374; active_samples=1.000000; outside(low/high)=0.086051/0.000071
+[10:04:53.575] SliceEqOcc train iteration 19800: lambda=0.275747 loss(original/L-eq/U-eq)=0.006604/0.006554/0.011481; L-profile(sigma/abs_phase/center_w)=0.5800/0.1318/0.6822; U-profile=0.6813/0.1130/0.5961
+[10:04:53.575] SliceEqOcc occupancy iteration 19800: L(frac/entropy/dev/hard_change)=0.008221/0.005177/0.001407/0.000000; U=0.004665/0.003339/0.001047/0.000000; clamp(L/U)=0.1667/0.0833
+[10:05:03.597] iteration 19800 : mean_dice : 0.812559, best_dice : 0.821685
+[10:05:46.950] OAAC appearance iteration 20000: abs(log_gamma/log_contrast/brightness)=0.135593/0.078488/0.072165; normalized_abs_change=0.079117; active_samples=1.000000; outside(low/high)=0.245560/0.001134
+[10:05:47.075] SliceEqOcc train iteration 20000: lambda=0.285283 loss(original/L-eq/U-eq)=0.007615/0.007443/0.017279; L-profile(sigma/abs_phase/center_w)=0.6392/0.0941/0.6334; U-profile=0.6835/0.1277/0.5970
+[10:05:47.076] SliceEqOcc occupancy iteration 20000: L(frac/entropy/dev/hard_change)=0.009160/0.005950/0.001628/0.000000; U=0.011996/0.008838/0.002648/0.000121; clamp(L/U)=0.0000/0.0833
+[10:05:57.760] iteration 20000 : mean_dice : 0.804498, best_dice : 0.821685
+[10:05:57.771] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_20000.pth
+[10:06:38.709] OAAC appearance iteration 20200: abs(log_gamma/log_contrast/brightness)=0.188949/0.075644/0.065043; normalized_abs_change=0.088995; active_samples=1.000000; outside(low/high)=0.211053/0.000206
+[10:06:38.836] SliceEqOcc train iteration 20200: lambda=0.290066 loss(original/L-eq/U-eq)=0.006769/0.007181/0.025426; L-profile(sigma/abs_phase/center_w)=0.5844/0.1300/0.6787; U-profile=0.6457/0.1165/0.6327
+[10:06:38.839] SliceEqOcc occupancy iteration 20200: L(frac/entropy/dev/hard_change)=0.008853/0.006402/0.001990/0.000000; U=0.009913/0.006098/0.001707/0.000052; clamp(L/U)=0.0833/0.2500
+[10:06:49.410] iteration 20200 : mean_dice : 0.823688, best_dice : 0.823688
+[10:07:32.226] OAAC appearance iteration 20400: abs(log_gamma/log_contrast/brightness)=0.152909/0.091445/0.054278; normalized_abs_change=0.067104; active_samples=1.000000; outside(low/high)=0.251419/0.000097
+[10:07:32.374] SliceEqOcc train iteration 20400: lambda=0.294855 loss(original/L-eq/U-eq)=0.006999/0.007249/0.014910; L-profile(sigma/abs_phase/center_w)=0.5986/0.1412/0.6626; U-profile=0.5940/0.1157/0.6820
+[10:07:32.375] SliceEqOcc occupancy iteration 20400: L(frac/entropy/dev/hard_change)=0.010071/0.006426/0.001779/0.000000; U=0.014076/0.008779/0.002434/0.000004; clamp(L/U)=0.0833/0.0000
+[10:07:39.407] iteration 20400 : mean_dice : 0.805568, best_dice : 0.823688
+[10:08:19.324] OAAC appearance iteration 20600: abs(log_gamma/log_contrast/brightness)=0.109850/0.113287/0.062667; normalized_abs_change=0.072099; active_samples=1.000000; outside(low/high)=0.421038/0.000534
+[10:08:19.500] SliceEqOcc train iteration 20600: lambda=0.304443 loss(original/L-eq/U-eq)=0.005533/0.005175/0.007654; L-profile(sigma/abs_phase/center_w)=0.6168/0.1096/0.6625; U-profile=0.6203/0.1213/0.6490
+[10:08:19.500] SliceEqOcc occupancy iteration 20600: L(frac/entropy/dev/hard_change)=0.005494/0.003616/0.001017/0.000000; U=0.007476/0.005294/0.001569/0.000031; clamp(L/U)=0.0833/0.0000
+[10:08:33.449] iteration 20600 : mean_dice : 0.811908, best_dice : 0.823688
+[10:09:15.558] OAAC appearance iteration 20800: abs(log_gamma/log_contrast/brightness)=0.108127/0.105517/0.048695; normalized_abs_change=0.052831; active_samples=1.000000; outside(low/high)=0.059522/0.000050
+[10:09:15.704] SliceEqOcc train iteration 20800: lambda=0.309237 loss(original/L-eq/U-eq)=0.004204/0.003783/0.012854; L-profile(sigma/abs_phase/center_w)=0.6020/0.1324/0.6565; U-profile=0.6080/0.1503/0.6572
+[10:09:15.705] SliceEqOcc occupancy iteration 20800: L(frac/entropy/dev/hard_change)=0.003707/0.002629/0.000769/0.000000; U=0.011403/0.008104/0.002410/0.000084; clamp(L/U)=0.0833/0.0000
+[10:09:25.706] iteration 20800 : mean_dice : 0.812396, best_dice : 0.823688
+[10:10:07.175] OAAC appearance iteration 21000: abs(log_gamma/log_contrast/brightness)=0.139386/0.115482/0.085098; normalized_abs_change=0.079938; active_samples=1.000000; outside(low/high)=0.140036/0.000987
+[10:10:07.308] SliceEqOcc train iteration 21000: lambda=0.314028 loss(original/L-eq/U-eq)=0.005797/0.005196/0.009087; L-profile(sigma/abs_phase/center_w)=0.6744/0.1161/0.6110; U-profile=0.6573/0.1312/0.6211
+[10:10:07.309] SliceEqOcc occupancy iteration 21000: L(frac/entropy/dev/hard_change)=0.005914/0.003755/0.001034/0.000000; U=0.006996/0.004596/0.001364/0.000000; clamp(L/U)=0.0000/0.0000
+[10:10:18.844] iteration 21000 : mean_dice : 0.814749, best_dice : 0.823688
+[10:10:18.855] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_21000.pth
+[10:11:00.401] OAAC appearance iteration 21200: abs(log_gamma/log_contrast/brightness)=0.134973/0.089722/0.075397; normalized_abs_change=0.081461; active_samples=1.000000; outside(low/high)=0.232386/0.000214
+[10:11:00.550] SliceEqOcc train iteration 21200: lambda=0.323592 loss(original/L-eq/U-eq)=0.007280/0.007178/0.012253; L-profile(sigma/abs_phase/center_w)=0.6188/0.0979/0.6492; U-profile=0.7022/0.1030/0.5872
+[10:11:00.550] SliceEqOcc occupancy iteration 21200: L(frac/entropy/dev/hard_change)=0.009946/0.006651/0.001866/0.000000; U=0.007243/0.005534/0.001742/0.000010; clamp(L/U)=0.0833/0.1667
+[10:11:13.928] iteration 21200 : mean_dice : 0.813412, best_dice : 0.823688
+[10:11:57.344] OAAC appearance iteration 21400: abs(log_gamma/log_contrast/brightness)=0.106383/0.123968/0.050039; normalized_abs_change=0.047575; active_samples=1.000000; outside(low/high)=0.044487/0.000431
+[10:11:57.502] SliceEqOcc train iteration 21400: lambda=0.328359 loss(original/L-eq/U-eq)=0.006523/0.006069/0.011071; L-profile(sigma/abs_phase/center_w)=0.6886/0.1184/0.5886; U-profile=0.6551/0.0871/0.6318
+[10:11:57.503] SliceEqOcc occupancy iteration 21400: L(frac/entropy/dev/hard_change)=0.005189/0.004004/0.001253/0.000000; U=0.005508/0.003572/0.001000/0.000000; clamp(L/U)=0.0000/0.0000
+[10:12:12.297] iteration 21400 : mean_dice : 0.819654, best_dice : 0.823688
+[10:12:51.726] OAAC appearance iteration 21600: abs(log_gamma/log_contrast/brightness)=0.102452/0.088218/0.069093; normalized_abs_change=0.076832; active_samples=1.000000; outside(low/high)=0.252875/0.000126
+[10:12:51.886] SliceEqOcc train iteration 21600: lambda=0.333113 loss(original/L-eq/U-eq)=0.006204/0.005559/0.013611; L-profile(sigma/abs_phase/center_w)=0.5931/0.1418/0.6700; U-profile=0.6068/0.1239/0.6619
+[10:12:51.887] SliceEqOcc occupancy iteration 21600: L(frac/entropy/dev/hard_change)=0.005641/0.003795/0.001086/0.000000; U=0.009813/0.006074/0.001638/0.000000; clamp(L/U)=0.0833/0.1667
+[10:13:01.284] iteration 21600 : mean_dice : 0.816977, best_dice : 0.823688
+[10:13:43.945] OAAC appearance iteration 21800: abs(log_gamma/log_contrast/brightness)=0.083340/0.079446/0.074510; normalized_abs_change=0.078695; active_samples=1.000000; outside(low/high)=0.107224/0.000125
+[10:13:44.076] SliceEqOcc train iteration 21800: lambda=0.342572 loss(original/L-eq/U-eq)=0.011490/0.009585/0.012629; L-profile(sigma/abs_phase/center_w)=0.6303/0.1290/0.6388; U-profile=0.6363/0.1339/0.6272
+[10:13:44.076] SliceEqOcc occupancy iteration 21800: L(frac/entropy/dev/hard_change)=0.008656/0.005796/0.001661/0.000000; U=0.008848/0.005438/0.001489/0.000000; clamp(L/U)=0.0833/0.0833
+[10:13:50.602] iteration 21800 : mean_dice : 0.807103, best_dice : 0.823688
+[10:14:24.022] OAAC appearance iteration 22000: abs(log_gamma/log_contrast/brightness)=0.118657/0.096578/0.070824; normalized_abs_change=0.067302; active_samples=1.000000; outside(low/high)=0.330733/0.000023
+[10:14:24.153] SliceEqOcc train iteration 22000: lambda=0.347272 loss(original/L-eq/U-eq)=0.008231/0.009886/0.016753; L-profile(sigma/abs_phase/center_w)=0.6473/0.1223/0.6253; U-profile=0.6473/0.1357/0.6206
+[10:14:24.153] SliceEqOcc occupancy iteration 22000: L(frac/entropy/dev/hard_change)=0.011088/0.008362/0.002583/0.000000; U=0.011908/0.008439/0.002502/0.000000; clamp(L/U)=0.0000/0.0833
+[10:14:30.853] iteration 22000 : mean_dice : 0.793364, best_dice : 0.823688
+[10:14:30.863] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_22000.pth
+[10:15:06.257] OAAC appearance iteration 22200: abs(log_gamma/log_contrast/brightness)=0.151192/0.095473/0.069591; normalized_abs_change=0.087261; active_samples=1.000000; outside(low/high)=0.234118/0.000004
+[10:15:06.379] SliceEqOcc train iteration 22200: lambda=0.351948 loss(original/L-eq/U-eq)=0.006879/0.007017/0.013081; L-profile(sigma/abs_phase/center_w)=0.6831/0.1060/0.5969; U-profile=0.6594/0.1120/0.6252
+[10:15:06.379] SliceEqOcc occupancy iteration 22200: L(frac/entropy/dev/hard_change)=0.007877/0.005632/0.001647/0.000000; U=0.014188/0.009939/0.002852/0.000092; clamp(L/U)=0.0000/0.0000
+[10:15:12.961] iteration 22200 : mean_dice : 0.815728, best_dice : 0.823688
+[10:15:55.024] OAAC appearance iteration 22400: abs(log_gamma/log_contrast/brightness)=0.101251/0.096622/0.069548; normalized_abs_change=0.071603; active_samples=1.000000; outside(low/high)=0.209691/0.000011
+[10:15:55.156] SliceEqOcc train iteration 22400: lambda=0.361219 loss(original/L-eq/U-eq)=0.006181/0.006485/0.007035; L-profile(sigma/abs_phase/center_w)=0.6496/0.1164/0.6220; U-profile=0.6530/0.0988/0.6242
+[10:15:55.156] SliceEqOcc occupancy iteration 22400: L(frac/entropy/dev/hard_change)=0.009776/0.006773/0.001947/0.000000; U=0.003368/0.002409/0.000719/0.000000; clamp(L/U)=0.0833/0.0000
+[10:16:02.719] iteration 22400 : mean_dice : 0.824671, best_dice : 0.824671
+[10:16:44.837] OAAC appearance iteration 22600: abs(log_gamma/log_contrast/brightness)=0.094886/0.095752/0.058274; normalized_abs_change=0.056200; active_samples=1.000000; outside(low/high)=0.107731/0.000017
+[10:16:44.985] SliceEqOcc train iteration 22600: lambda=0.365808 loss(original/L-eq/U-eq)=0.006444/0.007568/0.009260; L-profile(sigma/abs_phase/center_w)=0.6787/0.0971/0.6041; U-profile=0.6933/0.0910/0.5959
+[10:16:44.985] SliceEqOcc occupancy iteration 22600: L(frac/entropy/dev/hard_change)=0.009762/0.007386/0.002237/0.000000; U=0.008751/0.006114/0.001716/0.000000; clamp(L/U)=0.0000/0.0833
+[10:16:53.846] iteration 22600 : mean_dice : 0.811134, best_dice : 0.824671
+[10:17:35.203] OAAC appearance iteration 22800: abs(log_gamma/log_contrast/brightness)=0.123539/0.092805/0.064620; normalized_abs_change=0.072091; active_samples=1.000000; outside(low/high)=0.147994/0.000036
+[10:17:35.348] SliceEqOcc train iteration 22800: lambda=0.370363 loss(original/L-eq/U-eq)=0.007165/0.006405/0.016145; L-profile(sigma/abs_phase/center_w)=0.6413/0.1321/0.6367; U-profile=0.6471/0.1192/0.6187
+[10:17:35.349] SliceEqOcc occupancy iteration 22800: L(frac/entropy/dev/hard_change)=0.006579/0.004484/0.001303/0.000000; U=0.010626/0.007624/0.002296/0.000000; clamp(L/U)=0.3333/0.0833
+[10:17:43.569] iteration 22800 : mean_dice : 0.803997, best_dice : 0.824671
+[10:18:25.359] OAAC appearance iteration 23000: abs(log_gamma/log_contrast/brightness)=0.120828/0.071508/0.058620; normalized_abs_change=0.076723; active_samples=1.000000; outside(low/high)=0.105977/0.000203
+[10:18:25.506] SliceEqOcc train iteration 23000: lambda=0.379359 loss(original/L-eq/U-eq)=0.007762/0.006694/0.011858; L-profile(sigma/abs_phase/center_w)=0.6168/0.0842/0.6625; U-profile=0.6354/0.1818/0.6192
+[10:18:25.506] SliceEqOcc occupancy iteration 23000: L(frac/entropy/dev/hard_change)=0.006081/0.003533/0.000915/0.000000; U=0.009843/0.006997/0.002059/0.000000; clamp(L/U)=0.2500/0.0833
+[10:18:35.965] iteration 23000 : mean_dice : 0.818146, best_dice : 0.824671
+[10:18:35.982] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_23000.pth
+[10:19:17.030] OAAC appearance iteration 23200: abs(log_gamma/log_contrast/brightness)=0.125200/0.114824/0.065261; normalized_abs_change=0.088043; active_samples=1.000000; outside(low/high)=0.267965/0.000058
+[10:19:17.156] SliceEqOcc train iteration 23200: lambda=0.383795 loss(original/L-eq/U-eq)=0.007050/0.006652/0.017218; L-profile(sigma/abs_phase/center_w)=0.6275/0.1130/0.6462; U-profile=0.6561/0.1455/0.6103
+[10:19:17.156] SliceEqOcc occupancy iteration 23200: L(frac/entropy/dev/hard_change)=0.008710/0.005571/0.001599/0.000000; U=0.010448/0.006606/0.001916/0.000000; clamp(L/U)=0.0000/0.0000
+[10:19:24.777] iteration 23200 : mean_dice : 0.821375, best_dice : 0.824671
+[10:20:07.345] OAAC appearance iteration 23400: abs(log_gamma/log_contrast/brightness)=0.130481/0.098970/0.065915; normalized_abs_change=0.071056; active_samples=1.000000; outside(low/high)=0.244729/0.001122
+[10:20:07.460] SliceEqOcc train iteration 23400: lambda=0.388185 loss(original/L-eq/U-eq)=0.005236/0.005402/0.014315; L-profile(sigma/abs_phase/center_w)=0.6492/0.0864/0.6304; U-profile=0.6417/0.1315/0.6264
+[10:20:07.460] SliceEqOcc occupancy iteration 23400: L(frac/entropy/dev/hard_change)=0.006401/0.004602/0.001334/0.000000; U=0.008364/0.005541/0.001542/0.000000; clamp(L/U)=0.0000/0.0833
+[10:20:20.953] iteration 23400 : mean_dice : 0.819598, best_dice : 0.824671
+[10:21:02.296] OAAC appearance iteration 23600: abs(log_gamma/log_contrast/brightness)=0.155799/0.109747/0.089917; normalized_abs_change=0.083527; active_samples=1.000000; outside(low/high)=0.034648/0.000259
+[10:21:02.443] SliceEqOcc train iteration 23600: lambda=0.396820 loss(original/L-eq/U-eq)=0.007369/0.005906/0.014250; L-profile(sigma/abs_phase/center_w)=0.6416/0.1205/0.6372; U-profile=0.6507/0.1077/0.6177
+[10:21:02.444] SliceEqOcc occupancy iteration 23600: L(frac/entropy/dev/hard_change)=0.003597/0.002564/0.000769/0.000108; U=0.008179/0.005343/0.001528/0.000000; clamp(L/U)=0.0000/0.0833
+[10:21:18.181] iteration 23600 : mean_dice : 0.808517, best_dice : 0.824671
+[10:22:01.236] OAAC appearance iteration 23800: abs(log_gamma/log_contrast/brightness)=0.128319/0.084487/0.051456; normalized_abs_change=0.036022; active_samples=1.000000; outside(low/high)=0.139627/0.000022
+[10:22:01.381] SliceEqOcc train iteration 23800: lambda=0.401059 loss(original/L-eq/U-eq)=0.005728/0.006499/0.011955; L-profile(sigma/abs_phase/center_w)=0.6588/0.1491/0.6032; U-profile=0.6094/0.0822/0.6682
+[10:22:01.381] SliceEqOcc occupancy iteration 23800: L(frac/entropy/dev/hard_change)=0.008586/0.005766/0.001738/0.000000; U=0.008984/0.005867/0.001604/0.000000; clamp(L/U)=0.2500/0.0833
+[10:22:14.617] iteration 23800 : mean_dice : 0.828276, best_dice : 0.828276
+[10:22:56.855] OAAC appearance iteration 24000: abs(log_gamma/log_contrast/brightness)=0.103243/0.083075/0.085000; normalized_abs_change=0.082770; active_samples=1.000000; outside(low/high)=0.243270/0.000029
+[10:22:57.068] SliceEqOcc train iteration 24000: lambda=0.405241 loss(original/L-eq/U-eq)=0.006309/0.005459/0.007252; L-profile(sigma/abs_phase/center_w)=0.7376/0.1188/0.5577; U-profile=0.6059/0.1644/0.6512
+[10:22:57.069] SliceEqOcc occupancy iteration 24000: L(frac/entropy/dev/hard_change)=0.005666/0.004329/0.001368/0.000104; U=0.005357/0.003595/0.001056/0.000000; clamp(L/U)=0.1667/0.0833
+[10:23:04.538] iteration 24000 : mean_dice : 0.821251, best_dice : 0.828276
+[10:23:04.548] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_24000.pth
+[10:23:46.509] OAAC appearance iteration 24200: abs(log_gamma/log_contrast/brightness)=0.127681/0.120318/0.041928; normalized_abs_change=0.048873; active_samples=1.000000; outside(low/high)=0.051577/0.000197
+[10:23:46.646] SliceEqOcc train iteration 24200: lambda=0.413428 loss(original/L-eq/U-eq)=0.008634/0.005858/0.011507; L-profile(sigma/abs_phase/center_w)=0.6629/0.1150/0.6156; U-profile=0.5830/0.1036/0.6858
+[10:23:46.647] SliceEqOcc occupancy iteration 24200: L(frac/entropy/dev/hard_change)=0.006145/0.004549/0.001412/0.000000; U=0.011072/0.006550/0.001734/0.000000; clamp(L/U)=0.0000/0.0000
+[10:23:53.787] iteration 24200 : mean_dice : 0.815611, best_dice : 0.828276
+[10:24:36.325] OAAC appearance iteration 24400: abs(log_gamma/log_contrast/brightness)=0.093683/0.103614/0.054478; normalized_abs_change=0.050826; active_samples=1.000000; outside(low/high)=0.176961/0.000142
+[10:24:36.463] SliceEqOcc train iteration 24400: lambda=0.417426 loss(original/L-eq/U-eq)=0.006879/0.006564/0.008435; L-profile(sigma/abs_phase/center_w)=0.6540/0.1182/0.6248; U-profile=0.6692/0.0959/0.6148
+[10:24:36.465] SliceEqOcc occupancy iteration 24400: L(frac/entropy/dev/hard_change)=0.008884/0.005323/0.001452/0.000000; U=0.010386/0.007139/0.002046/0.000000; clamp(L/U)=0.0000/0.0833
+[10:24:43.308] iteration 24400 : mean_dice : 0.815135, best_dice : 0.828276
+[10:25:23.285] OAAC appearance iteration 24600: abs(log_gamma/log_contrast/brightness)=0.088919/0.099376/0.065308; normalized_abs_change=0.066191; active_samples=1.000000; outside(low/high)=0.364534/0.000004
+[10:25:23.481] SliceEqOcc train iteration 24600: lambda=0.421358 loss(original/L-eq/U-eq)=0.004553/0.005249/0.009055; L-profile(sigma/abs_phase/center_w)=0.6277/0.1202/0.6466; U-profile=0.6254/0.0969/0.6492
+[10:25:23.485] SliceEqOcc occupancy iteration 24600: L(frac/entropy/dev/hard_change)=0.006545/0.004364/0.001196/0.000033; U=0.007000/0.005329/0.001609/0.000000; clamp(L/U)=0.0000/0.0000
+[10:25:30.450] iteration 24600 : mean_dice : 0.821393, best_dice : 0.828276
+[10:26:13.621] OAAC appearance iteration 24800: abs(log_gamma/log_contrast/brightness)=0.109675/0.081024/0.063505; normalized_abs_change=0.063694; active_samples=1.000000; outside(low/high)=0.320938/0.000334
+[10:26:13.748] SliceEqOcc train iteration 24800: lambda=0.429011 loss(original/L-eq/U-eq)=0.007721/0.006672/0.014614; L-profile(sigma/abs_phase/center_w)=0.5819/0.1509/0.6756; U-profile=0.6814/0.1514/0.5975
+[10:26:13.748] SliceEqOcc occupancy iteration 24800: L(frac/entropy/dev/hard_change)=0.010326/0.006401/0.001828/0.000000; U=0.014187/0.010716/0.003321/0.000000; clamp(L/U)=0.0000/0.0000
+[10:26:21.796] iteration 24800 : mean_dice : 0.820431, best_dice : 0.828276
+[10:27:03.499] OAAC appearance iteration 25000: abs(log_gamma/log_contrast/brightness)=0.090675/0.093361/0.063190; normalized_abs_change=0.059994; active_samples=1.000000; outside(low/high)=0.192584/0.000074
+[10:27:03.634] SliceEqOcc train iteration 25000: lambda=0.432727 loss(original/L-eq/U-eq)=0.006188/0.005542/0.013120; L-profile(sigma/abs_phase/center_w)=0.6109/0.0981/0.6647; U-profile=0.7061/0.1239/0.5833
+[10:27:03.634] SliceEqOcc occupancy iteration 25000: L(frac/entropy/dev/hard_change)=0.006109/0.003527/0.000895/0.000000; U=0.009431/0.006917/0.002074/0.000000; clamp(L/U)=0.1667/0.1667
+[10:27:13.290] iteration 25000 : mean_dice : 0.830453, best_dice : 0.830453
+[10:27:13.299] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_25000.pth
+[10:27:56.219] OAAC appearance iteration 25200: abs(log_gamma/log_contrast/brightness)=0.135589/0.082428/0.051345; normalized_abs_change=0.062649; active_samples=1.000000; outside(low/high)=0.254130/0.000033
+[10:27:56.452] SliceEqOcc train iteration 25200: lambda=0.436367 loss(original/L-eq/U-eq)=0.010830/0.009984/0.012459; L-profile(sigma/abs_phase/center_w)=0.5808/0.1395/0.6718; U-profile=0.6629/0.1430/0.6070
+[10:27:56.453] SliceEqOcc occupancy iteration 25200: L(frac/entropy/dev/hard_change)=0.011702/0.007770/0.002179/0.000000; U=0.010807/0.007676/0.002226/0.000000; clamp(L/U)=0.0000/0.0833
+[10:28:03.470] iteration 25200 : mean_dice : 0.825031, best_dice : 0.830453
+[10:28:45.577] OAAC appearance iteration 25400: abs(log_gamma/log_contrast/brightness)=0.099676/0.099188/0.047303; normalized_abs_change=0.050553; active_samples=1.000000; outside(low/high)=0.171422/0.000043
+[10:28:45.758] SliceEqOcc train iteration 25400: lambda=0.443405 loss(original/L-eq/U-eq)=0.006803/0.007354/0.015805; L-profile(sigma/abs_phase/center_w)=0.6348/0.1145/0.6399; U-profile=0.6908/0.1272/0.5938
+[10:28:45.758] SliceEqOcc occupancy iteration 25400: L(frac/entropy/dev/hard_change)=0.010515/0.006932/0.001935/0.000000; U=0.013809/0.009625/0.002791/0.000000; clamp(L/U)=0.0833/0.0000
+[10:28:53.254] iteration 25400 : mean_dice : 0.823762, best_dice : 0.830453
+[10:29:32.344] OAAC appearance iteration 25600: abs(log_gamma/log_contrast/brightness)=0.097141/0.090066/0.073400; normalized_abs_change=0.077191; active_samples=1.000000; outside(low/high)=0.182123/0.000707
+[10:29:32.489] SliceEqOcc train iteration 25600: lambda=0.446799 loss(original/L-eq/U-eq)=0.007863/0.006652/0.006547; L-profile(sigma/abs_phase/center_w)=0.6696/0.1223/0.6148; U-profile=0.6228/0.1465/0.6508
+[10:29:32.490] SliceEqOcc occupancy iteration 25600: L(frac/entropy/dev/hard_change)=0.007852/0.005488/0.001715/0.000000; U=0.004943/0.003017/0.000811/0.000000; clamp(L/U)=0.0000/0.1667
+[10:29:39.141] iteration 25600 : mean_dice : 0.826015, best_dice : 0.830453
+[10:30:21.305] OAAC appearance iteration 25800: abs(log_gamma/log_contrast/brightness)=0.157120/0.076992/0.067862; normalized_abs_change=0.080722; active_samples=1.000000; outside(low/high)=0.103798/0.000599
+[10:30:21.436] SliceEqOcc train iteration 25800: lambda=0.450106 loss(original/L-eq/U-eq)=0.006241/0.006492/0.015484; L-profile(sigma/abs_phase/center_w)=0.6678/0.1276/0.6047; U-profile=0.6487/0.1095/0.6217
+[10:30:21.441] SliceEqOcc occupancy iteration 25800: L(frac/entropy/dev/hard_change)=0.006298/0.004254/0.001216/0.000000; U=0.009109/0.006498/0.001925/0.000000; clamp(L/U)=0.0000/0.1667
+[10:30:28.546] iteration 25800 : mean_dice : 0.825104, best_dice : 0.830453
+[10:31:11.360] OAAC appearance iteration 26000: abs(log_gamma/log_contrast/brightness)=0.143429/0.094856/0.061500; normalized_abs_change=0.079241; active_samples=1.000000; outside(low/high)=0.200190/0.000015
+[10:31:11.522] SliceEqOcc train iteration 26000: lambda=0.456452 loss(original/L-eq/U-eq)=0.006414/0.005192/0.008778; L-profile(sigma/abs_phase/center_w)=0.7031/0.1279/0.5876; U-profile=0.6299/0.0927/0.6438
+[10:31:11.523] SliceEqOcc occupancy iteration 26000: L(frac/entropy/dev/hard_change)=0.006962/0.004464/0.001283/0.000000; U=0.008575/0.005912/0.001681/0.000000; clamp(L/U)=0.0833/0.0833
+[10:31:21.411] iteration 26000 : mean_dice : 0.823830, best_dice : 0.830453
+[10:31:21.421] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_26000.pth
+[10:32:03.642] OAAC appearance iteration 26200: abs(log_gamma/log_contrast/brightness)=0.100658/0.103934/0.056974; normalized_abs_change=0.049081; active_samples=1.000000; outside(low/high)=0.091059/0.000312
+[10:32:03.849] SliceEqOcc train iteration 26200: lambda=0.459486 loss(original/L-eq/U-eq)=0.006136/0.005875/0.012784; L-profile(sigma/abs_phase/center_w)=0.6988/0.1645/0.5750; U-profile=0.6525/0.1174/0.6221
+[10:32:03.850] SliceEqOcc occupancy iteration 26200: L(frac/entropy/dev/hard_change)=0.007395/0.004961/0.001477/0.000000; U=0.006636/0.004359/0.001248/0.000000; clamp(L/U)=0.0833/0.1667
+[10:32:10.851] iteration 26200 : mean_dice : 0.828862, best_dice : 0.830453
+[10:32:52.425] OAAC appearance iteration 26400: abs(log_gamma/log_contrast/brightness)=0.132244/0.098747/0.054336; normalized_abs_change=0.074991; active_samples=1.000000; outside(low/high)=0.207820/0.000057
+[10:32:52.577] SliceEqOcc train iteration 26400: lambda=0.462424 loss(original/L-eq/U-eq)=0.007180/0.005631/0.010177; L-profile(sigma/abs_phase/center_w)=0.6345/0.1444/0.6282; U-profile=0.6111/0.1259/0.6597
+[10:32:52.583] SliceEqOcc occupancy iteration 26400: L(frac/entropy/dev/hard_change)=0.006872/0.004717/0.001391/0.000000; U=0.008189/0.005812/0.001722/0.000090; clamp(L/U)=0.0833/0.0000
+[10:32:59.757] iteration 26400 : mean_dice : 0.822847, best_dice : 0.830453
+[10:33:41.903] OAAC appearance iteration 26600: abs(log_gamma/log_contrast/brightness)=0.162322/0.093612/0.042431; normalized_abs_change=0.058974; active_samples=1.000000; outside(low/high)=0.228994/0.000029
+[10:33:42.057] SliceEqOcc train iteration 26600: lambda=0.468007 loss(original/L-eq/U-eq)=0.008456/0.007677/0.009611; L-profile(sigma/abs_phase/center_w)=0.6343/0.1677/0.6244; U-profile=0.6175/0.1493/0.6487
+[10:33:42.063] SliceEqOcc occupancy iteration 26600: L(frac/entropy/dev/hard_change)=0.010965/0.007036/0.002035/0.000000; U=0.006504/0.004880/0.001515/0.000000; clamp(L/U)=0.1667/0.0833
+[10:33:49.606] iteration 26600 : mean_dice : 0.815763, best_dice : 0.830453
+[10:34:28.680] OAAC appearance iteration 26800: abs(log_gamma/log_contrast/brightness)=0.110098/0.087583/0.054742; normalized_abs_change=0.051229; active_samples=1.000000; outside(low/high)=0.087826/0.000107
+[10:34:28.837] SliceEqOcc train iteration 26800: lambda=0.470647 loss(original/L-eq/U-eq)=0.005971/0.006466/0.012465; L-profile(sigma/abs_phase/center_w)=0.5995/0.1248/0.6707; U-profile=0.7103/0.0920/0.5855
+[10:34:28.838] SliceEqOcc occupancy iteration 26800: L(frac/entropy/dev/hard_change)=0.007730/0.005412/0.001661/0.000000; U=0.008916/0.006683/0.002025/0.000000; clamp(L/U)=0.0000/0.0833
+[10:34:35.800] iteration 26800 : mean_dice : 0.819775, best_dice : 0.830453
+[10:35:16.989] OAAC appearance iteration 27000: abs(log_gamma/log_contrast/brightness)=0.108052/0.084883/0.073746; normalized_abs_change=0.096279; active_samples=1.000000; outside(low/high)=0.244167/0.000535
+[10:35:17.133] SliceEqOcc train iteration 27000: lambda=0.473183 loss(original/L-eq/U-eq)=0.006078/0.006086/0.013157; L-profile(sigma/abs_phase/center_w)=0.6448/0.1379/0.6253; U-profile=0.6815/0.1819/0.5861
+[10:35:17.138] SliceEqOcc occupancy iteration 27000: L(frac/entropy/dev/hard_change)=0.008430/0.005906/0.001760/0.000000; U=0.013275/0.008836/0.002570/0.000000; clamp(L/U)=0.0833/0.0000
+[10:35:24.451] iteration 27000 : mean_dice : 0.831026, best_dice : 0.831026
+[10:35:24.471] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_27000.pth
+[10:36:06.914] OAAC appearance iteration 27200: abs(log_gamma/log_contrast/brightness)=0.163122/0.104289/0.059061; normalized_abs_change=0.071275; active_samples=1.000000; outside(low/high)=0.135660/0.000546
+[10:36:07.058] SliceEqOcc train iteration 27200: lambda=0.477939 loss(original/L-eq/U-eq)=0.005931/0.006263/0.013890; L-profile(sigma/abs_phase/center_w)=0.6751/0.1133/0.6066; U-profile=0.6803/0.1226/0.5991
+[10:36:07.061] SliceEqOcc occupancy iteration 27200: L(frac/entropy/dev/hard_change)=0.009964/0.006967/0.002028/0.000018; U=0.008003/0.005586/0.001594/0.000000; clamp(L/U)=0.0000/0.1667
+[10:36:14.327] iteration 27200 : mean_dice : 0.819657, best_dice : 0.831026
+[10:36:57.184] OAAC appearance iteration 27400: abs(log_gamma/log_contrast/brightness)=0.128095/0.085397/0.072850; normalized_abs_change=0.071743; active_samples=1.000000; outside(low/high)=0.148869/0.000613
+[10:36:57.349] SliceEqOcc train iteration 27400: lambda=0.480155 loss(original/L-eq/U-eq)=0.007048/0.009091/0.011536; L-profile(sigma/abs_phase/center_w)=0.6650/0.1363/0.6149; U-profile=0.6964/0.1728/0.5760
+[10:36:57.353] SliceEqOcc occupancy iteration 27400: L(frac/entropy/dev/hard_change)=0.012302/0.008821/0.002619/0.000000; U=0.007483/0.005908/0.001975/0.000102; clamp(L/U)=0.0833/0.0000
+[10:37:04.197] iteration 27400 : mean_dice : 0.828775, best_dice : 0.831026
+[10:37:46.476] OAAC appearance iteration 27600: abs(log_gamma/log_contrast/brightness)=0.170387/0.059790/0.075254; normalized_abs_change=0.076727; active_samples=1.000000; outside(low/high)=0.301608/0.000183
+[10:37:46.628] SliceEqOcc train iteration 27600: lambda=0.482260 loss(original/L-eq/U-eq)=0.007356/0.007084/0.007818; L-profile(sigma/abs_phase/center_w)=0.6342/0.1318/0.6406; U-profile=0.6748/0.1082/0.6002
+[10:37:46.629] SliceEqOcc occupancy iteration 27600: L(frac/entropy/dev/hard_change)=0.011883/0.007315/0.001982/0.000000; U=0.008672/0.005426/0.001483/0.000000; clamp(L/U)=0.0833/0.1667
+[10:37:53.713] iteration 27600 : mean_dice : 0.815937, best_dice : 0.831026
+[10:38:36.547] OAAC appearance iteration 27800: abs(log_gamma/log_contrast/brightness)=0.148581/0.068694/0.055243; normalized_abs_change=0.064546; active_samples=1.000000; outside(low/high)=0.326944/0.000050
+[10:38:36.716] SliceEqOcc train iteration 27800: lambda=0.486133 loss(original/L-eq/U-eq)=0.006056/0.006749/0.008752; L-profile(sigma/abs_phase/center_w)=0.6436/0.1634/0.6263; U-profile=0.6910/0.1256/0.5924
+[10:38:36.717] SliceEqOcc occupancy iteration 27800: L(frac/entropy/dev/hard_change)=0.009614/0.006445/0.001936/0.000000; U=0.008671/0.006508/0.002012/0.000000; clamp(L/U)=0.0833/0.0000
+[10:38:43.525] iteration 27800 : mean_dice : 0.827911, best_dice : 0.831026
+[10:39:24.467] OAAC appearance iteration 28000: abs(log_gamma/log_contrast/brightness)=0.145766/0.108552/0.052709; normalized_abs_change=0.059187; active_samples=1.000000; outside(low/high)=0.159326/0.000050
+[10:39:24.621] SliceEqOcc train iteration 28000: lambda=0.487899 loss(original/L-eq/U-eq)=0.005969/0.005907/0.007044; L-profile(sigma/abs_phase/center_w)=0.6813/0.0979/0.5989; U-profile=0.6842/0.1041/0.6059
+[10:39:24.622] SliceEqOcc occupancy iteration 28000: L(frac/entropy/dev/hard_change)=0.008522/0.006215/0.001856/0.000000; U=0.007455/0.004153/0.001149/0.000000; clamp(L/U)=0.0000/0.0833
+[10:39:31.980] iteration 28000 : mean_dice : 0.815434, best_dice : 0.831026
+[10:39:31.990] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_28000.pth
+[10:40:13.783] OAAC appearance iteration 28200: abs(log_gamma/log_contrast/brightness)=0.129388/0.077728/0.067725; normalized_abs_change=0.074433; active_samples=1.000000; outside(low/high)=0.212069/0.000183
+[10:40:13.920] SliceEqOcc train iteration 28200: lambda=0.489548 loss(original/L-eq/U-eq)=0.007436/0.006877/0.016067; L-profile(sigma/abs_phase/center_w)=0.6355/0.1274/0.6320; U-profile=0.6185/0.1326/0.6536
+[10:40:13.924] SliceEqOcc occupancy iteration 28200: L(frac/entropy/dev/hard_change)=0.008762/0.006063/0.001767/0.000000; U=0.010187/0.006714/0.001851/0.000000; clamp(L/U)=0.0833/0.0833
+[10:40:21.007] iteration 28200 : mean_dice : 0.813781, best_dice : 0.831026
+[10:41:04.535] OAAC appearance iteration 28400: abs(log_gamma/log_contrast/brightness)=0.135917/0.125384/0.055643; normalized_abs_change=0.058626; active_samples=1.000000; outside(low/high)=0.266460/0.000319
+[10:41:04.696] SliceEqOcc train iteration 28400: lambda=0.492494 loss(original/L-eq/U-eq)=0.006717/0.005664/0.018061; L-profile(sigma/abs_phase/center_w)=0.6365/0.1159/0.6489; U-profile=0.6635/0.1217/0.6226
+[10:41:04.697] SliceEqOcc occupancy iteration 28400: L(frac/entropy/dev/hard_change)=0.005801/0.003437/0.000953/0.000000; U=0.008283/0.005452/0.001602/0.000000; clamp(L/U)=0.0000/0.0833
+[10:41:11.720] iteration 28400 : mean_dice : 0.825486, best_dice : 0.831026
+[10:41:54.548] OAAC appearance iteration 28600: abs(log_gamma/log_contrast/brightness)=0.109455/0.097964/0.078802; normalized_abs_change=0.085232; active_samples=1.000000; outside(low/high)=0.042141/0.001420
+[10:41:54.695] SliceEqOcc train iteration 28600: lambda=0.493789 loss(original/L-eq/U-eq)=0.009696/0.012080/0.023713; L-profile(sigma/abs_phase/center_w)=0.6946/0.1434/0.5877; U-profile=0.6285/0.1172/0.6388
+[10:41:54.696] SliceEqOcc occupancy iteration 28600: L(frac/entropy/dev/hard_change)=0.010222/0.007228/0.002193/0.000126; U=0.008842/0.006166/0.001791/0.000000; clamp(L/U)=0.0000/0.0833
+[10:42:01.740] iteration 28600 : mean_dice : 0.795889, best_dice : 0.831026
+[10:42:44.339] OAAC appearance iteration 28800: abs(log_gamma/log_contrast/brightness)=0.132576/0.089658/0.063197; normalized_abs_change=0.063967; active_samples=1.000000; outside(low/high)=0.210025/0.000048
+[10:42:44.472] SliceEqOcc train iteration 28800: lambda=0.494963 loss(original/L-eq/U-eq)=0.006069/0.005737/0.009175; L-profile(sigma/abs_phase/center_w)=0.6256/0.1122/0.6506; U-profile=0.6266/0.1179/0.6392
+[10:42:44.472] SliceEqOcc occupancy iteration 28800: L(frac/entropy/dev/hard_change)=0.008492/0.005514/0.001552/0.000043; U=0.007768/0.005494/0.001617/0.000000; clamp(L/U)=0.0000/0.1667
+[10:42:51.539] iteration 28800 : mean_dice : 0.834240, best_dice : 0.834240
+[10:43:33.142] OAAC appearance iteration 29000: abs(log_gamma/log_contrast/brightness)=0.132406/0.129375/0.067445; normalized_abs_change=0.076015; active_samples=1.000000; outside(low/high)=0.077976/0.002981
+[10:43:33.282] SliceEqOcc train iteration 29000: lambda=0.496947 loss(original/L-eq/U-eq)=0.009290/0.007321/0.016262; L-profile(sigma/abs_phase/center_w)=0.6548/0.1144/0.6249; U-profile=0.6940/0.1344/0.5984
+[10:43:33.283] SliceEqOcc occupancy iteration 29000: L(frac/entropy/dev/hard_change)=0.010109/0.006191/0.001746/0.000000; U=0.014932/0.009956/0.002861/0.000001; clamp(L/U)=0.0833/0.0833
+[10:43:40.384] iteration 29000 : mean_dice : 0.831341, best_dice : 0.834240
+[10:43:40.394] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_29000.pth
+[10:44:24.420] OAAC appearance iteration 29200: abs(log_gamma/log_contrast/brightness)=0.056203/0.109771/0.071133; normalized_abs_change=0.077011; active_samples=1.000000; outside(low/high)=0.120734/0.000189
+[10:44:24.557] SliceEqOcc train iteration 29200: lambda=0.497755 loss(original/L-eq/U-eq)=0.008115/0.008286/0.011184; L-profile(sigma/abs_phase/center_w)=0.6390/0.1424/0.6363; U-profile=0.6321/0.1397/0.6415
+[10:44:24.558] SliceEqOcc occupancy iteration 29200: L(frac/entropy/dev/hard_change)=0.010853/0.006853/0.001950/0.000000; U=0.011650/0.007674/0.002218/0.000000; clamp(L/U)=0.0000/0.0833
+[10:44:31.580] iteration 29200 : mean_dice : 0.825280, best_dice : 0.834240
+[10:45:14.277] OAAC appearance iteration 29400: abs(log_gamma/log_contrast/brightness)=0.132779/0.088022/0.053104; normalized_abs_change=0.068657; active_samples=1.000000; outside(low/high)=0.146865/0.000731
+[10:45:14.435] SliceEqOcc train iteration 29400: lambda=0.498440 loss(original/L-eq/U-eq)=0.006109/0.005826/0.009093; L-profile(sigma/abs_phase/center_w)=0.5998/0.1496/0.6641; U-profile=0.6662/0.1323/0.6136
+[10:45:14.436] SliceEqOcc occupancy iteration 29400: L(frac/entropy/dev/hard_change)=0.008547/0.005477/0.001525/0.000000; U=0.009097/0.006238/0.001886/0.000000; clamp(L/U)=0.0000/0.0000
+[10:45:21.905] iteration 29400 : mean_dice : 0.836475, best_dice : 0.836475
+[10:46:05.385] OAAC appearance iteration 29600: abs(log_gamma/log_contrast/brightness)=0.164790/0.106905/0.054196; normalized_abs_change=0.073440; active_samples=1.000000; outside(low/high)=0.107037/0.000361
+[10:46:05.608] SliceEqOcc train iteration 29600: lambda=0.499438 loss(original/L-eq/U-eq)=0.007516/0.006795/0.012789; L-profile(sigma/abs_phase/center_w)=0.6355/0.1037/0.6390; U-profile=0.6086/0.1180/0.6536
+[10:46:05.608] SliceEqOcc occupancy iteration 29600: L(frac/entropy/dev/hard_change)=0.006847/0.004844/0.001457/0.000000; U=0.006227/0.004220/0.001208/0.000000; clamp(L/U)=0.0000/0.0833
+[10:46:13.662] iteration 29600 : mean_dice : 0.821663, best_dice : 0.836475
+[10:46:55.634] OAAC appearance iteration 29800: abs(log_gamma/log_contrast/brightness)=0.128002/0.093748/0.058460; normalized_abs_change=0.068488; active_samples=1.000000; outside(low/high)=0.315567/0.000148
+[10:46:55.770] SliceEqOcc train iteration 29800: lambda=0.499750 loss(original/L-eq/U-eq)=0.008504/0.007418/0.016762; L-profile(sigma/abs_phase/center_w)=0.7016/0.1356/0.5788; U-profile=0.6378/0.1396/0.6310
+[10:46:55.771] SliceEqOcc occupancy iteration 29800: L(frac/entropy/dev/hard_change)=0.008238/0.006115/0.001815/0.000000; U=0.006311/0.004137/0.001244/0.000000; clamp(L/U)=0.1667/0.0833
+[10:47:03.022] iteration 29800 : mean_dice : 0.793280, best_dice : 0.836475
+[10:47:44.256] OAAC appearance iteration 30000: abs(log_gamma/log_contrast/brightness)=0.119425/0.073389/0.056631; normalized_abs_change=0.059506; active_samples=1.000000; outside(low/high)=0.127778/0.000039
+[10:47:44.385] SliceEqOcc train iteration 30000: lambda=0.499938 loss(original/L-eq/U-eq)=0.007410/0.007069/0.010037; L-profile(sigma/abs_phase/center_w)=0.6640/0.0982/0.6081; U-profile=0.6441/0.1549/0.6162
+[10:47:44.386] SliceEqOcc occupancy iteration 30000: L(frac/entropy/dev/hard_change)=0.008773/0.006654/0.002034/0.000000; U=0.006626/0.005097/0.001561/0.000000; clamp(L/U)=0.1667/0.0000
+[10:47:50.915] iteration 30000 : mean_dice : 0.828680, best_dice : 0.836475
+[10:47:50.925] save model to ../model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/iter_30000.pth
+[10:47:50.970] OAAC parent call contract complete: paired=58000, diagnostics=58000

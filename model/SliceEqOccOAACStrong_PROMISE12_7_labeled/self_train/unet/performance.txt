@@ -1,0 +1,25 @@
+Model path: /home/aiteam/zhengtaoma/CoDA/model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet/unet_best_model.pth
+Snapshot path: /home/aiteam/zhengtaoma/CoDA/model/SliceEqOccOAACStrong_PROMISE12_7_labeled/self_train/unet
+Model root: /home/aiteam/zhengtaoma/CoDA/model
+Model: unet
+Experiment: SliceEqOccOAACStrong_PROMISE12
+Stage: self_train
+NMS: 0
+Test cases: 10
+
+Case05 -> Dice: 0.791402, Jaccard: 0.654810, HD95: 6.000000, ASD: 2.093632
+Case09 -> Dice: 0.892792, Jaccard: 0.806346, HD95: 3.605551, ASD: 1.358298
+Case16 -> Dice: 0.861094, Jaccard: 0.756072, HD95: 2.000000, ASD: 0.724019
+Case30 -> Dice: 0.884555, Jaccard: 0.793006, HD95: 3.000000, ASD: 1.050433
+Case34 -> Dice: 0.879094, Jaccard: 0.784272, HD95: 3.000000, ASD: 1.529271
+Case36 -> Dice: 0.900145, Jaccard: 0.818421, HD95: 1.732051, ASD: 0.913635
+Case38 -> Dice: 0.920300, Jaccard: 0.852366, HD95: 2.000000, ASD: 0.664011
+Case43 -> Dice: 0.826778, Jaccard: 0.704708, HD95: 4.472136, ASD: 1.483840
+Case45 -> Dice: 0.789854, Jaccard: 0.652693, HD95: 3.316625, ASD: 1.534687
+Case49 -> Dice: 0.773588, Jaccard: 0.630773, HD95: 3.162278, ASD: 1.718806
+
+Average metric:
+Dice: 0.851960
+Jaccard: 0.745347
+HD95: 3.228864
+ASD: 1.307063
